@@ -256,6 +256,75 @@ def _gsddmm(gidx, op, lhs, rhs, lhs_target='u', rhs_target='v'):
         out = F.squeeze(out, -1)
     return out
 
+def _gsddmmspmm(gidx, op, lhs, rhs, lhs_target='u', rhs_target='v', imsg=0):
+    r""" Combination of SDDMM and SpMM (will update below description). It
+    takes the result of :attr:`op` on source node feature and destination node
+    feature, leads to a feature on edge.
+    .. math::
+        x_{e} = \phi(x_u, x_e, x_v), \forall (u,e,v)\in \mathcal{G}
+    where :math:`x_{e}` is the returned feature on edges and :math:`x_u`,
+    :math:`x_v` refers to :attr:`u`, :attr:`v` respectively. :math:`\phi`
+    is the binary operator :attr:`op`, and :math:`\mathcal{G}` is the graph
+    we apply gsddmm on: :attr:`g`.
+    Parameters
+    ----------
+    gidx : HeteroGraphIndex
+        The input graph index.
+    op : str
+        Binary operator, could be ``add``, ``sub``, ``mul``, ``div``, ``dot``,
+        ``copy_lhs``, ``copy_rhs``.
+    lhs : tensor or None
+        Left hand operand.
+    rhs : tensor or None
+        Right hand operand.
+    lhs_target : str
+        The target of left hand operand, could be ``src``, ``edge``, ``dst``
+        or their alias ``u``, ``e``, ``v``.
+    rhs_target : str
+        The target of right hand operand, could be ``src``, ``edge``, ``dst``
+        or their alias ``u``, ``e``, ``v``.
+    Returns
+    -------
+    tensor
+        The result tensor.
+    Notes
+    -----
+    This function does not handle gradients.
+    """
+    if gidx.number_of_etypes() != 1:
+        raise DGLError("We only support gsddmm on graph with one edge type")
+    use_lhs = op != 'copy_rhs'
+    use_rhs = op != 'copy_lhs'
+    # deal with scalar features.
+    expand_lhs, expand_rhs = False, False
+    #print("Before:", lhs)
+    if use_lhs:
+        if F.ndim(lhs) == 1:
+            lhs = F.unsqueeze(lhs, -1)
+            expand_lhs = True
+    if use_rhs:
+        if F.ndim(rhs) == 1:
+            rhs = F.unsqueeze(rhs, -1)
+            expand_rhs = True
+    #print("After:", lhs)
+    lhs_target = target_mapping[lhs_target]
+    rhs_target = target_mapping[rhs_target]
+    ctx = F.context(lhs) if use_lhs else F.context(rhs)
+    dtype = F.dtype(lhs) if use_lhs else F.dtype(rhs)
+    lhs_shp = F.shape(lhs) if use_lhs else (0,)
+    rhs_shp = F.shape(rhs) if use_rhs else (0,)
+    out_shp = F.shape(lhs) if use_lhs else (0,)
+    out = F.zeros(out_shp, dtype, ctx)
+    #print("lshape:", lhs_shp)
+    if gidx.number_of_edges(0) > 0:
+        _CAPI_DGLKernelSDDMMSPMM(gidx, op,
+                             to_dgl_nd(lhs if use_lhs else None),
+                             to_dgl_nd(rhs if use_rhs else None),
+                             to_dgl_nd_for_write(out),
+                             lhs_target, rhs_target, imsg)
+    if (expand_lhs or not use_lhs) and (expand_rhs or not use_rhs):
+        out = F.squeeze(out, -1)
+    return out
 
 def _segment_reduce(op, feat, offsets):
     r"""Segment reduction operator.

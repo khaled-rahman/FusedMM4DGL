@@ -1,7 +1,7 @@
 import torch as th
 from distutils.version import LooseVersion
 from ...base import is_all, ALL
-from ...sparse import _gspmm, _gsddmm, _segment_reduce, _bwd_segment_cmp, _scatter_add
+from ...sparse import _gspmm, _gsddmm, _gsddmmspmm, _segment_reduce, _bwd_segment_cmp, _scatter_add
 
 if LooseVersion(th.__version__) >= LooseVersion("1.6.0"):
     from torch.cuda.amp import custom_fwd, custom_bwd
@@ -24,7 +24,7 @@ else:
             return bwd(*args, **kwargs)
         return decorate_bwd
 
-__all__ = ['gspmm', 'gsddmm', 'edge_softmax', 'segment_reduce', 'scatter_add']
+__all__ = ['gspmm', 'gsddmm', 'gsddmmspmm', 'edge_softmax', 'segment_reduce', 'scatter_add']
 
 
 def _reduce_grad(grad, shape):
@@ -202,6 +202,65 @@ class GSDDMM(th.autograd.Function):
             dY = None
         return None, None, dX, dY, None, None
 
+class GSDDMMSpMM(th.autograd.Function):
+    @staticmethod
+    def forward(ctx, gidx, op, X, Y, lhs_target, rhs_target, imsg):
+        out = _gsddmmspmm(gidx, op, X, Y, lhs_target, rhs_target, imsg)
+        ctx.backward_cache = gidx, op, lhs_target, rhs_target
+        ctx.save_for_backward(X, Y)
+        return out
+
+    @staticmethod
+    def backward(ctx, dZ):
+        gidx, op, reduce_op = ctx.backward_cache
+        X, Y, argX, argY = ctx.saved_tensors
+        if op != 'copy_rhs' and ctx.needs_input_grad[3]:
+            g_rev = gidx.reverse()
+            if reduce_op == 'sum':
+                if op in ['mul', 'div']:
+                    dX = gspmm(g_rev, 'mul', 'sum', dZ, _muldiv(op, Y))
+                elif op in ['add', 'sub']:
+                    dX = gspmm(g_rev, 'copy_lhs', 'sum', dZ, Y)
+                elif op == 'copy_lhs':
+                    dX = gspmm(g_rev, 'copy_lhs', 'sum', dZ, None)
+            else:  # max/min
+                dX = th.zeros((X.shape[0],) + dZ.shape[1:],
+                              dtype=X.dtype, device=X.device)
+                if op in ['mul', 'div']:
+                    grad = _muldiv(op, _expand(Y, dZ.shape[1:]).gather(
+                        0, argY.long())) * dZ
+                    dX.scatter_add_(0, argX.long(), grad)
+                elif op in ['add', 'sub', 'copy_lhs']:
+                    dX.scatter_add_(0, argX.long(), dZ)
+            dX = _reduce_grad(dX, X.shape)
+        else:  # X has not gradient
+            dX = None
+        if op != 'copy_lhs' and ctx.needs_input_grad[4]:
+            if reduce_op == 'sum':
+                if op == 'mul' and _need_reduce_last_dim(X, Y):
+                    dY = gsddmm(gidx, 'dot', X, dZ)
+                elif op in ['mul', 'div']:
+                    dY = gsddmm(gidx, 'mul', X, dZ)
+                    if op == 'div':
+                        dY = -dY / (Y ** 2)
+                elif op in ['add', 'sub', 'copy_rhs']:
+                    dY = gsddmm(gidx, 'copy_rhs', X, _addsub(op, dZ))
+            else:  # max/min
+                dY = th.zeros((Y.shape[0],) + dZ.shape[1:],
+                              dtype=Y.dtype, device=Y.device)
+                if op in ['mul',  'div']:
+                    grad = _expand(X, dZ.shape[1:]).gather(
+                        0, argX.long()) * dZ
+                    dY.scatter_add_(0, argY.long(), grad)
+                    if op == 'div':
+                        dY = -dY / (Y ** 2)
+                elif op in ['add', 'sub', 'copy_rhs']:
+                    dY.scatter_add_(0, argY.long(), _addsub(op, dZ))
+            dY = _reduce_grad(dY, Y.shape)
+        else:  # Y has no gradient
+            dY = None
+        return None, None, None, dX, dY
+
 
 class EdgeSoftmax(th.autograd.Function):
     @staticmethod
@@ -310,6 +369,9 @@ def gspmm(gidx, op, reduce_op, lhs_data, rhs_data):
 def gsddmm(gidx, op, lhs_data, rhs_data, lhs_target='u', rhs_target='v'):
     return GSDDMM.apply(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target)
 
+def gsddmmspmm(gidx, op, lhs_data, rhs_data, lhs_target='u', rhs_target='v', imsg = 0):
+    #return GSDDMMSpMM.apply(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target, imsg)
+    return _gsddmmspmm(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target, imsg)
 
 def edge_softmax(gidx, logits, eids=ALL, norm_by='dst'):
     return EdgeSoftmax.apply(gidx, logits, eids, norm_by)

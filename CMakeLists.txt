@@ -175,6 +175,7 @@ target_include_directories(dgl PRIVATE "third_party/phmap/")
 target_include_directories(dgl PRIVATE "third_party/xbyak/")
 target_include_directories(dgl PRIVATE "third_party/METIS/include/")
 target_include_directories(dgl PRIVATE "tensoradapter/include")
+target_include_directories(dgl PRIVATE "src/array/cpu/fusedmm/kernels/generated/include")
 
 # For serialization
 if (USE_HDFS)
@@ -211,6 +212,9 @@ endif(USE_TVM)
 if (LIBCXX_ENABLE_PARALLEL_ALGORITHMS)
   add_definitions(-DPARALLEL_ALGORITHMS)
 endif(LIBCXX_ENABLE_PARALLEL_ALGORITHMS)
+
+add_subdirectory("src/array/cpu/fusedmmopt/kernels/generated/")
+list(APPEND DGL_LINKER_LIBS fusedmm)
 
 target_link_libraries(dgl ${DGL_LINKER_LIBS} ${DGL_RUNTIME_LINKER_LIBS})
 if(MSVC)
