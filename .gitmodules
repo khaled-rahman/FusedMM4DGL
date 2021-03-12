@@ -1,3 +1,0 @@
-[submodule "src/array/cpu/fusedmm"]
-	path = src/array/cpu/fusedmm
-	url = https://github.com/HipGraph/FusedMM
