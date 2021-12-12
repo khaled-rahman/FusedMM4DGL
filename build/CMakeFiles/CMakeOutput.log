@@ -1,0 +1,1406 @@
+The system is: Linux - 3.10.0-1127.19.1.el7.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/gcc-10.1.0/bin/gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/3.14.0/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/gcc-10.1.0/bin/gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/3.14.0/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c260f/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_c260f.dir/build.make CMakeFiles/cmTC_c260f.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c260f.dir/testCCompiler.c.o
+/opt/gcc-10.1.0/bin/gcc    -o CMakeFiles/cmTC_c260f.dir/testCCompiler.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_c260f
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c260f.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc      CMakeFiles/cmTC_c260f.dir/testCCompiler.c.o  -o cmTC_c260f 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_b5926/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_b5926.dir/build.make CMakeFiles/cmTC_b5926.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o
+/opt/gcc-10.1.0/bin/gcc   -v -o CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o   -c /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/cc1 -quiet -v /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccGvOqwZ.s
+GNU C17 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include
+ /usr/local/include
+ /opt/gcc-10.1.0/include
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e4cad98b682f289234dab06836c2763b
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o /tmp/ccGvOqwZ.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-43.base.el7_8.1
+COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_b5926
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5926.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc     -v CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o  -o cmTC_b5926 
+Using built-in specs.
+COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc
+COLLECT_LTO_WRAPPER=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.1.0 (GCC) 
+COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b5926' '-mtune=generic' '-march=x86-64'
+ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2 -plugin /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so -plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccF38JB1.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b5926 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../.. CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b5926' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include]
+    add: [/usr/local/include]
+    add: [/opt/gcc-10.1.0/include]
+    add: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed]
+    add: [/usr/include]
+  end of search list found
+  implicit include dirs: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include;/usr/local/include;/opt/gcc-10.1.0/include;/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_b5926/fast ]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_b5926.dir/build.make CMakeFiles/cmTC_b5926.dir/build]
+  ignore line: [gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/gcc-10.1.0/bin/gcc   -v -o CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o   -c /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/cc1 -quiet -v /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccGvOqwZ.s]
+  ignore line: [GNU C17 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/gcc-10.1.0/include]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: e4cad98b682f289234dab06836c2763b]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o /tmp/ccGvOqwZ.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-43.base.el7_8.1]
+  ignore line: [COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_b5926]
+  ignore line: [/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5926.dir/link.txt --verbose=1]
+  ignore line: [/opt/gcc-10.1.0/bin/gcc     -v CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o  -o cmTC_b5926 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.1.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b5926' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2 -plugin /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so -plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccF38JB1.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b5926 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../.. CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccF38JB1.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_b5926] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o] ==> ignore
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0]
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..]
+    arg [CMakeFiles/cmTC_b5926.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0] ==> [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0]
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64] ==> [/opt/gcc-10.1.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..] ==> [/opt/gcc-10.1.0/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0;/opt/gcc-10.1.0/lib64;/lib64;/usr/lib64;/opt/gcc-10.1.0/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_0b33a/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_0b33a.dir/build.make CMakeFiles/cmTC_0b33a.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0b33a.dir/feature_tests.c.o
+/opt/gcc-10.1.0/bin/gcc   -std=c11 -o CMakeFiles/cmTC_0b33a.dir/feature_tests.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_0b33a
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b33a.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc      CMakeFiles/cmTC_0b33a.dir/feature_tests.c.o  -o cmTC_0b33a 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_91f13/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_91f13.dir/build.make CMakeFiles/cmTC_91f13.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_91f13.dir/feature_tests.c.o
+/opt/gcc-10.1.0/bin/gcc   -std=c99 -o CMakeFiles/cmTC_91f13.dir/feature_tests.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_91f13
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91f13.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc      CMakeFiles/cmTC_91f13.dir/feature_tests.c.o  -o cmTC_91f13 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_5e173/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_5e173.dir/build.make CMakeFiles/cmTC_5e173.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5e173.dir/feature_tests.c.o
+/opt/gcc-10.1.0/bin/gcc   -std=c90 -o CMakeFiles/cmTC_5e173.dir/feature_tests.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5e173
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e173.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc      CMakeFiles/cmTC_5e173.dir/feature_tests.c.o  -o cmTC_5e173 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_ea4e3/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_ea4e3.dir/build.make CMakeFiles/cmTC_ea4e3.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ea4e3.dir/testCXXCompiler.cxx.o
+/opt/gcc-10.1.0/bin/gcc     -o CMakeFiles/cmTC_ea4e3.dir/testCXXCompiler.cxx.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_ea4e3
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea4e3.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc       CMakeFiles/cmTC_ea4e3.dir/testCXXCompiler.cxx.o  -o cmTC_ea4e3 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3c33a/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_3c33a.dir/build.make CMakeFiles/cmTC_3c33a.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o
+/opt/gcc-10.1.0/bin/gcc    -v -o CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o -c /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mtune=generic' '-march=x86-64'
+ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/cc1plus -quiet -v -D_GNU_SOURCE /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccCSPRgw.s
+GNU C++14 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include
+ /usr/local/include
+ /opt/gcc-10.1.0/include
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed
+ /usr/include
+End of search list.
+GNU C++14 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 1f2ec42f78d222e0f6523dcc2163992d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccCSPRgw.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-43.base.el7_8.1
+COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_3c33a
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c33a.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc      -v CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3c33a 
+Using built-in specs.
+COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc
+COLLECT_LTO_WRAPPER=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.1.0 (GCC) 
+COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3c33a' '-mtune=generic' '-march=x86-64'
+ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2 -plugin /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so -plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTPbipy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3c33a /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../.. CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3c33a' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0]
+    add: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu]
+    add: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward]
+    add: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include]
+    add: [/usr/local/include]
+    add: [/opt/gcc-10.1.0/include]
+    add: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed]
+    add: [/usr/include]
+  end of search list found
+  implicit include dirs: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0;/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu;/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward;/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include;/usr/local/include;/opt/gcc-10.1.0/include;/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_3c33a/fast ]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_3c33a.dir/build.make CMakeFiles/cmTC_3c33a.dir/build]
+  ignore line: [gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/gcc-10.1.0/bin/gcc    -v -o CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o -c /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/cc1plus -quiet -v -D_GNU_SOURCE /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccCSPRgw.s]
+  ignore line: [GNU C++14 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/gcc-10.1.0/include]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 1f2ec42f78d222e0f6523dcc2163992d]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccCSPRgw.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-43.base.el7_8.1]
+  ignore line: [COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_3c33a]
+  ignore line: [/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c33a.dir/link.txt --verbose=1]
+  ignore line: [/opt/gcc-10.1.0/bin/gcc      -v CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3c33a ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.1.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3c33a' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2 -plugin /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so -plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTPbipy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3c33a /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../.. CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccTPbipy.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_3c33a] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o] ==> ignore
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0]
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..]
+    arg [CMakeFiles/cmTC_3c33a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0] ==> [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0]
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64] ==> [/opt/gcc-10.1.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..] ==> [/opt/gcc-10.1.0/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0;/opt/gcc-10.1.0/lib64;/lib64;/usr/lib64;/opt/gcc-10.1.0/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++2a] compiler features compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_32f92/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_32f92.dir/build.make CMakeFiles/cmTC_32f92.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_32f92.dir/feature_tests.cxx.o
+/opt/gcc-10.1.0/bin/gcc    -std=c++2a -o CMakeFiles/cmTC_32f92.dir/feature_tests.cxx.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_32f92
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32f92.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc       CMakeFiles/cmTC_32f92.dir/feature_tests.cxx.o  -o cmTC_32f92 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++17] compiler features compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_041fc/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_041fc.dir/build.make CMakeFiles/cmTC_041fc.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_041fc.dir/feature_tests.cxx.o
+/opt/gcc-10.1.0/bin/gcc    -std=c++17 -o CMakeFiles/cmTC_041fc.dir/feature_tests.cxx.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_041fc
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_041fc.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc       CMakeFiles/cmTC_041fc.dir/feature_tests.cxx.o  -o cmTC_041fc 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_d6c5c/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_d6c5c.dir/build.make CMakeFiles/cmTC_d6c5c.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d6c5c.dir/feature_tests.cxx.o
+/opt/gcc-10.1.0/bin/gcc    -std=c++14 -o CMakeFiles/cmTC_d6c5c.dir/feature_tests.cxx.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d6c5c
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6c5c.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc       CMakeFiles/cmTC_d6c5c.dir/feature_tests.cxx.o  -o cmTC_d6c5c 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_138cf/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_138cf.dir/build.make CMakeFiles/cmTC_138cf.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_138cf.dir/feature_tests.cxx.o
+/opt/gcc-10.1.0/bin/gcc    -std=c++11 -o CMakeFiles/cmTC_138cf.dir/feature_tests.cxx.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_138cf
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_138cf.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc       CMakeFiles/cmTC_138cf.dir/feature_tests.cxx.o  -o cmTC_138cf 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2ae34/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_2ae34.dir/build.make CMakeFiles/cmTC_2ae34.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2ae34.dir/feature_tests.cxx.o
+/opt/gcc-10.1.0/bin/gcc    -std=c++98 -o CMakeFiles/cmTC_2ae34.dir/feature_tests.cxx.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2ae34
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ae34.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc       CMakeFiles/cmTC_2ae34.dir/feature_tests.cxx.o  -o cmTC_2ae34 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Performing C++ SOURCE FILE Test SUPPORT_CXX11 succeeded with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c557f/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_c557f.dir/build.make CMakeFiles/cmTC_c557f.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c557f.dir/src.cxx.o
+/opt/gcc-10.1.0/bin/gcc    -DSUPPORT_CXX11   -std=c++11 -o CMakeFiles/cmTC_c557f.dir/src.cxx.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c557f
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c557f.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc   -DSUPPORT_CXX11    CMakeFiles/cmTC_c557f.dir/src.cxx.o  -o cmTC_c557f 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Detecting C OpenMP compiler ABI info compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_bb897/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_bb897.dir/build.make CMakeFiles/cmTC_bb897.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o
+/opt/gcc-10.1.0/bin/gcc   -O2 -Wall -fPIC  -fopenmp -v   -o CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Using built-in specs.
+COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread'
+ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/cc1 -quiet -v -D_REENTRANT /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -quiet -dumpbase OpenMPTryFlag.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o -O2 -Wall -version -fPIC -fopenmp -o /tmp/ccJeWJiK.s
+GNU C17 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include
+ /usr/local/include
+ /opt/gcc-10.1.0/include
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e4cad98b682f289234dab06836c2763b
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread'
+ as -v --64 -o CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o /tmp/ccJeWJiK.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-43.base.el7_8.1
+COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread'
+Linking C executable cmTC_bb897
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb897.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -O2 -Wall -fPIC  -fopenmp -v    CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o  -o cmTC_bb897 -v 
+Using built-in specs.
+COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc
+COLLECT_LTO_WRAPPER=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.1.0 (GCC) 
+COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/
+Reading specs from /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/libgomp.spec
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-fopenmp' '-v' '-o' 'cmTC_bb897' '-v' '-mtune=generic' '-march=x86-64' '-pthread'
+ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2 -plugin /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so -plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwJqdfL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bb897 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../.. CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o -lgomp -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-fopenmp' '-v' '-o' 'cmTC_bb897' '-v' '-mtune=generic' '-march=x86-64' '-pthread'
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_bb897/fast ]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_bb897.dir/build.make CMakeFiles/cmTC_bb897.dir/build]
+  ignore line: [gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o]
+  ignore line: [/opt/gcc-10.1.0/bin/gcc   -O2 -Wall -fPIC  -fopenmp -v   -o CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/cc1 -quiet -v -D_REENTRANT /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -quiet -dumpbase OpenMPTryFlag.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o -O2 -Wall -version -fPIC -fopenmp -o /tmp/ccJeWJiK.s]
+  ignore line: [GNU C17 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/gcc-10.1.0/include]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: e4cad98b682f289234dab06836c2763b]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o /tmp/ccJeWJiK.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-43.base.el7_8.1]
+  ignore line: [COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [Linking C executable cmTC_bb897]
+  ignore line: [/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb897.dir/link.txt --verbose=1]
+  ignore line: [/opt/gcc-10.1.0/bin/gcc -O2 -Wall -fPIC  -fopenmp -v    CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o  -o cmTC_bb897 -v ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.1.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [Reading specs from /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/libgomp.spec]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-fopenmp' '-v' '-o' 'cmTC_bb897' '-v' '-mtune=generic' '-march=x86-64' '-pthread']
+  link line: [ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2 -plugin /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so -plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwJqdfL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bb897 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../.. CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o -lgomp -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccwJqdfL.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_bb897] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o] ==> ignore
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0]
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..]
+    arg [CMakeFiles/cmTC_bb897.dir/OpenMPTryFlag.c.o] ==> ignore
+    arg [-lgomp] ==> lib [gomp]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0] ==> [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0]
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64] ==> [/opt/gcc-10.1.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..] ==> [/opt/gcc-10.1.0/lib]
+  implicit libs: [gomp;gcc;gcc_s;pthread;c;gcc;gcc_s]
+  implicit dirs: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0;/opt/gcc-10.1.0/lib64;/lib64;/usr/lib64;/opt/gcc-10.1.0/lib]
+  implicit fwks: []
+
+
+Detecting CXX OpenMP compiler ABI info compiled with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_512d9/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_512d9.dir/build.make CMakeFiles/cmTC_512d9.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o
+/opt/gcc-10.1.0/bin/gcc    -O2 -Wall -fPIC -std=c++11  -fopenmp -v   -o CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Using built-in specs.
+COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-std=c++11' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread'
+ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/cc1plus -quiet -v -D_GNU_SOURCE -D_REENTRANT /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o -O2 -Wall -std=c++11 -version -fPIC -fopenmp -o /tmp/ccYFEW34.s
+GNU C++11 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include
+ /usr/local/include
+ /opt/gcc-10.1.0/include
+ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed
+ /usr/include
+End of search list.
+GNU C++11 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 1f2ec42f78d222e0f6523dcc2163992d
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-std=c++11' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread'
+ as -v --64 -o CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o /tmp/ccYFEW34.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-43.base.el7_8.1
+COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-std=c++11' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread'
+Linking CXX executable cmTC_512d9
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_512d9.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc  -O2 -Wall -fPIC -std=c++11  -fopenmp -v    CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o  -o cmTC_512d9 -v 
+Using built-in specs.
+COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc
+COLLECT_LTO_WRAPPER=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.1.0 (GCC) 
+COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/
+Reading specs from /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/libgomp.spec
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-std=c++11' '-fopenmp' '-v' '-o' 'cmTC_512d9' '-v' '-mtune=generic' '-march=x86-64' '-pthread'
+ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2 -plugin /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so -plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxE5c56.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_512d9 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../.. CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o -lgomp -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-std=c++11' '-fopenmp' '-v' '-o' 'cmTC_512d9' '-v' '-mtune=generic' '-march=x86-64' '-pthread'
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_512d9/fast ]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_512d9.dir/build.make CMakeFiles/cmTC_512d9.dir/build]
+  ignore line: [gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o]
+  ignore line: [/opt/gcc-10.1.0/bin/gcc    -O2 -Wall -fPIC -std=c++11  -fopenmp -v   -o CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-std=c++11' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/cc1plus -quiet -v -D_GNU_SOURCE -D_REENTRANT /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o -O2 -Wall -std=c++11 -version -fPIC -fopenmp -o /tmp/ccYFEW34.s]
+  ignore line: [GNU C++11 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/gcc-10.1.0/include]
+  ignore line: [ /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++11 (GCC) version 10.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.1.0, GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version none]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 1f2ec42f78d222e0f6523dcc2163992d]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-std=c++11' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o /tmp/ccYFEW34.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-43.base.el7_8.1]
+  ignore line: [COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-std=c++11' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [Linking CXX executable cmTC_512d9]
+  ignore line: [/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_512d9.dir/link.txt --verbose=1]
+  ignore line: [/opt/gcc-10.1.0/bin/gcc  -O2 -Wall -fPIC -std=c++11  -fopenmp -v    CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o  -o cmTC_512d9 -v ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/gcc-10.1.0/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../gcc-10.1.0/configure --prefix=/opt/gcc-10.1.0 --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.1.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [Reading specs from /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64/libgomp.spec]
+  ignore line: [COLLECT_GCC_OPTIONS='-O2' '-Wall' '-fPIC' '-std=c++11' '-fopenmp' '-v' '-o' 'cmTC_512d9' '-v' '-mtune=generic' '-march=x86-64' '-pthread']
+  link line: [ /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2 -plugin /opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so -plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxE5c56.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_512d9 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../.. CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o -lgomp -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/gcc-10.1.0/libexec/gcc/x86_64-pc-linux-gnu/10.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccxE5c56.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_512d9] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtbegin.o] ==> ignore
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0]
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..] ==> dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..]
+    arg [CMakeFiles/cmTC_512d9.dir/OpenMPTryFlag.cpp.o] ==> ignore
+    arg [-lgomp] ==> lib [gomp]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0] ==> [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0]
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../lib64] ==> [/opt/gcc-10.1.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../..] ==> [/opt/gcc-10.1.0/lib]
+  implicit libs: [gomp;gcc;gcc_s;pthread;c;gcc;gcc_s]
+  implicit dirs: [/opt/gcc-10.1.0/lib/gcc/x86_64-pc-linux-gnu/10.1.0;/opt/gcc-10.1.0/lib64;/lib64;/usr/lib64;/opt/gcc-10.1.0/lib]
+  implicit fwks: []
+
+
+Determining if the function clock_gettime exists in the rt passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_275a9/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_275a9.dir/build.make CMakeFiles/cmTC_275a9.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_275a9.dir/CheckFunctionExists.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DCHECK_FUNCTION_EXISTS=clock_gettime   -o CMakeFiles/cmTC_275a9.dir/CheckFunctionExists.c.o   -c /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_275a9
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_275a9.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DCHECK_FUNCTION_EXISTS=clock_gettime    -rdynamic CMakeFiles/cmTC_275a9.dir/CheckFunctionExists.c.o  -o cmTC_275a9  -L/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/time.h -Wl,-rpath,/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/time.h -lrt 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file cxxabi.h exists passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_aa5c6/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_aa5c6.dir/build.make CMakeFiles/cmTC_aa5c6.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_aa5c6.dir/CheckIncludeFile.cxx.o
+/opt/gcc-10.1.0/bin/gcc    -fopenmp -O2 -Wall -fPIC -std=c++11  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_aa5c6.dir/CheckIncludeFile.cxx.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_aa5c6
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa5c6.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc  -fopenmp -O2 -Wall -fPIC -std=c++11  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32     -rdynamic CMakeFiles/cmTC_aa5c6.dir/CheckIncludeFile.cxx.o  -o cmTC_aa5c6 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the nanosleep exist passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c4979/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_c4979.dir/build.make CMakeFiles/cmTC_c4979.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c4979.dir/CheckSymbolExists.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_c4979.dir/CheckSymbolExists.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c4979
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4979.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32     -rdynamic CMakeFiles/cmTC_c4979.dir/CheckSymbolExists.c.o  -o cmTC_c4979 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+File /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef nanosleep
+  return ((int*)(&nanosleep))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the backtrace exist passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_80a7d/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_80a7d.dir/build.make CMakeFiles/cmTC_80a7d.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_80a7d.dir/CheckSymbolExists.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_80a7d.dir/CheckSymbolExists.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_80a7d
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80a7d.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32     -rdynamic CMakeFiles/cmTC_80a7d.dir/CheckSymbolExists.c.o  -o cmTC_80a7d 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+File /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <execinfo.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef backtrace
+  return ((int*)(&backtrace))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_e0f95/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_e0f95.dir/build.make CMakeFiles/cmTC_e0f95.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e0f95.dir/CheckIncludeFile.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_e0f95.dir/CheckIncludeFile.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e0f95
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0f95.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32     -rdynamic CMakeFiles/cmTC_e0f95.dir/CheckIncludeFile.c.o  -o cmTC_e0f95 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_90fcb/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_90fcb.dir/build.make CMakeFiles/cmTC_90fcb.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_90fcb.dir/CheckIncludeFile.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_90fcb.dir/CheckIncludeFile.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_90fcb
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90fcb.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32     -rdynamic CMakeFiles/cmTC_90fcb.dir/CheckIncludeFile.c.o  -o cmTC_90fcb 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_edf47/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_edf47.dir/build.make CMakeFiles/cmTC_edf47.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_edf47.dir/CheckIncludeFile.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_edf47.dir/CheckIncludeFile.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_edf47
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edf47.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32     -rdynamic CMakeFiles/cmTC_edf47.dir/CheckIncludeFile.c.o  -o cmTC_edf47 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_0e7cc/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_0e7cc.dir/build.make CMakeFiles/cmTC_0e7cc.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0e7cc.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_0e7cc.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTC_0e7cc
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e7cc.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32     -rdynamic CMakeFiles/cmTC_0e7cc.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTC_0e7cc 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_12a47/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_12a47.dir/build.make CMakeFiles/cmTC_12a47.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_12a47.dir/TestEndianess.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_12a47.dir/TestEndianess.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTC_12a47
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12a47.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32     -rdynamic CMakeFiles/cmTC_12a47.dir/TestEndianess.c.o  -o cmTC_12a47 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing C++ SOURCE FILE Test SUPPORT_MSSE2 succeeded with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_9cc6e/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_9cc6e.dir/build.make CMakeFiles/cmTC_9cc6e.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9cc6e.dir/src.cxx.o
+/opt/gcc-10.1.0/bin/gcc    -fopenmp -O2 -Wall -fPIC -std=c++11  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DSUPPORT_MSSE2 -fPIE   -msse2 -o CMakeFiles/cmTC_9cc6e.dir/src.cxx.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_9cc6e
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9cc6e.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc  -fopenmp -O2 -Wall -fPIC -std=c++11  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DSUPPORT_MSSE2    CMakeFiles/cmTC_9cc6e.dir/src.cxx.o  -o cmTC_9cc6e 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the include file execinfo.h exists passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_5a9b2/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_5a9b2.dir/build.make CMakeFiles/cmTC_5a9b2.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5a9b2.dir/CheckIncludeFile.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_5a9b2.dir/CheckIncludeFile.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5a9b2
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a9b2.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32     -rdynamic CMakeFiles/cmTC_5a9b2.dir/CheckIncludeFile.c.o  -o cmTC_5a9b2 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function getline exists passed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_ba97e/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_ba97e.dir/build.make CMakeFiles/cmTC_ba97e.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ba97e.dir/CheckFunctionExists.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DCHECK_FUNCTION_EXISTS=getline   -o CMakeFiles/cmTC_ba97e.dir/CheckFunctionExists.c.o   -c /N/u2/m/morahma/Softwares/cmake/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ba97e
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba97e.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DCHECK_FUNCTION_EXISTS=getline    CMakeFiles/cmTC_ba97e.dir/CheckFunctionExists.c.o  -o cmTC_ba97e 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+

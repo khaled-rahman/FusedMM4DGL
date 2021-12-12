@@ -22,9 +22,11 @@ in a format that is easy to load during the training.
 
 By default, the partition API assigns new IDs to the nodes and edges in the input graph to help locate
 nodes/edges during distributed training/inference. After assigning IDs, the partition API shuffles
-all node data and edge data accordingly. During the training, users just use the new node/edge IDs.
-However, the original IDs are still accessible through ``g.ndata['orig_id']`` and ``g.edata['orig_id']``,
-where ``g`` is a DistGraph object (see the section of DistGraph).
+all node data and edge data accordingly. After generating partitioned subgraphs, each subgraph is stored
+as a ``DGLGraph`` object. The original node/edge IDs before reshuffling are stored in the field of
+'orig_id' in the node/edge data of the subgraphs. The node data `dgl.NID` and the edge data `dgl.EID`
+of the subgraphs store new node/edge IDs of the full graph after nodes/edges reshuffle.
+During the training, users just use the new node/edge IDs.
 
 The partitioned results are stored in multiple files in the output directory. It always contains
 a JSON file called xxx.json, where xxx is the graph name provided to the partition API. The JSON file
@@ -52,7 +54,7 @@ the graph structure of the partition as well as some metadata on nodes and edges
             |-- graph.dgl
 
 Load balancing
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 
 When partitioning a graph, by default, Metis only balances the number of nodes in each partition.
 This can result in suboptimal configuration, depending on the task at hand. For example, in the case
@@ -77,9 +79,32 @@ the number of edges incident to the nodes of different types.
 The graph name will be used by :class:`dgl.distributed.DistGraph` to identify a distributed graph.
 A legal graph name should only contain alphabetic characters and underscores.
 
+ID mapping
+~~~~~~~~~~
+
+:func:`dgl.distributed.partition_graph` shuffles node IDs and edge IDs during the partitioning and shuffles
+node data and edge data accordingly. After training, we may need to save the computed node embeddings for
+any downstream tasks. Therefore, we need to reshuffle the saved node embeddings according to their original
+IDs.
+
+When `return_mapping=True`, :func:`dgl.distributed.partition_graph` returns the mappings between shuffled
+node/edge IDs and their original IDs. For a homogeneous graph, it returns two vectors. The first
+vector maps every shuffled node ID to its original ID; the second vector maps every shuffled edge ID to its
+original ID. For a heterogeneous graph, it returns two dictionaries of vectors. The first dictionary contains
+the mapping for each node type; the second dictionary contains the mapping for each edge type.
+
+.. code:: python
+
+    node_map, edge_map = dgl.distributed.partition_graph(g, 'graph_name', 4, '/tmp/test',
+                                                         balance_ntypes=g.ndata['train_mask'],
+                                                         return_mapping=True)
+    # Let's assume that node_emb is saved from the distributed training.
+    orig_node_emb = th.zeros(node_emb.shape, dtype=node_emb.dtype)
+    orig_node_emb[node_map] = node_emb
+
 
 7.1.1 Distributed partitioning
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For a large graph, DGL uses `ParMetis <http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview>`__ to partition
 a graph in a cluster of machines. This solution requires users to prepare data for ParMETIS and use a DGL script
@@ -88,7 +113,7 @@ a graph in a cluster of machines. This solution requires users to prepare data f
 **Note**: `convert_partition.py` uses the `pyarrow` package to load csv files. Please install `pyarrow`.
 
 ParMETIS Installation
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 ParMETIS requires METIS and GKLib. Please follow the instructions `here <https://github.com/KarypisLab/GKlib>`__
 to compile and install GKLib. For compiling and install METIS, please follow the instructions below to
@@ -122,7 +147,7 @@ Before running ParMETIS, we need to set two environment variables: `PATH` and `L
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/local/lib/
 
 Input format for ParMETIS
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The input graph for ParMETIS is stored in three files with the following names: `xxx_nodes.txt`,
 `xxx_edges.txt` and `xxx_stats.txt`, where `xxx` is a graph name.
@@ -196,7 +221,7 @@ separated by whitespace:
 * `num_node_weights` stores the number of node weights in the node file.
 
 Run ParMETIS and output formats
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ParMETIS contains a command called `pm_dglpart`, which loads the graph stored in the three
 files from the machine where `pm_dglpart` is invoked, distributes data to all machines in
@@ -245,7 +270,7 @@ processes to partition the graph named `xxx` into eight partitions (each process
     mpirun -np 4 pm_dglpart xxx 2
 
 Convert ParMETIS outputs to DGLGraph
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 DGL provides a script named `convert_partition.py`, located in the `tools` directory, to convert the data
 in the partition files into :class:`dgl.DGLGraph` objects and save them into files.
@@ -371,7 +396,7 @@ Below shows the demo code to construct the schema file.
         json.dump({'nid': nid_ranges, 'eid': eid_ranges}, outfile, indent=4)
 
 Construct node/edge features for a heterogeneous graph
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :class:`dgl.DGLGraph` output by `convert_partition.py` stores a heterogeneous graph partition
 as a homogeneous graph. Its node data contains a field called `orig_id` to store the node IDs

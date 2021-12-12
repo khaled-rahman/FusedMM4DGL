@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfusedmm.a  
+/usr/bin/ranlib libfusedmm.a

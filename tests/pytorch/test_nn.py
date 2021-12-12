@@ -1,3 +1,4 @@
+import io
 import torch as th
 import networkx as nx
 import dgl
@@ -8,8 +9,11 @@ import pytest
 from test_utils.graph_cases import get_cases, random_graph, random_bipartite, random_dglgraph
 from test_utils import parametrize_dtype
 from copy import deepcopy
+import pickle
 
 import scipy as sp
+
+tmp_buffer = io.BytesIO()
 
 def _AXWb(A, X, W, b):
     X = th.matmul(X, W)
@@ -20,11 +24,16 @@ def _AXWb(A, X, W, b):
 def test_graph_conv0(out_dim):
     g = dgl.DGLGraph(nx.path_graph(3)).to(F.ctx())
     ctx = F.ctx()
-    adj = g.adjacency_matrix(transpose=False, ctx=ctx)
+    adj = g.adjacency_matrix(transpose=True, ctx=ctx)
 
     conv = nn.GraphConv(5, out_dim, norm='none', bias=True)
     conv = conv.to(ctx)
     print(conv)
+
+    # test pickle
+    th.save(conv, tmp_buffer)
+
+
     # test#1: basic
     h0 = F.ones((3, 5))
     h1 = conv(g, h0)
@@ -72,7 +81,7 @@ def test_graph_conv0(out_dim):
 
 @parametrize_dtype
 @pytest.mark.parametrize('g', get_cases(['homo', 'bipartite'], exclude=['zero-degree', 'dglgraph']))
-@pytest.mark.parametrize('norm', ['none', 'both', 'right'])
+@pytest.mark.parametrize('norm', ['none', 'both', 'right', 'left'])
 @pytest.mark.parametrize('weight', [True, False])
 @pytest.mark.parametrize('bias', [True, False])
 @pytest.mark.parametrize('out_dim', [1, 2])
@@ -119,6 +128,10 @@ def test_graph_conv_e_weight(idtype, g, norm, weight, bias, out_dim):
 def test_graph_conv_e_weight_norm(idtype, g, norm, weight, bias, out_dim):
     g = g.astype(idtype).to(F.ctx())
     conv = nn.GraphConv(5, out_dim, norm=norm, weight=weight, bias=bias).to(F.ctx())
+
+    # test pickle
+    th.save(conv, tmp_buffer)
+
     ext_w = F.randn((5, out_dim)).to(F.ctx())
     nsrc = g.number_of_src_nodes()
     ndst = g.number_of_dst_nodes()
@@ -141,6 +154,10 @@ def test_graph_conv_bi(idtype, g, norm, weight, bias, out_dim):
     # Test a pair of tensor inputs
     g = g.astype(idtype).to(F.ctx())
     conv = nn.GraphConv(5, out_dim, norm=norm, weight=weight, bias=bias).to(F.ctx())
+    
+    # test pickle
+    th.save(conv, tmp_buffer)
+
     ext_w = F.randn((5, out_dim)).to(F.ctx())
     nsrc = g.number_of_src_nodes()
     ndst = g.number_of_dst_nodes()
@@ -169,12 +186,15 @@ def test_tagconv(out_dim):
     g = dgl.DGLGraph(nx.path_graph(3))
     g = g.to(F.ctx())
     ctx = F.ctx()
-    adj = g.adjacency_matrix(transpose=False, ctx=ctx)
+    adj = g.adjacency_matrix(transpose=True, ctx=ctx)
     norm = th.pow(g.in_degrees().float(), -0.5)
 
     conv = nn.TAGConv(5, out_dim, bias=True)
     conv = conv.to(ctx)
     print(conv)
+    
+    # test pickle
+    th.save(conv, tmp_buffer)
 
     # test#1: basic
     h0 = F.ones((3, 5))
@@ -230,6 +250,9 @@ def test_glob_att_pool():
     gap = nn.GlobalAttentionPooling(th.nn.Linear(5, 1), th.nn.Linear(5, 10))
     gap = gap.to(ctx)
     print(gap)
+
+    # test pickle
+    th.save(gap, tmp_buffer)
 
     # test#1: basic
     h0 = F.randn((g.number_of_nodes(), 5))
@@ -347,6 +370,10 @@ def test_rgcn(O):
     I = 10
 
     rgc_basis = nn.RelGraphConv(I, O, R, "basis", B).to(ctx)
+
+    # test pickle
+    th.save(rgc_basis, tmp_buffer)
+
     rgc_basis_low = nn.RelGraphConv(I, O, R, "basis", B, low_mem=True).to(ctx)
     rgc_basis_low.weight = rgc_basis.weight
     rgc_basis_low.w_comp = rgc_basis.w_comp
@@ -500,18 +527,27 @@ def test_rgcn_sorted(O):
 
 @parametrize_dtype
 @pytest.mark.parametrize('g', get_cases(['homo', 'block-bipartite'], exclude=['zero-degree']))
-@pytest.mark.parametrize('out_dim', [1, 2])
+@pytest.mark.parametrize('out_dim', [1, 5])
 @pytest.mark.parametrize('num_heads', [1, 4])
 def test_gat_conv(g, idtype, out_dim, num_heads):
     g = g.astype(idtype).to(F.ctx())
     ctx = F.ctx()
     gat = nn.GATConv(5, out_dim, num_heads)
-    feat = F.randn((g.number_of_nodes(), 5))
+    feat = F.randn((g.number_of_src_nodes(), 5))
     gat = gat.to(ctx)
     h = gat(g, feat)
-    assert h.shape == (g.number_of_nodes(), num_heads, out_dim)
+
+    # test pickle
+    th.save(gat, tmp_buffer)
+
+    assert h.shape == (g.number_of_dst_nodes(), num_heads, out_dim)
     _, a = gat(g, feat, get_attention=True)
     assert a.shape == (g.number_of_edges(), num_heads, 1)
+
+    # test residual connection
+    gat = nn.GATConv(5, out_dim, num_heads, residual=True)
+    gat = gat.to(ctx)
+    h = gat(g, feat)
 
 @parametrize_dtype
 @pytest.mark.parametrize('g', get_cases(['bipartite'], exclude=['zero-degree']))
@@ -534,8 +570,10 @@ def test_gat_conv_bi(g, idtype, out_dim, num_heads):
 def test_sage_conv(idtype, g, aggre_type):
     g = g.astype(idtype).to(F.ctx())
     sage = nn.SAGEConv(5, 10, aggre_type)
-    feat = F.randn((g.number_of_nodes(), 5))
+    feat = F.randn((g.number_of_src_nodes(), 5))
     sage = sage.to(F.ctx())
+    # test pickle
+    th.save(sage, tmp_buffer)
     h = sage(g, feat)
     assert h.shape[-1] == 10
 
@@ -583,6 +621,10 @@ def test_sgc_conv(g, idtype, out_dim):
     g = g.astype(idtype).to(ctx)
     # not cached
     sgc = nn.SGConv(5, out_dim, 3)
+
+    # test pickle
+    th.save(sgc, tmp_buffer)
+
     feat = F.randn((g.number_of_nodes(), 5))
     sgc = sgc.to(ctx)
 
@@ -605,6 +647,9 @@ def test_appnp_conv(g, idtype):
     appnp = nn.APPNPConv(10, 0.1)
     feat = F.randn((g.number_of_nodes(), 5))
     appnp = appnp.to(ctx)
+    
+    # test pickle
+    th.save(appnp, tmp_buffer)
 
     h = appnp(g, feat)
     assert h.shape[-1] == 5
@@ -619,10 +664,14 @@ def test_gin_conv(g, idtype, aggregator_type):
         th.nn.Linear(5, 12),
         aggregator_type
     )
-    feat = F.randn((g.number_of_nodes(), 5))
+    feat = F.randn((g.number_of_src_nodes(), 5))
     gin = gin.to(ctx)
     h = gin(g, feat)
-    assert h.shape == (g.number_of_nodes(), 12)
+
+    # test pickle
+    th.save(h, tmp_buffer)
+    
+    assert h.shape == (g.number_of_dst_nodes(), 12)
 
 @parametrize_dtype
 @pytest.mark.parametrize('g', get_cases(['bipartite'], exclude=['zero-degree']))
@@ -645,10 +694,10 @@ def test_agnn_conv(g, idtype):
     g = g.astype(idtype).to(F.ctx())
     ctx = F.ctx()
     agnn = nn.AGNNConv(1)
-    feat = F.randn((g.number_of_nodes(), 5))
+    feat = F.randn((g.number_of_src_nodes(), 5))
     agnn = agnn.to(ctx)
     h = agnn(g, feat)
-    assert h.shape == (g.number_of_nodes(), 5)
+    assert h.shape == (g.number_of_dst_nodes(), 5)
 
 @parametrize_dtype
 @pytest.mark.parametrize('g', get_cases(['bipartite'], exclude=['zero-degree']))
@@ -677,13 +726,30 @@ def test_gated_graph_conv(g, idtype):
     assert h.shape[-1] == 10
 
 @parametrize_dtype
+@pytest.mark.parametrize('g', get_cases(['homo'], exclude=['zero-degree']))
+def test_gated_graph_conv_one_etype(g, idtype):
+    ctx = F.ctx()
+    g = g.astype(idtype).to(ctx)
+    ggconv = nn.GatedGraphConv(5, 10, 5, 1)
+    etypes = th.zeros(g.number_of_edges())
+    feat = F.randn((g.number_of_nodes(), 5))
+    ggconv = ggconv.to(ctx)
+    etypes = etypes.to(ctx)
+
+    h = ggconv(g, feat, etypes)
+    h2 = ggconv(g, feat)
+    # current we only do shape check
+    assert F.allclose(h, h2)
+    assert h.shape[-1] == 10
+
+@parametrize_dtype
 @pytest.mark.parametrize('g', get_cases(['homo', 'block-bipartite'], exclude=['zero-degree']))
 def test_nn_conv(g, idtype):
     g = g.astype(idtype).to(F.ctx())
     ctx = F.ctx()
     edge_func = th.nn.Linear(4, 5 * 10)
     nnconv = nn.NNConv(5, 10, edge_func, 'mean')
-    feat = F.randn((g.number_of_nodes(), 5))
+    feat = F.randn((g.number_of_src_nodes(), 5))
     efeat = F.randn((g.number_of_edges(), 4))
     nnconv = nnconv.to(ctx)
     h = nnconv(g, feat, efeat)
@@ -740,7 +806,7 @@ def test_dense_graph_conv(norm_type, g, idtype, out_dim):
     g = g.astype(idtype).to(F.ctx())
     ctx = F.ctx()
     # TODO(minjie): enable the following option after #1385
-    adj = g.adjacency_matrix(transpose=False, ctx=ctx).to_dense()
+    adj = g.adjacency_matrix(transpose=True, ctx=ctx).to_dense()
     conv = nn.GraphConv(5, out_dim, norm=norm_type, bias=True)
     dense_conv = nn.DenseGraphConv(5, out_dim, norm=norm_type, bias=True)
     dense_conv.weight.data = conv.weight.data
@@ -758,11 +824,11 @@ def test_dense_graph_conv(norm_type, g, idtype, out_dim):
 def test_dense_sage_conv(g, idtype, out_dim):
     g = g.astype(idtype).to(F.ctx())
     ctx = F.ctx()
-    adj = g.adjacency_matrix(transpose=False, ctx=ctx).to_dense()
+    adj = g.adjacency_matrix(transpose=True, ctx=ctx).to_dense()
     sage = nn.SAGEConv(5, out_dim, 'gcn')
     dense_sage = nn.DenseSAGEConv(5, out_dim)
     dense_sage.fc.weight.data = sage.fc_neigh.weight.data
-    dense_sage.fc.bias.data = sage.fc_neigh.bias.data
+    dense_sage.fc.bias.data = sage.bias.data
     if len(g.ntypes) == 2:
         feat = (
             F.randn((g.number_of_src_nodes(), 5)),
@@ -784,9 +850,13 @@ def test_edge_conv(g, idtype, out_dim):
     ctx = F.ctx()
     edge_conv = nn.EdgeConv(5, out_dim).to(ctx)
     print(edge_conv)
-    h0 = F.randn((g.number_of_nodes(), 5))
+
+    # test pickle
+    th.save(edge_conv, tmp_buffer)
+    
+    h0 = F.randn((g.number_of_src_nodes(), 5))
     h1 = edge_conv(g, h0)
-    assert h1.shape == (g.number_of_nodes(), out_dim)
+    assert h1.shape == (g.number_of_dst_nodes(), out_dim)
 
 @parametrize_dtype
 @pytest.mark.parametrize('g', get_cases(['bipartite'], exclude=['zero-degree']))
@@ -809,10 +879,14 @@ def test_dotgat_conv(g, idtype, out_dim, num_heads):
     g = g.astype(idtype).to(F.ctx())
     ctx = F.ctx()
     dotgat = nn.DotGatConv(5, out_dim, num_heads)
-    feat = F.randn((g.number_of_nodes(), 5))
+    feat = F.randn((g.number_of_src_nodes(), 5))
     dotgat = dotgat.to(ctx)
+    
+    # test pickle
+    th.save(dotgat, tmp_buffer)
+    
     h = dotgat(g, feat)
-    assert h.shape == (g.number_of_nodes(), num_heads, out_dim)
+    assert h.shape == (g.number_of_dst_nodes(), num_heads, out_dim)
     _, a = dotgat(g, feat, get_attention=True)
     assert a.shape == (g.number_of_edges(), num_heads, 1)
 
@@ -837,7 +911,7 @@ def test_dense_cheb_conv(out_dim):
         ctx = F.ctx()
         g = dgl.DGLGraph(sp.sparse.random(100, 100, density=0.1), readonly=True)
         g = g.to(F.ctx())
-        adj = g.adjacency_matrix(transpose=False, ctx=ctx).to_dense()
+        adj = g.adjacency_matrix(transpose=True, ctx=ctx).to_dense()
         cheb = nn.ChebConv(5, out_dim, k, None)
         dense_cheb = nn.DenseChebConv(5, out_dim, k)
         #for i in range(len(cheb.fc)):
@@ -919,6 +993,7 @@ def test_atomic_conv(g, idtype):
     dist = F.randn((g.number_of_edges(), 1))
 
     h = aconv(g, feat, dist)
+
     # current we only do shape check
     assert h.shape[-1] == 4
 
@@ -968,6 +1043,10 @@ def test_hetero_conv(agg, idtype):
         'sells': nn.GraphConv(3, 4, allow_zero_in_degree=True)},
         agg)
     conv = conv.to(F.ctx())
+
+    # test pickle
+    th.save(conv, tmp_buffer)
+
     uf = F.randn((4, 2))
     gf = F.randn((4, 4))
     sf = F.randn((2, 3))
@@ -1051,6 +1130,7 @@ if __name__ == '__main__':
     test_gin_conv()
     test_agnn_conv()
     test_gated_graph_conv()
+    test_gated_graph_conv_one_etype()
     test_nn_conv()
     test_gmm_conv()
     test_dotgat_conv()

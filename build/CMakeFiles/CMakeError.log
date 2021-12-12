@@ -1,0 +1,33 @@
+Determining if the fopen64 exist failed with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_405c9/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_405c9.dir/build.make CMakeFiles/cmTC_405c9.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_405c9.dir/CheckSymbolExists.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32    -o CMakeFiles/cmTC_405c9.dir/CheckSymbolExists.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘fopen64’ undeclared (first use in this function); did you mean ‘fopen’?
+    8 |   return ((int*)(&fopen64))[argc];
+      |                   ^~~~~~~
+      |                   fopen
+/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_405c9.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_405c9/fast] Error 2
+
+File /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fopen64
+  return ((int*)(&fopen64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

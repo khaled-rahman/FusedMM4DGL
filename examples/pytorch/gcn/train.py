@@ -1,18 +1,16 @@
 import argparse
-import time
+import time,sys
 import numpy as np
-import networkx as nx
 import torch
-import torch.nn as nn
 import torch.nn.functional as F
 import dgl
-from dgl.data import register_data_args
+import pdb
 from dgl.data import CoraGraphDataset, CiteseerGraphDataset, PubmedGraphDataset
-
+import traceback
 from gcn import GCN
 #from gcn_mp import GCN
 #from gcn_spmv import GCN
-
+import traceback
 
 def evaluate(model, features, labels, mask):
     model.eval()
@@ -101,6 +99,7 @@ def main(args):
         if epoch >= 3:
             t0 = time.time()
         # forward
+        pdb.set_trace()
         logits = model(features)
         loss = loss_fcn(logits[train_mask], labels[train_mask])
 
@@ -123,7 +122,8 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='GCN')
-    register_data_args(parser)
+    parser.add_argument("--dataset", type=str, default="cora",
+                        help="Dataset name ('cora', 'citeseer', 'pubmed').")
     parser.add_argument("--dropout", type=float, default=0.5,
                         help="dropout probability")
     parser.add_argument("--gpu", type=int, default=-1,
@@ -143,5 +143,5 @@ if __name__ == '__main__':
     parser.set_defaults(self_loop=False)
     args = parser.parse_args()
     print(args)
-
     main(args)
+    
