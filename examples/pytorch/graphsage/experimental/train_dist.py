@@ -155,9 +155,35 @@ def evaluate(model, g, inputs, labels, val_nid, test_nid, batch_size, device):
     model.train()
     return compute_acc(pred[val_nid], labels[val_nid]), compute_acc(pred[test_nid], labels[test_nid])
 
+def pad_data(nids):
+    """
+    In distributed traning scenario, we need to make sure that each worker has same number of
+    batches. Otherwise the synchronization(barrier) is called diffirent times, which results in
+    the worker with more batches hangs up.
+
+    This function pads the nids to the same size for all workers, by repeating the head ids till
+    the maximum size among all workers.
+    """
+    import torch.distributed as dist
+    num_nodes = th.tensor(nids.numel())
+    dist.all_reduce(num_nodes, dist.ReduceOp.MAX)
+    max_num_nodes = int(num_nodes)
+    nids_length = nids.shape[0]
+    if max_num_nodes > nids_length:
+        pad_size = max_num_nodes % nids_length
+        repeat_size = max_num_nodes // nids_length
+        new_nids = th.cat([nids for _ in repeat_size] + [nids[:pad_size]], axis=0)
+        print("Pad nids from {} to {}".format(nids_length, max_num_nodes))
+    else:
+        new_nids = nids
+    assert new_nids.shape[0] == max_num_nodes
+    return new_nids
+
+
 def run(args, device, data):
     # Unpack data
     train_nid, val_nid, test_nid, in_feats, n_classes, g = data
+    train_nid = pad_data(train_nid)
     # Create sampler
     sampler = NeighborSampler(g, [int(fanout) for fanout in args.fan_out.split(',')],
                               dgl.distributed.sample_neighbors, device)
@@ -279,7 +305,7 @@ def main(args):
     if args.num_gpus == -1:
         device = th.device('cpu')
     else:
-        device = th.device('cuda:'+str(g.rank() % args.num_gpus))
+        device = th.device('cuda:'+str(args.local_rank))
     labels = g.ndata['labels'][np.arange(g.number_of_nodes())]
     n_classes = len(th.unique(labels[th.logical_not(th.isnan(labels))]))
     print('#labels:', n_classes)

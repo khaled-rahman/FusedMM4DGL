@@ -345,6 +345,9 @@ OpenMP_pthread_LIBRARY:FILEPATH=/lib64/libpthread.so
 //enable PCRE support
 PCRE:BOOL=OFF
 
+//Clean LIBXSMM build cache at every build
+REBUILD_LIBXSMM:STRING=OFF
+
 //Build with AVX optimization
 USE_AVX:STRING=ON
 
@@ -356,6 +359,9 @@ USE_CUDA:STRING=OFF
 
 //Build with C++14 if the compiler supports it
 USE_CXX14_IF_AVAILABLE:BOOL=OFF
+
+//Build with epoll for socket communicator
+USE_EPOLL:STRING=OFF
 
 //Build with fp16 support to enable mixed precision training
 USE_FP16:STRING=OFF
@@ -385,7 +391,7 @@ USE_TVM:STRING=OFF
 dgl_BINARY_DIR:STATIC=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build
 
 //Dependencies for the target
-dgl_LIB_DEPENDS:STATIC=general;dl;general;dmlc;general;metis;general;-L/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/third_party/libxsmm/lib/;general;xsmm;general;fusedmm;general;rt;
+dgl_LIB_DEPENDS:STATIC=general;dl;general;dmlc;general;metis;general;-L/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/third_party/libxsmm/lib/;general;xsmm;general;tensorpipe;general;fusedmm;general;rt;
 
 //Value Computed by CMake
 dgl_SOURCE_DIR:STATIC=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl
@@ -551,7 +557,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -603,11 +609,11 @@ DMLC_NANOSLEEP_PRESENT:INTERNAL=1
 //Details about finding Backtrace
 FIND_PACKAGE_MESSAGE_DETAILS_Backtrace:INTERNAL=[/usr/include][v()]
 //Details about finding OpenMP
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v4.5()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v()]
 //Details about finding OpenMP_C
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][v4.5()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][v()]
 //Details about finding OpenMP_CXX
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][v4.5()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][v()]
 //Result of TRY_COMPILE
 HAVE_BIG_ENDIAN:INTERNAL=TRUE
 //Have library rt

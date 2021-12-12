@@ -57,15 +57,30 @@ include src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/flags.make
 
+src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/fusedMM.c.o: src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/flags.make
+src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/fusedMM.c.o: ../src/array/cpu/FusedMM/fusedMM.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/fusedMM.c.o"
+	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/src/array/cpu/FusedMM && /opt/gcc-10.1.0/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fusedmm.dir/fusedMM.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/FusedMM/fusedMM.c
+
+src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/fusedMM.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fusedmm.dir/fusedMM.c.i"
+	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/src/array/cpu/FusedMM && /opt/gcc-10.1.0/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/FusedMM/fusedMM.c > CMakeFiles/fusedmm.dir/fusedMM.c.i
+
+src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/fusedMM.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fusedmm.dir/fusedMM.c.s"
+	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/src/array/cpu/FusedMM && /opt/gcc-10.1.0/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/FusedMM/fusedMM.c -o CMakeFiles/fusedmm.dir/fusedMM.c.s
+
 # Object files for target fusedmm
-fusedmm_OBJECTS =
+fusedmm_OBJECTS = \
+"CMakeFiles/fusedmm.dir/fusedMM.c.o"
 
 # External object files for target fusedmm
 fusedmm_EXTERNAL_OBJECTS =
 
+src/array/cpu/FusedMM/libfusedmm.a: src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/fusedMM.c.o
 src/array/cpu/FusedMM/libfusedmm.a: src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/build.make
 src/array/cpu/FusedMM/libfusedmm.a: src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX static library libfusedmm.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libfusedmm.a"
 	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/src/array/cpu/FusedMM && $(CMAKE_COMMAND) -P CMakeFiles/fusedmm.dir/cmake_clean_target.cmake
 	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/src/array/cpu/FusedMM && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fusedmm.dir/link.txt --verbose=$(VERBOSE)
 

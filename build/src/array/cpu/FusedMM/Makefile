@@ -171,6 +171,33 @@ fusedmm/fast:
 	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build && $(MAKE) -f src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/build.make src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/build
 .PHONY : fusedmm/fast
 
+fusedMM.o: fusedMM.c.o
+
+.PHONY : fusedMM.o
+
+# target to build an object file
+fusedMM.c.o:
+	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build && $(MAKE) -f src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/build.make src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/fusedMM.c.o
+.PHONY : fusedMM.c.o
+
+fusedMM.i: fusedMM.c.i
+
+.PHONY : fusedMM.i
+
+# target to preprocess a source file
+fusedMM.c.i:
+	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build && $(MAKE) -f src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/build.make src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/fusedMM.c.i
+.PHONY : fusedMM.c.i
+
+fusedMM.s: fusedMM.c.s
+
+.PHONY : fusedMM.s
+
+# target to generate assembly for a file
+fusedMM.c.s:
+	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build && $(MAKE) -f src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/build.make src/array/cpu/FusedMM/CMakeFiles/fusedmm.dir/fusedMM.c.s
+.PHONY : fusedMM.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -184,6 +211,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fusedmm"
+	@echo "... fusedMM.o"
+	@echo "... fusedMM.i"
+	@echo "... fusedMM.s"
 .PHONY : help
 
 

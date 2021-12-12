@@ -5,7 +5,6 @@
  *     */
 #include "./fusedmmh.h"
 #include <dgl/array.h>
-#include "./FusedMM/fusedMM.h"
 
 
 namespace dgl {

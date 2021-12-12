@@ -1,5 +1,5 @@
-#ifndef DGL_ARRAY_CPU_SDDMMSPMM_H_
-#define DGL_ARRAY_CPU_SDDMMSPMM_H_
+#ifndef DGL_ARRAY_CPU_FUSEDMMH_H_
+#define DGL_ARRAY_CPU_FUSEDMMH_H_
 #include <dgl/array.h>
 #include <dgl/bcast.h>
 #include <math.h>
@@ -8,10 +8,8 @@
 #include "../selector.h"
 #include "sddmm.h"
 //#include "./FusedMM/kernels/include/kernels.h"
-#define SOP_UDEF_IMPL 1
-#define ROP_UDEF_IMPL 1
-#define VSC_UDEF_IMPL 1
 #include "./FusedMM/fusedMM.h"
+//#include "fusedMM.h"
 #define SM_TABLE_SIZE 2048
 #define SM_BOUND 5.0
 #define SM_RESOLUTION SM_TABLE_SIZE/(2.0 * SM_BOUND)
@@ -50,29 +48,11 @@ int SOP_UDEF_FUNC(VALUETYPE val, VALUETYPE &out)
    out = 1.0 - ufast_SM(val);
    return FUSEDMM_SUCCESS_RETURN;
 }
-int ROP_UDEF_FUNC(INDEXTYPE lhs_dim, const VALUETYPE *lhs, INDEXTYPE rhs_dim,
-      const VALUETYPE *rhs, VALUETYPE &out)
-{
-   out = 0.0;
-   for (INDEXTYPE i = 0; i < rhs_dim; i += 1)
-   {
-      out += rhs[i] * rhs[i];
-   }
-   return FUSEDMM_SUCCESS_RETURN;
-}
+
 VALUETYPE scale(VALUETYPE v){
         if(v > SM_BOUND) return SM_BOUND;
         else if(v < -SM_BOUND) return -SM_BOUND;
         return v;
-}
-int VSC_UDEF_FUNC(INDEXTYPE rhs_dim, const VALUETYPE *rhs, VALUETYPE scal,
-      INDEXTYPE out_dim, VALUETYPE *out)
-{
-   for (INDEXTYPE i = 0; i < rhs_dim; i += 1)
-   {
-      out[i] = scale(scal * rhs[i]);
-   }
-   return FUSEDMM_SUCCESS_RETURN;
 }
 
 namespace dgl {

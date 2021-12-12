@@ -99,7 +99,7 @@ def main(args):
         if epoch >= 3:
             t0 = time.time()
         # forward
-        pdb.set_trace()
+        # pdb.set_trace()
         logits = model(features)
         loss = loss_fcn(logits[train_mask], labels[train_mask])
 
