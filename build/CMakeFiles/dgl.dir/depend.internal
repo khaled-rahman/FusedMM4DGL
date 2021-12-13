@@ -242,6 +242,7 @@ CMakeFiles/dgl.dir/src/array/cpu/array_op_impl.cc.o
  ../include/dgl/graph_serializer.h
  ../include/dgl/runtime/c_runtime_api.h
  ../include/dgl/runtime/ndarray.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
  ../include/dgl/runtime/smart_ptr_serializer.h
@@ -255,6 +256,7 @@ CMakeFiles/dgl.dir/src/array/cpu/array_op_impl.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/arith.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/array_op_impl.cc
@@ -278,6 +280,7 @@ CMakeFiles/dgl.dir/src/array/cpu/array_pack.cc.o
  ../include/dgl/./runtime/smart_ptr_serializer.h
  ../include/dgl/array.h
  ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -288,6 +291,7 @@ CMakeFiles/dgl.dir/src/array/cpu/array_pack.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/array_pack.cc
  third_party/dmlc-core/include/dmlc/build_config.h
@@ -342,6 +346,7 @@ CMakeFiles/dgl.dir/src/array/cpu/array_scatter.cc.o
  ../include/dgl/./runtime/smart_ptr_serializer.h
  ../include/dgl/array.h
  ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -352,6 +357,7 @@ CMakeFiles/dgl.dir/src/array/cpu/array_scatter.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/array_scatter.cc
  third_party/dmlc-core/include/dmlc/build_config.h
@@ -553,6 +559,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_get_data.cc.o
  ../include/dgl/runtime/module.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
@@ -564,6 +571,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_get_data.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/phmap/parallel_hashmap/phmap.h
  ../third_party/phmap/parallel_hashmap/phmap_base.h
@@ -599,6 +607,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_mm.cc.o
  ../include/dgl/runtime/module.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
@@ -610,6 +619,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_mm.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/phmap/parallel_hashmap/phmap.h
  ../third_party/phmap/parallel_hashmap/phmap_base.h
@@ -686,6 +696,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_sort.cc.o
  ../include/dgl/./runtime/smart_ptr_serializer.h
  ../include/dgl/array.h
  ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -696,6 +707,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_sort.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/csr_sort.cc
  third_party/dmlc-core/include/dmlc/build_config.h
@@ -723,6 +735,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_sum.cc.o
  ../include/dgl/runtime/module.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
@@ -734,6 +747,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_sum.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/phmap/parallel_hashmap/phmap.h
  ../third_party/phmap/parallel_hashmap/phmap_base.h
@@ -796,6 +810,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_union.cc.o
  ../include/dgl/./runtime/smart_ptr_serializer.h
  ../include/dgl/array.h
  ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -806,6 +821,7 @@ CMakeFiles/dgl.dir/src/array/cpu/csr_union.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/csr_union.cc
  third_party/dmlc-core/include/dmlc/build_config.h
@@ -829,6 +845,7 @@ CMakeFiles/dgl.dir/src/array/cpu/fusedmmc.cc.o
  ../include/dgl/array.h
  ../include/dgl/bcast.h
  ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -839,6 +856,7 @@ CMakeFiles/dgl.dir/src/array/cpu/fusedmmc.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/././FusedMM/fusedMM.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/./fusedmmh.h
@@ -865,6 +883,7 @@ CMakeFiles/dgl.dir/src/array/cpu/rowwise_sampling.cc.o
  ../include/dgl/array.h
  ../include/dgl/graph_serializer.h
  ../include/dgl/random.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -875,6 +894,7 @@ CMakeFiles/dgl.dir/src/array/cpu/rowwise_sampling.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/dmlc-core/include/dmlc/thread_local.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/./rowwise_pick.h
@@ -899,6 +919,7 @@ CMakeFiles/dgl.dir/src/array/cpu/rowwise_topk.cc.o
  ../include/dgl/./runtime/smart_ptr_serializer.h
  ../include/dgl/array.h
  ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -909,6 +930,7 @@ CMakeFiles/dgl.dir/src/array/cpu/rowwise_topk.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/./rowwise_pick.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/rowwise_topk.cc
@@ -933,6 +955,7 @@ CMakeFiles/dgl.dir/src/array/cpu/sddmm.cc.o
  ../include/dgl/array.h
  ../include/dgl/bcast.h
  ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -943,6 +966,7 @@ CMakeFiles/dgl.dir/src/array/cpu/sddmm.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/./sddmm.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/sddmm.cc
@@ -965,8 +989,13 @@ CMakeFiles/dgl.dir/src/array/cpu/segment_reduce.cc.o
  ../include/dgl/./runtime/shared_mem.h
  ../include/dgl/./runtime/smart_ptr_serializer.h
  ../include/dgl/array.h
+ ../include/dgl/aten/spmat.h
+ ../include/dgl/aten/types.h
+ ../include/dgl/base_heterograph.h
  ../include/dgl/bcast.h
+ ../include/dgl/graph_interface.h
  ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -977,6 +1006,7 @@ CMakeFiles/dgl.dir/src/array/cpu/segment_reduce.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/./segment_reduce.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/./spmm_binary_ops.h
@@ -1002,6 +1032,7 @@ CMakeFiles/dgl.dir/src/array/cpu/spmat_op_impl_coo.cc.o
  ../include/dgl/runtime/module.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
@@ -1052,6 +1083,7 @@ CMakeFiles/dgl.dir/src/array/cpu/spmat_op_impl_csr.cc.o
  ../include/dgl/runtime/module.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
@@ -1063,6 +1095,7 @@ CMakeFiles/dgl.dir/src/array/cpu/spmat_op_impl_csr.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/phmap/parallel_hashmap/phmap.h
  ../third_party/phmap/parallel_hashmap/phmap_base.h
@@ -1094,6 +1127,7 @@ CMakeFiles/dgl.dir/src/array/cpu/spmm.cc.o
  ../include/dgl/array.h
  ../include/dgl/bcast.h
  ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/intel/cpu_support.h
  ../include/intel/meta_utils.h
  ../third_party/dlpack/include/dlpack/dlpack.h
@@ -1737,6 +1771,7 @@ CMakeFiles/dgl.dir/src/graph/graph_op.cc.o
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/object.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
@@ -1751,6 +1786,7 @@ CMakeFiles/dgl.dir/src/graph/graph_op.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/c_api_common.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/graph_op.cc
@@ -1871,10 +1907,12 @@ CMakeFiles/dgl.dir/src/graph/heterograph_capi.cc.o
  ../include/dgl/immutable_graph.h
  ../include/dgl/lazy.h
  ../include/dgl/packed_func_ext.h
+ ../include/dgl/runtime/c_runtime_api.h
  ../include/dgl/runtime/container.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/object.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
@@ -1890,6 +1928,7 @@ CMakeFiles/dgl.dir/src/graph/heterograph_capi.cc.o
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
  ../third_party/dmlc-core/include/dmlc/memory_io.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/dmlc-core/include/dmlc/type_traits.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/c_api_common.h
@@ -2031,6 +2070,7 @@ CMakeFiles/dgl.dir/src/graph/network.cc.o
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/object.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
  ../include/dgl/runtime/smart_ptr_serializer.h
@@ -2044,6 +2084,7 @@ CMakeFiles/dgl.dir/src/graph/network.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/./network.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/network.cc
@@ -2052,6 +2093,7 @@ CMakeFiles/dgl.dir/src/graph/network.cc.o
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/msg_queue.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_communicator.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/tcp_socket.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/semaphore_wrapper.h
  third_party/dmlc-core/include/dmlc/build_config.h
 CMakeFiles/dgl.dir/src/graph/nodeflow.cc.o
  ../include/dgl/./aten/./array_ops.h
@@ -2187,6 +2229,7 @@ CMakeFiles/dgl.dir/src/graph/sampler.cc.o
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/object.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
@@ -2326,6 +2369,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/neighbor/neighbor.cc.o
  ../include/dgl/./runtime/object.h
  ../include/dgl/./runtime/packed_func.h
  ../include/dgl/array.h
+ ../include/dgl/aten/macro.h
  ../include/dgl/aten/spmat.h
  ../include/dgl/aten/types.h
  ../include/dgl/base_heterograph.h
@@ -2468,6 +2512,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec_cpu.cc.o
  ../include/dgl/graph_interface.h
  ../include/dgl/graph_serializer.h
  ../include/dgl/random.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -2478,6 +2523,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec_cpu.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/dmlc-core/include/dmlc/thread_local.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/randomwalks/metapath_randomwalk.h
@@ -2498,7 +2544,6 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.o
  ../include/dgl/./aten/macro.h
  ../include/dgl/./aten/spmat.h
  ../include/dgl/./aten/types.h
- ../include/dgl/./runtime/c_runtime_api.h
  ../include/dgl/./runtime/ndarray.h
  ../include/dgl/./runtime/object.h
  ../include/dgl/./runtime/serializer.h
@@ -2511,6 +2556,12 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.o
  ../include/dgl/graph_interface.h
  ../include/dgl/graph_serializer.h
  ../include/dgl/random.h
+ ../include/dgl/runtime/c_runtime_api.h
+ ../include/dgl/runtime/device_api.h
+ ../include/dgl/runtime/module.h
+ ../include/dgl/runtime/ndarray.h
+ ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -2521,6 +2572,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.o
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/dmlc-core/include/dmlc/thread_local.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/randomwalks/metapath_randomwalk.h
@@ -2552,6 +2604,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc
  ../include/dgl/graph_interface.h
  ../include/dgl/graph_serializer.h
  ../include/dgl/random.h
+ ../include/dgl/runtime/parallel_for.h
  ../third_party/dlpack/include/dlpack/dlpack.h
  ../third_party/dmlc-core/include/dmlc/./base.h
  ../third_party/dmlc-core/include/dmlc/./endian.h
@@ -2562,6 +2615,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc
  ../third_party/dmlc-core/include/dmlc/build_config_default.h
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/dmlc-core/include/dmlc/thread_local.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/randomwalks/metapath_randomwalk.h
@@ -2979,6 +3033,7 @@ CMakeFiles/dgl.dir/src/graph/transform/compact.cc.o
  ../include/dgl/graph_serializer.h
  ../include/dgl/lazy.h
  ../include/dgl/packed_func_ext.h
+ ../include/dgl/runtime/container.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/object.h
  ../include/dgl/runtime/packed_func.h
@@ -3008,6 +3063,7 @@ CMakeFiles/dgl.dir/src/graph/transform/compact.cc.o
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/array_utils.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/c_api_common.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/compact.cc
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/compact.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/unit_graph.h
  third_party/dmlc-core/include/dmlc/build_config.h
 CMakeFiles/dgl.dir/src/graph/transform/cpu/knn.cc.o
@@ -3032,6 +3088,7 @@ CMakeFiles/dgl.dir/src/graph/transform/cpu/knn.cc.o
  ../include/dgl/runtime/module.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
@@ -3226,6 +3283,7 @@ CMakeFiles/dgl.dir/src/graph/transform/partition_hetero.cc.o
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/object.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
@@ -3261,6 +3319,7 @@ CMakeFiles/dgl.dir/src/graph/transform/partition_hetero.cc.o
  ../third_party/dmlc-core/include/dmlc/io.h
  ../third_party/dmlc-core/include/dmlc/logging.h
  ../third_party/dmlc-core/include/dmlc/memory_io.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/dmlc-core/include/dmlc/type_traits.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/c_api_common.h
@@ -3556,607 +3615,6 @@ CMakeFiles/dgl.dir/src/graph/unit_graph.cc.o
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/./unit_graph.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/unit_graph.cc
  third_party/dmlc-core/include/dmlc/build_config.h
-CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.o
- ../include/dgl/./aten/./array_ops.h
- ../include/dgl/./aten/./macro.h
- ../include/dgl/./aten/./spmat.h
- ../include/dgl/./aten/array_ops.h
- ../include/dgl/./aten/coo.h
- ../include/dgl/./aten/csr.h
- ../include/dgl/./aten/macro.h
- ../include/dgl/./aten/spmat.h
- ../include/dgl/./aten/types.h
- ../include/dgl/./runtime/c_runtime_api.h
- ../include/dgl/./runtime/container.h
- ../include/dgl/./runtime/module.h
- ../include/dgl/./runtime/ndarray.h
- ../include/dgl/./runtime/object.h
- ../include/dgl/./runtime/packed_func.h
- ../include/dgl/array.h
- ../include/dgl/aten/./types.h
- ../include/dgl/aten/spmat.h
- ../include/dgl/aten/types.h
- ../include/dgl/base_heterograph.h
- ../include/dgl/graph_interface.h
- ../include/dgl/graph_serializer.h
- ../include/dgl/immutable_graph.h
- ../include/dgl/lazy.h
- ../include/dgl/packed_func_ext.h
- ../include/dgl/runtime/c_runtime_api.h
- ../include/dgl/runtime/ndarray.h
- ../include/dgl/runtime/object.h
- ../include/dgl/runtime/packed_func.h
- ../include/dgl/runtime/registry.h
- ../include/dgl/runtime/serializer.h
- ../include/dgl/runtime/shared_mem.h
- ../include/dgl/runtime/smart_ptr_serializer.h
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/././endian.h
- ../third_party/dmlc-core/include/dmlc/././io.h
- ../third_party/dmlc-core/include/dmlc/././type_traits.h
- ../third_party/dmlc-core/include/dmlc/./logging.h
- ../third_party/dmlc-core/include/dmlc/./serializer.h
- ../third_party/dmlc-core/include/dmlc/io.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/serializer.h
- ../third_party/dmlc-core/include/dmlc/type_traits.h
- ../third_party/minigun/minigun/minigun/./base.h
- ../third_party/minigun/minigun/minigun/csr.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/check.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/c_api_common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/unit_graph.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/././binary_reduce_common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./binary_reduce.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./binary_reduce_impl_decl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./csr_interface.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./utils.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/binary_reduce.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_max.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_min.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_none.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_prod.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_sum.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.o
- ../include/dgl/./aten/./array_ops.h
- ../include/dgl/./aten/./macro.h
- ../include/dgl/./aten/./spmat.h
- ../include/dgl/./aten/./types.h
- ../include/dgl/./aten/array_ops.h
- ../include/dgl/./aten/coo.h
- ../include/dgl/./aten/csr.h
- ../include/dgl/./aten/macro.h
- ../include/dgl/./aten/spmat.h
- ../include/dgl/./aten/types.h
- ../include/dgl/./runtime/ndarray.h
- ../include/dgl/./runtime/object.h
- ../include/dgl/array.h
- ../include/dgl/graph_serializer.h
- ../include/dgl/runtime/c_runtime_api.h
- ../include/dgl/runtime/device_api.h
- ../include/dgl/runtime/module.h
- ../include/dgl/runtime/ndarray.h
- ../include/dgl/runtime/packed_func.h
- ../include/dgl/runtime/serializer.h
- ../include/dgl/runtime/shared_mem.h
- ../include/dgl/runtime/smart_ptr_serializer.h
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/./endian.h
- ../third_party/dmlc-core/include/dmlc/./io.h
- ../third_party/dmlc-core/include/dmlc/./logging.h
- ../third_party/dmlc-core/include/dmlc/./serializer.h
- ../third_party/dmlc-core/include/dmlc/./type_traits.h
- ../third_party/dmlc-core/include/dmlc/io.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/dmlc-core/include/dmlc/serializer.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./././common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/././binary_reduce_common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./binary_reduce.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./binary_reduce_impl_decl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./csr_interface.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./utils.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_impl.cc
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/csr_interface.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/cuda/cuda_common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/workspace_pool.h
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_max.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_min.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_none.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_prod.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.o
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/omp.h
- ../third_party/minigun/minigun/minigun/./././cuda/cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././advance.h
- ../third_party/minigun/minigun/minigun/././base.h
- ../third_party/minigun/minigun/minigun/././cpu/advance.h
- ../third_party/minigun/minigun/minigun/././cuda/./advance_all.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./advance_lb.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./cuda_common.cuh
- ../third_party/minigun/minigun/minigun/././cuda/./tuning.h
- ../third_party/minigun/minigun/minigun/././cuda/advance.cuh
- ../third_party/minigun/minigun/minigun/././mem.h
- ../third_party/minigun/minigun/minigun/./advance.h
- ../third_party/minigun/minigun/minigun/./csr.h
- ../third_party/minigun/minigun/minigun/minigun.h
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/context.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_merge.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_reduce.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/cta_search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/intrinsics.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_scan.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/kernel_sortedsearch.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_box.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/launch_params.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/loadstore.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/memory.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/meta.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/operators.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/search.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/transform.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/tuple.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/types.hxx
- ../third_party/minigun/third_party/moderngpu/src/moderngpu/util.hxx
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/././functor.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./backward_binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/./binary_reduce_impl.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_sum.cc
-CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.o
- ../include/dgl/./aten/./array_ops.h
- ../include/dgl/./aten/./macro.h
- ../include/dgl/./aten/./spmat.h
- ../include/dgl/./aten/./types.h
- ../include/dgl/./aten/array_ops.h
- ../include/dgl/./aten/coo.h
- ../include/dgl/./aten/csr.h
- ../include/dgl/./aten/macro.h
- ../include/dgl/./aten/spmat.h
- ../include/dgl/./aten/types.h
- ../include/dgl/./runtime/ndarray.h
- ../include/dgl/./runtime/object.h
- ../include/dgl/array.h
- ../include/dgl/graph_serializer.h
- ../include/dgl/runtime/c_runtime_api.h
- ../include/dgl/runtime/ndarray.h
- ../include/dgl/runtime/serializer.h
- ../include/dgl/runtime/shared_mem.h
- ../include/dgl/runtime/smart_ptr_serializer.h
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/./endian.h
- ../third_party/dmlc-core/include/dmlc/./io.h
- ../third_party/dmlc-core/include/dmlc/./logging.h
- ../third_party/dmlc-core/include/dmlc/./serializer.h
- ../third_party/dmlc-core/include/dmlc/./type_traits.h
- ../third_party/dmlc-core/include/dmlc/io.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/serializer.h
- ../third_party/minigun/minigun/minigun/./base.h
- ../third_party/minigun/minigun/minigun/csr.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/utils.cc
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/utils.h
-CMakeFiles/dgl.dir/src/kernel/utils.cc.o
- ../include/dgl/./aten/./array_ops.h
- ../include/dgl/./aten/./macro.h
- ../include/dgl/./aten/./spmat.h
- ../include/dgl/./aten/./types.h
- ../include/dgl/./aten/array_ops.h
- ../include/dgl/./aten/coo.h
- ../include/dgl/./aten/csr.h
- ../include/dgl/./aten/macro.h
- ../include/dgl/./aten/spmat.h
- ../include/dgl/./aten/types.h
- ../include/dgl/./runtime/ndarray.h
- ../include/dgl/./runtime/object.h
- ../include/dgl/array.h
- ../include/dgl/graph_serializer.h
- ../include/dgl/runtime/c_runtime_api.h
- ../include/dgl/runtime/ndarray.h
- ../include/dgl/runtime/serializer.h
- ../include/dgl/runtime/shared_mem.h
- ../include/dgl/runtime/smart_ptr_serializer.h
- ../third_party/dlpack/include/dlpack/dlpack.h
- ../third_party/dmlc-core/include/dmlc/./endian.h
- ../third_party/dmlc-core/include/dmlc/./io.h
- ../third_party/dmlc-core/include/dmlc/./logging.h
- ../third_party/dmlc-core/include/dmlc/./serializer.h
- ../third_party/dmlc-core/include/dmlc/./type_traits.h
- ../third_party/dmlc-core/include/dmlc/io.h
- ../third_party/dmlc-core/include/dmlc/logging.h
- ../third_party/dmlc-core/include/dmlc/serializer.h
- ../third_party/minigun/minigun/minigun/./base.h
- ../third_party/minigun/minigun/minigun/csr.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/././common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./binary_reduce_common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/./utils.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/utils.cc
 CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.o
  ../include/dgl/./aten/./array_ops.h
  ../include/dgl/./aten/./macro.h
@@ -4255,6 +3713,7 @@ CMakeFiles/dgl.dir/src/random/random.cc.o
  ../include/dgl/runtime/module.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
@@ -4345,6 +3804,16 @@ CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/msg_queue.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_communicator.cc
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_communicator.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_pool.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/tcp_socket.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/semaphore_wrapper.h
+ third_party/dmlc-core/include/dmlc/build_config.h
+CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.o
+ ../third_party/dmlc-core/include/dmlc/./base.h
+ ../third_party/dmlc-core/include/dmlc/build_config_default.h
+ ../third_party/dmlc-core/include/dmlc/logging.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_pool.cc
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_pool.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/tcp_socket.h
  third_party/dmlc-core/include/dmlc/build_config.h
 CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o
@@ -4366,6 +3835,7 @@ CMakeFiles/dgl.dir/src/rpc/rpc.cc.o
  ../include/dgl/./aten/spmat.h
  ../include/dgl/./aten/types.h
  ../include/dgl/./runtime/container.h
+ ../include/dgl/./runtime/module.h
  ../include/dgl/./runtime/ndarray.h
  ../include/dgl/./runtime/object.h
  ../include/dgl/./runtime/packed_func.h
@@ -4379,11 +3849,87 @@ CMakeFiles/dgl.dir/src/rpc/rpc.cc.o
  ../include/dgl/random.h
  ../include/dgl/runtime/c_runtime_api.h
  ../include/dgl/runtime/container.h
- ../include/dgl/runtime/module.h
  ../include/dgl/runtime/ndarray.h
  ../include/dgl/runtime/object.h
  ../include/dgl/runtime/packed_func.h
+ ../include/dgl/runtime/parallel_for.h
  ../include/dgl/runtime/registry.h
+ ../include/dgl/runtime/serializer.h
+ ../include/dgl/runtime/shared_mem.h
+ ../include/dgl/runtime/smart_ptr_serializer.h
+ ../include/dgl/zerocopy_serializer.h
+ ../third_party/dlpack/include/dlpack/dlpack.h
+ ../third_party/dmlc-core/include/dmlc/./base.h
+ ../third_party/dmlc-core/include/dmlc/./endian.h
+ ../third_party/dmlc-core/include/dmlc/./io.h
+ ../third_party/dmlc-core/include/dmlc/./logging.h
+ ../third_party/dmlc-core/include/dmlc/./serializer.h
+ ../third_party/dmlc-core/include/dmlc/./type_traits.h
+ ../third_party/dmlc-core/include/dmlc/build_config_default.h
+ ../third_party/dmlc-core/include/dmlc/io.h
+ ../third_party/dmlc-core/include/dmlc/logging.h
+ ../third_party/dmlc-core/include/dmlc/memory_io.h
+ ../third_party/dmlc-core/include/dmlc/omp.h
+ ../third_party/dmlc-core/include/dmlc/serializer.h
+ ../third_party/dmlc-core/include/dmlc/thread_local.h
+ ../third_party/tensorpipe/tensorpipe/channel/basic/factory.h
+ ../third_party/tensorpipe/tensorpipe/channel/cma/factory.h
+ ../third_party/tensorpipe/tensorpipe/channel/context.h
+ ../third_party/tensorpipe/tensorpipe/channel/error.h
+ ../third_party/tensorpipe/tensorpipe/channel/mpt/factory.h
+ ../third_party/tensorpipe/tensorpipe/channel/xth/factory.h
+ ../third_party/tensorpipe/tensorpipe/common/buffer.h
+ ../third_party/tensorpipe/tensorpipe/common/cpu_buffer.h
+ ../third_party/tensorpipe/tensorpipe/common/device.h
+ ../third_party/tensorpipe/tensorpipe/common/error.h
+ ../third_party/tensorpipe/tensorpipe/common/optional.h
+ ../third_party/tensorpipe/tensorpipe/core/context.h
+ ../third_party/tensorpipe/tensorpipe/core/error.h
+ ../third_party/tensorpipe/tensorpipe/core/listener.h
+ ../third_party/tensorpipe/tensorpipe/core/message.h
+ ../third_party/tensorpipe/tensorpipe/core/pipe.h
+ ../third_party/tensorpipe/tensorpipe/tensorpipe.h
+ ../third_party/tensorpipe/tensorpipe/transport/context.h
+ ../third_party/tensorpipe/tensorpipe/transport/error.h
+ ../third_party/tensorpipe/tensorpipe/transport/ibv/error.h
+ ../third_party/tensorpipe/tensorpipe/transport/ibv/factory.h
+ ../third_party/tensorpipe/tensorpipe/transport/ibv/utility.h
+ ../third_party/tensorpipe/tensorpipe/transport/shm/factory.h
+ ../third_party/tensorpipe/tensorpipe/transport/uv/error.h
+ ../third_party/tensorpipe/tensorpipe/transport/uv/factory.h
+ ../third_party/tensorpipe/tensorpipe/transport/uv/utility.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/c_api_common.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././network/common.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././rpc_msg.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././server_state.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././tensorpipe/./queue.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././tensorpipe/tp_communicator.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/./rpc.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/rpc.cc
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/resource_manager.h
+ third_party/dmlc-core/include/dmlc/build_config.h
+ third_party/tensorpipe/tensorpipe/config.h
+CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.o
+ ../include/dgl/./aten/./array_ops.h
+ ../include/dgl/./aten/./macro.h
+ ../include/dgl/./aten/./spmat.h
+ ../include/dgl/./aten/array_ops.h
+ ../include/dgl/./aten/coo.h
+ ../include/dgl/./aten/csr.h
+ ../include/dgl/./aten/macro.h
+ ../include/dgl/./aten/spmat.h
+ ../include/dgl/./aten/types.h
+ ../include/dgl/./runtime/object.h
+ ../include/dgl/array.h
+ ../include/dgl/aten/./types.h
+ ../include/dgl/aten/spmat.h
+ ../include/dgl/aten/types.h
+ ../include/dgl/base_heterograph.h
+ ../include/dgl/graph_interface.h
+ ../include/dgl/graph_serializer.h
+ ../include/dgl/runtime/c_runtime_api.h
+ ../include/dgl/runtime/ndarray.h
+ ../include/dgl/runtime/object.h
  ../include/dgl/runtime/serializer.h
  ../include/dgl/runtime/shared_mem.h
  ../include/dgl/runtime/smart_ptr_serializer.h
@@ -4401,17 +3947,42 @@ CMakeFiles/dgl.dir/src/rpc/rpc.cc.o
  ../third_party/dmlc-core/include/dmlc/memory_io.h
  ../third_party/dmlc-core/include/dmlc/serializer.h
  ../third_party/dmlc-core/include/dmlc/thread_local.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/c_api_common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././network/common.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././network/communicator.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././network/msg_queue.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././network/socket_communicator.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././network/tcp_socket.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/././server_state.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/./rpc.h
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/rpc.cc
- /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/resource_manager.h
+ ../third_party/tensorpipe/tensorpipe/channel/basic/factory.h
+ ../third_party/tensorpipe/tensorpipe/channel/cma/factory.h
+ ../third_party/tensorpipe/tensorpipe/channel/context.h
+ ../third_party/tensorpipe/tensorpipe/channel/error.h
+ ../third_party/tensorpipe/tensorpipe/channel/mpt/factory.h
+ ../third_party/tensorpipe/tensorpipe/channel/xth/factory.h
+ ../third_party/tensorpipe/tensorpipe/common/buffer.h
+ ../third_party/tensorpipe/tensorpipe/common/cpu_buffer.h
+ ../third_party/tensorpipe/tensorpipe/common/device.h
+ ../third_party/tensorpipe/tensorpipe/common/error.h
+ ../third_party/tensorpipe/tensorpipe/common/optional.h
+ ../third_party/tensorpipe/tensorpipe/core/context.h
+ ../third_party/tensorpipe/tensorpipe/core/error.h
+ ../third_party/tensorpipe/tensorpipe/core/listener.h
+ ../third_party/tensorpipe/tensorpipe/core/message.h
+ ../third_party/tensorpipe/tensorpipe/core/pipe.h
+ ../third_party/tensorpipe/tensorpipe/tensorpipe.h
+ ../third_party/tensorpipe/tensorpipe/transport/context.h
+ ../third_party/tensorpipe/tensorpipe/transport/error.h
+ ../third_party/tensorpipe/tensorpipe/transport/ibv/error.h
+ ../third_party/tensorpipe/tensorpipe/transport/ibv/factory.h
+ ../third_party/tensorpipe/tensorpipe/transport/ibv/utility.h
+ ../third_party/tensorpipe/tensorpipe/transport/shm/factory.h
+ ../third_party/tensorpipe/tensorpipe/transport/uv/error.h
+ ../third_party/tensorpipe/tensorpipe/transport/uv/factory.h
+ ../third_party/tensorpipe/tensorpipe/transport/uv/utility.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/./network/common.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/./rpc_msg.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/./server_state.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/./tensorpipe/tp_communicator.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/rpc.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/tensorpipe/./queue.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/tensorpipe/tp_communicator.cc
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/tensorpipe/tp_communicator.h
  third_party/dmlc-core/include/dmlc/build_config.h
+ third_party/tensorpipe/tensorpipe/config.h
 CMakeFiles/dgl.dir/src/runtime/c_object_api.cc.o
  ../include/dgl/./runtime/container.h
  ../include/dgl/./runtime/module.h
@@ -4671,6 +4242,13 @@ CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.o
  ../third_party/dmlc-core/include/dmlc/logging.h
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/resource_manager.cc
  /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/resource_manager.h
+ third_party/dmlc-core/include/dmlc/build_config.h
+CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.o
+ ../third_party/dmlc-core/include/dmlc/./base.h
+ ../third_party/dmlc-core/include/dmlc/build_config_default.h
+ ../third_party/dmlc-core/include/dmlc/logging.h
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/semaphore_wrapper.cc
+ /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/semaphore_wrapper.h
  third_party/dmlc-core/include/dmlc/build_config.h
 CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.o
  ../include/dgl/runtime/shared_mem.h

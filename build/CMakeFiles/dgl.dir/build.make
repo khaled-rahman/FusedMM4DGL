@@ -564,191 +564,9 @@ CMakeFiles/dgl.dir/src/geometry/geometry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/geometry/geometry.cc.s"
 	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/geometry/geometry.cc -o CMakeFiles/dgl.dir/src/geometry/geometry.cc.s
 
-CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.o: ../src/kernel/binary_reduce.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/binary_reduce.cc
-
-CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/binary_reduce.cc > CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/binary_reduce.cc -o CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.o: ../src/kernel/cpu/binary_bcast_reduce_max.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_max.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_max.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_max.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.o: ../src/kernel/cpu/binary_bcast_reduce_min.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_min.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_min.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_min.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.o: ../src/kernel/cpu/binary_bcast_reduce_none.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_none.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_none.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_none.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.o: ../src/kernel/cpu/binary_bcast_reduce_prod.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_prod.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_prod.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_prod.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.o: ../src/kernel/cpu/binary_bcast_reduce_sum.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_sum.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_sum.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_bcast_reduce_sum.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.o: ../src/kernel/cpu/binary_reduce_impl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_impl.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_impl.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_impl.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.o: ../src/kernel/cpu/binary_reduce_max.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_max.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_max.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_max.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.o: ../src/kernel/cpu/binary_reduce_min.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_min.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_min.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_min.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.o: ../src/kernel/cpu/binary_reduce_none.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_none.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_none.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_none.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.o: ../src/kernel/cpu/binary_reduce_prod.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_prod.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_prod.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_prod.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.o: ../src/kernel/cpu/binary_reduce_sum.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_sum.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_sum.cc > CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/binary_reduce_sum.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.o: ../src/kernel/cpu/utils.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/utils.cc
-
-CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/utils.cc > CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/cpu/utils.cc -o CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.s
-
-CMakeFiles/dgl.dir/src/kernel/utils.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/kernel/utils.cc.o: ../src/kernel/utils.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/dgl.dir/src/kernel/utils.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/kernel/utils.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/utils.cc
-
-CMakeFiles/dgl.dir/src/kernel/utils.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/kernel/utils.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/utils.cc > CMakeFiles/dgl.dir/src/kernel/utils.cc.i
-
-CMakeFiles/dgl.dir/src/kernel/utils.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/kernel/utils.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/kernel/utils.cc -o CMakeFiles/dgl.dir/src/kernel/utils.cc.s
-
 CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.o: ../src/partition/ndarray_partition.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/partition/ndarray_partition.cc
 
 CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.i: cmake_force
@@ -761,7 +579,7 @@ CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/random/cpu/choice.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/random/cpu/choice.cc.o: ../src/random/cpu/choice.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/dgl.dir/src/random/cpu/choice.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/dgl.dir/src/random/cpu/choice.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/random/cpu/choice.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/random/cpu/choice.cc
 
 CMakeFiles/dgl.dir/src/random/cpu/choice.cc.i: cmake_force
@@ -774,7 +592,7 @@ CMakeFiles/dgl.dir/src/random/cpu/choice.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/random/random.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/random/random.cc.o: ../src/random/random.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/dgl.dir/src/random/random.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/dgl.dir/src/random/random.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/random/random.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/random/random.cc
 
 CMakeFiles/dgl.dir/src/random/random.cc.i: cmake_force
@@ -787,7 +605,7 @@ CMakeFiles/dgl.dir/src/random/random.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/c_object_api.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/c_object_api.cc.o: ../src/runtime/c_object_api.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/dgl.dir/src/runtime/c_object_api.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/dgl.dir/src/runtime/c_object_api.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/c_object_api.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/c_object_api.cc
 
 CMakeFiles/dgl.dir/src/runtime/c_object_api.cc.i: cmake_force
@@ -800,7 +618,7 @@ CMakeFiles/dgl.dir/src/runtime/c_object_api.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/c_runtime_api.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/c_runtime_api.cc.o: ../src/runtime/c_runtime_api.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/dgl.dir/src/runtime/c_runtime_api.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/dgl.dir/src/runtime/c_runtime_api.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/c_runtime_api.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/c_runtime_api.cc
 
 CMakeFiles/dgl.dir/src/runtime/c_runtime_api.cc.i: cmake_force
@@ -813,7 +631,7 @@ CMakeFiles/dgl.dir/src/runtime/c_runtime_api.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/cpu_device_api.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/cpu_device_api.cc.o: ../src/runtime/cpu_device_api.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/dgl.dir/src/runtime/cpu_device_api.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/dgl.dir/src/runtime/cpu_device_api.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/cpu_device_api.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/cpu_device_api.cc
 
 CMakeFiles/dgl.dir/src/runtime/cpu_device_api.cc.i: cmake_force
@@ -826,7 +644,7 @@ CMakeFiles/dgl.dir/src/runtime/cpu_device_api.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/dso_module.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/dso_module.cc.o: ../src/runtime/dso_module.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/dgl.dir/src/runtime/dso_module.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/dgl.dir/src/runtime/dso_module.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/dso_module.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/dso_module.cc
 
 CMakeFiles/dgl.dir/src/runtime/dso_module.cc.i: cmake_force
@@ -839,7 +657,7 @@ CMakeFiles/dgl.dir/src/runtime/dso_module.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/file_util.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/file_util.cc.o: ../src/runtime/file_util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/dgl.dir/src/runtime/file_util.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/dgl.dir/src/runtime/file_util.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/file_util.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/file_util.cc
 
 CMakeFiles/dgl.dir/src/runtime/file_util.cc.i: cmake_force
@@ -852,7 +670,7 @@ CMakeFiles/dgl.dir/src/runtime/file_util.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/module.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/module.cc.o: ../src/runtime/module.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/dgl.dir/src/runtime/module.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/dgl.dir/src/runtime/module.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/module.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/module.cc
 
 CMakeFiles/dgl.dir/src/runtime/module.cc.i: cmake_force
@@ -865,7 +683,7 @@ CMakeFiles/dgl.dir/src/runtime/module.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/module_util.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/module_util.cc.o: ../src/runtime/module_util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/dgl.dir/src/runtime/module_util.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/dgl.dir/src/runtime/module_util.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/module_util.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/module_util.cc
 
 CMakeFiles/dgl.dir/src/runtime/module_util.cc.i: cmake_force
@@ -878,7 +696,7 @@ CMakeFiles/dgl.dir/src/runtime/module_util.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/ndarray.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/ndarray.cc.o: ../src/runtime/ndarray.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/dgl.dir/src/runtime/ndarray.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/dgl.dir/src/runtime/ndarray.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/ndarray.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/ndarray.cc
 
 CMakeFiles/dgl.dir/src/runtime/ndarray.cc.i: cmake_force
@@ -891,7 +709,7 @@ CMakeFiles/dgl.dir/src/runtime/ndarray.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/object.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/object.cc.o: ../src/runtime/object.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/dgl.dir/src/runtime/object.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/dgl.dir/src/runtime/object.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/object.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/object.cc
 
 CMakeFiles/dgl.dir/src/runtime/object.cc.i: cmake_force
@@ -904,7 +722,7 @@ CMakeFiles/dgl.dir/src/runtime/object.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/registry.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/registry.cc.o: ../src/runtime/registry.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/dgl.dir/src/runtime/registry.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/dgl.dir/src/runtime/registry.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/registry.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/registry.cc
 
 CMakeFiles/dgl.dir/src/runtime/registry.cc.i: cmake_force
@@ -917,7 +735,7 @@ CMakeFiles/dgl.dir/src/runtime/registry.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.o: ../src/runtime/resource_manager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/resource_manager.cc
 
 CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.i: cmake_force
@@ -928,9 +746,22 @@ CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.s"
 	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/resource_manager.cc -o CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.s
 
+CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.o: CMakeFiles/dgl.dir/flags.make
+CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.o: ../src/runtime/semaphore_wrapper.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.o"
+	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/semaphore_wrapper.cc
+
+CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.i"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/semaphore_wrapper.cc > CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.i
+
+CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.s"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/semaphore_wrapper.cc -o CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.s
+
 CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.o: ../src/runtime/shared_mem.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/shared_mem.cc
 
 CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.i: cmake_force
@@ -943,7 +774,7 @@ CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/system_lib_module.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/system_lib_module.cc.o: ../src/runtime/system_lib_module.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/dgl.dir/src/runtime/system_lib_module.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/dgl.dir/src/runtime/system_lib_module.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/system_lib_module.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/system_lib_module.cc
 
 CMakeFiles/dgl.dir/src/runtime/system_lib_module.cc.i: cmake_force
@@ -956,7 +787,7 @@ CMakeFiles/dgl.dir/src/runtime/system_lib_module.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/tensordispatch.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/tensordispatch.cc.o: ../src/runtime/tensordispatch.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/dgl.dir/src/runtime/tensordispatch.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/dgl.dir/src/runtime/tensordispatch.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/tensordispatch.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/tensordispatch.cc
 
 CMakeFiles/dgl.dir/src/runtime/tensordispatch.cc.i: cmake_force
@@ -969,7 +800,7 @@ CMakeFiles/dgl.dir/src/runtime/tensordispatch.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/thread_pool.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/thread_pool.cc.o: ../src/runtime/thread_pool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/dgl.dir/src/runtime/thread_pool.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/dgl.dir/src/runtime/thread_pool.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/thread_pool.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/thread_pool.cc
 
 CMakeFiles/dgl.dir/src/runtime/thread_pool.cc.i: cmake_force
@@ -982,7 +813,7 @@ CMakeFiles/dgl.dir/src/runtime/thread_pool.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/threading_backend.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/threading_backend.cc.o: ../src/runtime/threading_backend.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/dgl.dir/src/runtime/threading_backend.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/dgl.dir/src/runtime/threading_backend.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/threading_backend.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/threading_backend.cc
 
 CMakeFiles/dgl.dir/src/runtime/threading_backend.cc.i: cmake_force
@@ -995,7 +826,7 @@ CMakeFiles/dgl.dir/src/runtime/threading_backend.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/utils.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/utils.cc.o: ../src/runtime/utils.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/dgl.dir/src/runtime/utils.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/dgl.dir/src/runtime/utils.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/utils.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/utils.cc
 
 CMakeFiles/dgl.dir/src/runtime/utils.cc.i: cmake_force
@@ -1008,7 +839,7 @@ CMakeFiles/dgl.dir/src/runtime/utils.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/runtime/workspace_pool.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/runtime/workspace_pool.cc.o: ../src/runtime/workspace_pool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/dgl.dir/src/runtime/workspace_pool.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/dgl.dir/src/runtime/workspace_pool.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/runtime/workspace_pool.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/runtime/workspace_pool.cc
 
 CMakeFiles/dgl.dir/src/runtime/workspace_pool.cc.i: cmake_force
@@ -1021,7 +852,7 @@ CMakeFiles/dgl.dir/src/runtime/workspace_pool.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/api/api_container.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/api/api_container.cc.o: ../src/api/api_container.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/dgl.dir/src/api/api_container.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/dgl.dir/src/api/api_container.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/api/api_container.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/api/api_container.cc
 
 CMakeFiles/dgl.dir/src/api/api_container.cc.i: cmake_force
@@ -1034,7 +865,7 @@ CMakeFiles/dgl.dir/src/api/api_container.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/creators.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/creators.cc.o: ../src/graph/creators.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/dgl.dir/src/graph/creators.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/dgl.dir/src/graph/creators.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/creators.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/creators.cc
 
 CMakeFiles/dgl.dir/src/graph/creators.cc.i: cmake_force
@@ -1047,7 +878,7 @@ CMakeFiles/dgl.dir/src/graph/creators.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/gk_ops.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/gk_ops.cc.o: ../src/graph/gk_ops.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/dgl.dir/src/graph/gk_ops.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/dgl.dir/src/graph/gk_ops.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/gk_ops.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/gk_ops.cc
 
 CMakeFiles/dgl.dir/src/graph/gk_ops.cc.i: cmake_force
@@ -1060,7 +891,7 @@ CMakeFiles/dgl.dir/src/graph/gk_ops.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/graph.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/graph.cc.o: ../src/graph/graph.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/dgl.dir/src/graph/graph.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/dgl.dir/src/graph/graph.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/graph.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/graph.cc
 
 CMakeFiles/dgl.dir/src/graph/graph.cc.i: cmake_force
@@ -1073,7 +904,7 @@ CMakeFiles/dgl.dir/src/graph/graph.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/graph_apis.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/graph_apis.cc.o: ../src/graph/graph_apis.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/dgl.dir/src/graph/graph_apis.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/dgl.dir/src/graph/graph_apis.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/graph_apis.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/graph_apis.cc
 
 CMakeFiles/dgl.dir/src/graph/graph_apis.cc.i: cmake_force
@@ -1086,7 +917,7 @@ CMakeFiles/dgl.dir/src/graph/graph_apis.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/graph_op.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/graph_op.cc.o: ../src/graph/graph_op.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/dgl.dir/src/graph/graph_op.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/dgl.dir/src/graph/graph_op.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/graph_op.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/graph_op.cc
 
 CMakeFiles/dgl.dir/src/graph/graph_op.cc.i: cmake_force
@@ -1099,7 +930,7 @@ CMakeFiles/dgl.dir/src/graph/graph_op.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/graph_traversal.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/graph_traversal.cc.o: ../src/graph/graph_traversal.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/dgl.dir/src/graph/graph_traversal.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/dgl.dir/src/graph/graph_traversal.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/graph_traversal.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/graph_traversal.cc
 
 CMakeFiles/dgl.dir/src/graph/graph_traversal.cc.i: cmake_force
@@ -1112,7 +943,7 @@ CMakeFiles/dgl.dir/src/graph/graph_traversal.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/heterograph.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/heterograph.cc.o: ../src/graph/heterograph.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/dgl.dir/src/graph/heterograph.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/dgl.dir/src/graph/heterograph.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/heterograph.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/heterograph.cc
 
 CMakeFiles/dgl.dir/src/graph/heterograph.cc.i: cmake_force
@@ -1125,7 +956,7 @@ CMakeFiles/dgl.dir/src/graph/heterograph.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/heterograph_capi.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/heterograph_capi.cc.o: ../src/graph/heterograph_capi.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/dgl.dir/src/graph/heterograph_capi.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/dgl.dir/src/graph/heterograph_capi.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/heterograph_capi.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/heterograph_capi.cc
 
 CMakeFiles/dgl.dir/src/graph/heterograph_capi.cc.i: cmake_force
@@ -1138,7 +969,7 @@ CMakeFiles/dgl.dir/src/graph/heterograph_capi.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/immutable_graph.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/immutable_graph.cc.o: ../src/graph/immutable_graph.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/dgl.dir/src/graph/immutable_graph.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/dgl.dir/src/graph/immutable_graph.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/immutable_graph.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/immutable_graph.cc
 
 CMakeFiles/dgl.dir/src/graph/immutable_graph.cc.i: cmake_force
@@ -1151,7 +982,7 @@ CMakeFiles/dgl.dir/src/graph/immutable_graph.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/metis_partition.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/metis_partition.cc.o: ../src/graph/metis_partition.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/dgl.dir/src/graph/metis_partition.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/dgl.dir/src/graph/metis_partition.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/metis_partition.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/metis_partition.cc
 
 CMakeFiles/dgl.dir/src/graph/metis_partition.cc.i: cmake_force
@@ -1164,7 +995,7 @@ CMakeFiles/dgl.dir/src/graph/metis_partition.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/network.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/network.cc.o: ../src/graph/network.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/dgl.dir/src/graph/network.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/dgl.dir/src/graph/network.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/network.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/network.cc
 
 CMakeFiles/dgl.dir/src/graph/network.cc.i: cmake_force
@@ -1177,7 +1008,7 @@ CMakeFiles/dgl.dir/src/graph/network.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/nodeflow.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/nodeflow.cc.o: ../src/graph/nodeflow.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/dgl.dir/src/graph/nodeflow.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/dgl.dir/src/graph/nodeflow.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/nodeflow.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/nodeflow.cc
 
 CMakeFiles/dgl.dir/src/graph/nodeflow.cc.i: cmake_force
@@ -1190,7 +1021,7 @@ CMakeFiles/dgl.dir/src/graph/nodeflow.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/pickle.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/pickle.cc.o: ../src/graph/pickle.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/dgl.dir/src/graph/pickle.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/dgl.dir/src/graph/pickle.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/pickle.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/pickle.cc
 
 CMakeFiles/dgl.dir/src/graph/pickle.cc.i: cmake_force
@@ -1203,7 +1034,7 @@ CMakeFiles/dgl.dir/src/graph/pickle.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/sampler.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampler.cc.o: ../src/graph/sampler.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampler.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampler.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampler.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampler.cc
 
 CMakeFiles/dgl.dir/src/graph/sampler.cc.i: cmake_force
@@ -1216,7 +1047,7 @@ CMakeFiles/dgl.dir/src/graph/sampler.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/sampler/metapath.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampler/metapath.cc.o: ../src/graph/sampler/metapath.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampler/metapath.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampler/metapath.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampler/metapath.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampler/metapath.cc
 
 CMakeFiles/dgl.dir/src/graph/sampler/metapath.cc.i: cmake_force
@@ -1229,7 +1060,7 @@ CMakeFiles/dgl.dir/src/graph/sampler/metapath.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/sampler/randomwalk.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampler/randomwalk.cc.o: ../src/graph/sampler/randomwalk.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampler/randomwalk.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampler/randomwalk.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampler/randomwalk.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampler/randomwalk.cc
 
 CMakeFiles/dgl.dir/src/graph/sampler/randomwalk.cc.i: cmake_force
@@ -1242,7 +1073,7 @@ CMakeFiles/dgl.dir/src/graph/sampler/randomwalk.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/sampling/neighbor/neighbor.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampling/neighbor/neighbor.cc.o: ../src/graph/sampling/neighbor/neighbor.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/neighbor/neighbor.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/neighbor/neighbor.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampling/neighbor/neighbor.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/neighbor/neighbor.cc
 
 CMakeFiles/dgl.dir/src/graph/sampling/neighbor/neighbor.cc.i: cmake_force
@@ -1255,7 +1086,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/neighbor/neighbor.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/get_node_types_cpu.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/get_node_types_cpu.cc.o: ../src/graph/sampling/randomwalks/get_node_types_cpu.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/get_node_types_cpu.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/get_node_types_cpu.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/get_node_types_cpu.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/randomwalks/get_node_types_cpu.cc
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/get_node_types_cpu.cc.i: cmake_force
@@ -1268,7 +1099,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/get_node_types_cpu.cc.s: cmake
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec.cc.o: ../src/graph/sampling/randomwalks/node2vec.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/randomwalks/node2vec.cc
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec.cc.i: cmake_force
@@ -1281,7 +1112,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec_cpu.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec_cpu.cc.o: ../src/graph/sampling/randomwalks/node2vec_cpu.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec_cpu.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec_cpu.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec_cpu.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/randomwalks/node2vec_cpu.cc
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec_cpu.cc.i: cmake_force
@@ -1294,7 +1125,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/node2vec_cpu.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.o: ../src/graph/sampling/randomwalks/randomwalk_cpu.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/randomwalks/randomwalk_cpu.cc
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.i: cmake_force
@@ -1307,7 +1138,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_cpu.cc.s: cmake_for
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc.o: ../src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc.i: cmake_force
@@ -1320,7 +1151,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalk_with_restart_cpu.cc
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalks.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalks.cc.o: ../src/graph/sampling/randomwalks/randomwalks.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalks.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalks.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalks.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/sampling/randomwalks/randomwalks.cc
 
 CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalks.cc.i: cmake_force
@@ -1333,7 +1164,7 @@ CMakeFiles/dgl.dir/src/graph/sampling/randomwalks/randomwalks.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/serialize/dglgraph_serialize.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/serialize/dglgraph_serialize.cc.o: ../src/graph/serialize/dglgraph_serialize.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/dglgraph_serialize.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/dglgraph_serialize.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/serialize/dglgraph_serialize.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/serialize/dglgraph_serialize.cc
 
 CMakeFiles/dgl.dir/src/graph/serialize/dglgraph_serialize.cc.i: cmake_force
@@ -1346,7 +1177,7 @@ CMakeFiles/dgl.dir/src/graph/serialize/dglgraph_serialize.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/serialize/graph_serialize.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/serialize/graph_serialize.cc.o: ../src/graph/serialize/graph_serialize.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/graph_serialize.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/graph_serialize.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/serialize/graph_serialize.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/serialize/graph_serialize.cc
 
 CMakeFiles/dgl.dir/src/graph/serialize/graph_serialize.cc.i: cmake_force
@@ -1359,7 +1190,7 @@ CMakeFiles/dgl.dir/src/graph/serialize/graph_serialize.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/serialize/heterograph_serialize.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/serialize/heterograph_serialize.cc.o: ../src/graph/serialize/heterograph_serialize.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/heterograph_serialize.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/heterograph_serialize.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/serialize/heterograph_serialize.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/serialize/heterograph_serialize.cc
 
 CMakeFiles/dgl.dir/src/graph/serialize/heterograph_serialize.cc.i: cmake_force
@@ -1372,7 +1203,7 @@ CMakeFiles/dgl.dir/src/graph/serialize/heterograph_serialize.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/serialize/tensor_serialize.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/serialize/tensor_serialize.cc.o: ../src/graph/serialize/tensor_serialize.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/tensor_serialize.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/tensor_serialize.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/serialize/tensor_serialize.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/serialize/tensor_serialize.cc
 
 CMakeFiles/dgl.dir/src/graph/serialize/tensor_serialize.cc.i: cmake_force
@@ -1385,7 +1216,7 @@ CMakeFiles/dgl.dir/src/graph/serialize/tensor_serialize.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/serialize/zerocopy_serializer.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/serialize/zerocopy_serializer.cc.o: ../src/graph/serialize/zerocopy_serializer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/zerocopy_serializer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/dgl.dir/src/graph/serialize/zerocopy_serializer.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/serialize/zerocopy_serializer.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/serialize/zerocopy_serializer.cc
 
 CMakeFiles/dgl.dir/src/graph/serialize/zerocopy_serializer.cc.i: cmake_force
@@ -1398,7 +1229,7 @@ CMakeFiles/dgl.dir/src/graph/serialize/zerocopy_serializer.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/shared_mem_manager.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/shared_mem_manager.cc.o: ../src/graph/shared_mem_manager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/dgl.dir/src/graph/shared_mem_manager.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/dgl.dir/src/graph/shared_mem_manager.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/shared_mem_manager.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/shared_mem_manager.cc
 
 CMakeFiles/dgl.dir/src/graph/shared_mem_manager.cc.i: cmake_force
@@ -1411,7 +1242,7 @@ CMakeFiles/dgl.dir/src/graph/shared_mem_manager.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/subgraph.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/subgraph.cc.o: ../src/graph/subgraph.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/dgl.dir/src/graph/subgraph.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/dgl.dir/src/graph/subgraph.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/subgraph.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/subgraph.cc
 
 CMakeFiles/dgl.dir/src/graph/subgraph.cc.i: cmake_force
@@ -1424,7 +1255,7 @@ CMakeFiles/dgl.dir/src/graph/subgraph.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/compact.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/compact.cc.o: ../src/graph/transform/compact.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/compact.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/compact.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/compact.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/compact.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/compact.cc.i: cmake_force
@@ -1437,7 +1268,7 @@ CMakeFiles/dgl.dir/src/graph/transform/compact.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/cpu/knn.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/cpu/knn.cc.o: ../src/graph/transform/cpu/knn.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/cpu/knn.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/cpu/knn.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/cpu/knn.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/cpu/knn.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/cpu/knn.cc.i: cmake_force
@@ -1450,7 +1281,7 @@ CMakeFiles/dgl.dir/src/graph/transform/cpu/knn.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/knn.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/knn.cc.o: ../src/graph/transform/knn.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/knn.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/knn.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/knn.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/knn.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/knn.cc.i: cmake_force
@@ -1463,7 +1294,7 @@ CMakeFiles/dgl.dir/src/graph/transform/knn.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/line_graph.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/line_graph.cc.o: ../src/graph/transform/line_graph.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/line_graph.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/line_graph.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/line_graph.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/line_graph.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/line_graph.cc.i: cmake_force
@@ -1476,7 +1307,7 @@ CMakeFiles/dgl.dir/src/graph/transform/line_graph.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/metis_partition_hetero.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/metis_partition_hetero.cc.o: ../src/graph/transform/metis_partition_hetero.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/metis_partition_hetero.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/metis_partition_hetero.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/metis_partition_hetero.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/metis_partition_hetero.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/metis_partition_hetero.cc.i: cmake_force
@@ -1489,7 +1320,7 @@ CMakeFiles/dgl.dir/src/graph/transform/metis_partition_hetero.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/partition_hetero.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/partition_hetero.cc.o: ../src/graph/transform/partition_hetero.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/partition_hetero.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/partition_hetero.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/partition_hetero.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/partition_hetero.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/partition_hetero.cc.i: cmake_force
@@ -1502,7 +1333,7 @@ CMakeFiles/dgl.dir/src/graph/transform/partition_hetero.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/remove_edges.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/remove_edges.cc.o: ../src/graph/transform/remove_edges.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/remove_edges.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/remove_edges.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/remove_edges.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/remove_edges.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/remove_edges.cc.i: cmake_force
@@ -1515,7 +1346,7 @@ CMakeFiles/dgl.dir/src/graph/transform/remove_edges.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/to_bipartite.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/to_bipartite.cc.o: ../src/graph/transform/to_bipartite.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/to_bipartite.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/to_bipartite.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/to_bipartite.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/to_bipartite.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/to_bipartite.cc.i: cmake_force
@@ -1528,7 +1359,7 @@ CMakeFiles/dgl.dir/src/graph/transform/to_bipartite.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/to_simple.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/to_simple.cc.o: ../src/graph/transform/to_simple.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/to_simple.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/to_simple.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/to_simple.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/to_simple.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/to_simple.cc.i: cmake_force
@@ -1541,7 +1372,7 @@ CMakeFiles/dgl.dir/src/graph/transform/to_simple.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/transform/union_partition.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/transform/union_partition.cc.o: ../src/graph/transform/union_partition.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/union_partition.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object CMakeFiles/dgl.dir/src/graph/transform/union_partition.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/transform/union_partition.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/transform/union_partition.cc
 
 CMakeFiles/dgl.dir/src/graph/transform/union_partition.cc.i: cmake_force
@@ -1554,7 +1385,7 @@ CMakeFiles/dgl.dir/src/graph/transform/union_partition.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/traversal.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/traversal.cc.o: ../src/graph/traversal.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object CMakeFiles/dgl.dir/src/graph/traversal.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object CMakeFiles/dgl.dir/src/graph/traversal.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/traversal.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/traversal.cc
 
 CMakeFiles/dgl.dir/src/graph/traversal.cc.i: cmake_force
@@ -1567,7 +1398,7 @@ CMakeFiles/dgl.dir/src/graph/traversal.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/graph/unit_graph.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/graph/unit_graph.cc.o: ../src/graph/unit_graph.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object CMakeFiles/dgl.dir/src/graph/unit_graph.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/dgl.dir/src/graph/unit_graph.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/graph/unit_graph.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/unit_graph.cc
 
 CMakeFiles/dgl.dir/src/graph/unit_graph.cc.i: cmake_force
@@ -1578,74 +1409,9 @@ CMakeFiles/dgl.dir/src/graph/unit_graph.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/graph/unit_graph.cc.s"
 	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/graph/unit_graph.cc -o CMakeFiles/dgl.dir/src/graph/unit_graph.cc.s
 
-CMakeFiles/dgl.dir/src/rpc/network/common.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/rpc/network/common.cc.o: ../src/rpc/network/common.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object CMakeFiles/dgl.dir/src/rpc/network/common.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/network/common.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/common.cc
-
-CMakeFiles/dgl.dir/src/rpc/network/common.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/network/common.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/common.cc > CMakeFiles/dgl.dir/src/rpc/network/common.cc.i
-
-CMakeFiles/dgl.dir/src/rpc/network/common.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/network/common.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/common.cc -o CMakeFiles/dgl.dir/src/rpc/network/common.cc.s
-
-CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o: ../src/rpc/network/msg_queue.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/msg_queue.cc
-
-CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/msg_queue.cc > CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.i
-
-CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/msg_queue.cc -o CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.s
-
-CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o: ../src/rpc/network/socket_communicator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_communicator.cc
-
-CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_communicator.cc > CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.i
-
-CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_communicator.cc -o CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.s
-
-CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o: ../src/rpc/network/tcp_socket.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/tcp_socket.cc
-
-CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/tcp_socket.cc > CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.i
-
-CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/tcp_socket.cc -o CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.s
-
-CMakeFiles/dgl.dir/src/rpc/rpc.cc.o: CMakeFiles/dgl.dir/flags.make
-CMakeFiles/dgl.dir/src/rpc/rpc.cc.o: ../src/rpc/rpc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object CMakeFiles/dgl.dir/src/rpc/rpc.cc.o"
-	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/rpc.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/rpc.cc
-
-CMakeFiles/dgl.dir/src/rpc/rpc.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/rpc.cc.i"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/rpc.cc > CMakeFiles/dgl.dir/src/rpc/rpc.cc.i
-
-CMakeFiles/dgl.dir/src/rpc/rpc.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/rpc.cc.s"
-	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/rpc.cc -o CMakeFiles/dgl.dir/src/rpc/rpc.cc.s
-
 CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.o: ../src/scheduler/scheduler.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/scheduler/scheduler.cc
 
 CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.i: cmake_force
@@ -1658,7 +1424,7 @@ CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.s: cmake_force
 
 CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.o: CMakeFiles/dgl.dir/flags.make
 CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.o: ../src/scheduler/scheduler_apis.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.o"
 	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/scheduler/scheduler_apis.cc
 
 CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.i: cmake_force
@@ -1668,6 +1434,97 @@ CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.i: cmake_force
 CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.s"
 	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/scheduler/scheduler_apis.cc -o CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.s
+
+CMakeFiles/dgl.dir/src/rpc/network/common.cc.o: CMakeFiles/dgl.dir/flags.make
+CMakeFiles/dgl.dir/src/rpc/network/common.cc.o: ../src/rpc/network/common.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object CMakeFiles/dgl.dir/src/rpc/network/common.cc.o"
+	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/network/common.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/common.cc
+
+CMakeFiles/dgl.dir/src/rpc/network/common.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/network/common.cc.i"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/common.cc > CMakeFiles/dgl.dir/src/rpc/network/common.cc.i
+
+CMakeFiles/dgl.dir/src/rpc/network/common.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/network/common.cc.s"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/common.cc -o CMakeFiles/dgl.dir/src/rpc/network/common.cc.s
+
+CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o: CMakeFiles/dgl.dir/flags.make
+CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o: ../src/rpc/network/msg_queue.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o"
+	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/msg_queue.cc
+
+CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.i"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/msg_queue.cc > CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.i
+
+CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.s"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/msg_queue.cc -o CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.s
+
+CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o: CMakeFiles/dgl.dir/flags.make
+CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o: ../src/rpc/network/socket_communicator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o"
+	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_communicator.cc
+
+CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.i"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_communicator.cc > CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.i
+
+CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.s"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_communicator.cc -o CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.s
+
+CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.o: CMakeFiles/dgl.dir/flags.make
+CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.o: ../src/rpc/network/socket_pool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.o"
+	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_pool.cc
+
+CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.i"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_pool.cc > CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.i
+
+CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.s"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/socket_pool.cc -o CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.s
+
+CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o: CMakeFiles/dgl.dir/flags.make
+CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o: ../src/rpc/network/tcp_socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o"
+	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/tcp_socket.cc
+
+CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.i"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/tcp_socket.cc > CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.i
+
+CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.s"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/network/tcp_socket.cc -o CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.s
+
+CMakeFiles/dgl.dir/src/rpc/rpc.cc.o: CMakeFiles/dgl.dir/flags.make
+CMakeFiles/dgl.dir/src/rpc/rpc.cc.o: ../src/rpc/rpc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/dgl.dir/src/rpc/rpc.cc.o"
+	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/rpc.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/rpc.cc
+
+CMakeFiles/dgl.dir/src/rpc/rpc.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/rpc.cc.i"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/rpc.cc > CMakeFiles/dgl.dir/src/rpc/rpc.cc.i
+
+CMakeFiles/dgl.dir/src/rpc/rpc.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/rpc.cc.s"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/rpc.cc -o CMakeFiles/dgl.dir/src/rpc/rpc.cc.s
+
+CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.o: CMakeFiles/dgl.dir/flags.make
+CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.o: ../src/rpc/tensorpipe/tp_communicator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.o"
+	/opt/gcc-10.1.0/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.o -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/tensorpipe/tp_communicator.cc
+
+CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.i"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/tensorpipe/tp_communicator.cc > CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.i
+
+CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.s"
+	/opt/gcc-10.1.0/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/rpc/tensorpipe/tp_communicator.cc -o CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.s
 
 # Object files for target dgl
 dgl_OBJECTS = \
@@ -1710,20 +1567,6 @@ dgl_OBJECTS = \
 "CMakeFiles/dgl.dir/src/dataloading/async_transferer.cc.o" \
 "CMakeFiles/dgl.dir/src/geometry/cpu/geometry_op_impl.cc.o" \
 "CMakeFiles/dgl.dir/src/geometry/geometry.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.o" \
-"CMakeFiles/dgl.dir/src/kernel/utils.cc.o" \
 "CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.o" \
 "CMakeFiles/dgl.dir/src/random/cpu/choice.cc.o" \
 "CMakeFiles/dgl.dir/src/random/random.cc.o" \
@@ -1738,6 +1581,7 @@ dgl_OBJECTS = \
 "CMakeFiles/dgl.dir/src/runtime/object.cc.o" \
 "CMakeFiles/dgl.dir/src/runtime/registry.cc.o" \
 "CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.o" \
+"CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.o" \
 "CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.o" \
 "CMakeFiles/dgl.dir/src/runtime/system_lib_module.cc.o" \
 "CMakeFiles/dgl.dir/src/runtime/tensordispatch.cc.o" \
@@ -1788,13 +1632,15 @@ dgl_OBJECTS = \
 "CMakeFiles/dgl.dir/src/graph/transform/union_partition.cc.o" \
 "CMakeFiles/dgl.dir/src/graph/traversal.cc.o" \
 "CMakeFiles/dgl.dir/src/graph/unit_graph.cc.o" \
+"CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.o" \
+"CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.o" \
 "CMakeFiles/dgl.dir/src/rpc/network/common.cc.o" \
 "CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o" \
 "CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o" \
+"CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.o" \
 "CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o" \
 "CMakeFiles/dgl.dir/src/rpc/rpc.cc.o" \
-"CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.o" \
-"CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.o"
+"CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.o"
 
 # External object files for target dgl
 dgl_EXTERNAL_OBJECTS =
@@ -1838,20 +1684,6 @@ libdgl.so: CMakeFiles/dgl.dir/src/c_api_common.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/dataloading/async_transferer.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/geometry/cpu/geometry_op_impl.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/geometry/geometry.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/kernel/utils.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/partition/ndarray_partition.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/random/cpu/choice.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/random/random.cc.o
@@ -1866,6 +1698,7 @@ libdgl.so: CMakeFiles/dgl.dir/src/runtime/ndarray.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/runtime/object.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/runtime/registry.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.o
+libdgl.so: CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/runtime/shared_mem.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/runtime/system_lib_module.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/runtime/tensordispatch.cc.o
@@ -1916,21 +1749,25 @@ libdgl.so: CMakeFiles/dgl.dir/src/graph/transform/to_simple.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/graph/transform/union_partition.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/graph/traversal.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/graph/unit_graph.cc.o
+libdgl.so: CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.o
+libdgl.so: CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/rpc/network/common.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/rpc/network/msg_queue.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.o
+libdgl.so: CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/rpc/network/tcp_socket.cc.o
 libdgl.so: CMakeFiles/dgl.dir/src/rpc/rpc.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/scheduler/scheduler.cc.o
-libdgl.so: CMakeFiles/dgl.dir/src/scheduler/scheduler_apis.cc.o
+libdgl.so: CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.o
 libdgl.so: CMakeFiles/dgl.dir/build.make
 libdgl.so: third_party/dmlc-core/libdmlc.a
 libdgl.so: third_party/METIS/libmetis/libmetis.a
+libdgl.so: third_party/tensorpipe/tensorpipe/libtensorpipe.a
 libdgl.so: src/array/cpu/FusedMM/libfusedmm.a
 libdgl.so: /opt/gcc-10.1.0/lib64/libgomp.so
 libdgl.so: /lib64/libpthread.so
+libdgl.so: third_party/tensorpipe/tensorpipe/libtensorpipe_uv.a
 libdgl.so: CMakeFiles/dgl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Linking CXX shared library libdgl.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Linking CXX shared library libdgl.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dgl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

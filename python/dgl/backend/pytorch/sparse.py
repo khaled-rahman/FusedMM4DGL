@@ -1,13 +1,8 @@
 import torch as th
 from distutils.version import LooseVersion
 from ...base import is_all, ALL
-<<<<<<< HEAD
 from ...sparse import _gspmm, _gspmm_hetero, _gsddmm, _gsddmm_hetero, _gfusedmm, _segment_reduce, _bwd_segment_cmp, _scatter_add
-from ...sparse import _csrmm, _csrsum, _csrmask
-=======
-from ...sparse import _gspmm, _gspmm_hetero, _gsddmm, _gsddmm_hetero, _segment_reduce, _bwd_segment_cmp
 from ...sparse import _csrmm, _csrsum, _csrmask, _scatter_add, _update_grad_minmax_hetero
->>>>>>> a2241faf47dcb8be09dc219e488831c097431c65
 from ...heterograph_index import create_unitgraph_from_csr
 
 if LooseVersion(th.__version__) >= LooseVersion("1.6.0"):
@@ -371,6 +366,70 @@ class GSDDMM(th.autograd.Function):
             dY = None
         return None, None, dX, dY, None, None
 
+class FUSEDMM(th.autograd.Function):
+    @staticmethod
+    @custom_fwd(cast_inputs=th.float16)
+    def forward(ctx, gidx, op, X, Y, lhs_target, rhs_target):
+        out = _gfusedmm(gidx, op, X, Y, lhs_target, rhs_target)
+        X_shape = X.shape if X is not None else None
+        Y_shape = Y.shape if Y is not None else None
+        ctx.backward_cache = gidx, op, lhs_target, rhs_target, X_shape, Y_shape
+        req_grad_X = X.requires_grad if X is not None else False
+        req_grad_Y = Y.requires_grad if Y is not None else False
+        if not sddmm_cache_X(op, req_grad_X, req_grad_Y):
+            X = None
+        if not sddmm_cache_Y(op, req_grad_X, req_grad_Y):
+            Y = None
+        ctx.save_for_backward(X, Y)
+        return out
+    @staticmethod
+    @custom_bwd
+    def backward(ctx, dZ):
+        gidx, op, lhs_target, rhs_target, X_shape, Y_shape = ctx.backward_cache
+        ctx.backward_cache = None
+        X, Y = ctx.saved_tensors
+        if op != 'copy_rhs' and ctx.needs_input_grad[2]:
+            if lhs_target in ['u', 'v']:
+                _gidx = gidx if lhs_target == 'v' else gidx.reverse()
+                if op in ['add', 'copy_lhs']:
+                    dX = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ)
+                else:  # mul, dot
+                    if rhs_target == lhs_target:
+                        dX = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ) *  Y
+                    elif rhs_target == 'e':
+                        dX = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ * Y)
+                    else:  # rhs_target = !lhs_target
+                        dX = gspmm(_gidx, 'mul', 'sum', Y, dZ)
+            else:  # lhs_target == 'e'
+                if op in ['add', 'copy_lhs']:
+                    dX = dZ
+                else:  # mul, dot
+                    dX = gfusedmm(gidx, 'mul', dZ, Y, 'e', rhs_target)
+            dX = _reduce_grad(dX, X_shape)
+        else:
+            dX = None
+        if op != 'copy_lhs' and ctx.needs_input_grad[3]:
+            if rhs_target in ['u', 'v']:
+                _gidx = gidx if rhs_target == 'v' else gidx.reverse()
+                if op in ['add', 'copy_rhs']:
+                    dY = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ)
+                else:  # mul, dot
+                    if lhs_target == rhs_target:
+                        dY = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ) * X
+                    elif lhs_target == 'e':
+                        dY = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ * X)
+                    else:  # rhs_target = !lhs_target
+                        dY = gspmm(_gidx, 'mul', 'sum', X, dZ)
+            else:
+                if op in ['add', 'copy_rhs']:
+                    dY = dZ
+                else:  # mul, dot
+                    dY = gfusedmm(gidx, 'mul', dZ, X, 'e', lhs_target)
+            dY = _reduce_grad(dY, Y_shape)
+        else:
+            dY = None
+        return None, None, dX, dY, None, None
+
 
 class GSDDMM_hetero(th.autograd.Function):
     @staticmethod
@@ -633,17 +692,17 @@ def gsddmm(gidx, op, lhs_data, rhs_data, lhs_target='u', rhs_target='v'):
         rhs_data = 1. / rhs_data
     return GSDDMM.apply(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target)
 
-<<<<<<< HEAD
 # general-purpose fusedmm function for pytorch
 def gfusedmm(gidx, op, lhs_data, rhs_data, lhs_target='u', rhs_target='v', ftype = 1):
-    return _gfusedmm(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target, ftype)
+    # return _gfusedmm(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target, ftype)
+    if op == 'sub':
+        op = 'add'
+        rhs_data = -rhs_data
+    if op == 'div':
+        op = 'mul'
+        rhs_data = 1. / rhs_data
+    return GFUSEDMM.apply(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target)
 
-def gspmm_hetero(g, op, reduce_op, *lhs_and_rhs_tuple):
-    return GSpMM_hetero.apply(g, op, reduce_op, *lhs_and_rhs_tuple)
-
-def gsddmm_hetero(g, op, lhs_target='u', rhs_target='v', *lhs_and_rhs_tuple):
-    return GSDDMM_hetero.apply(g, op, lhs_target, rhs_target, *lhs_and_rhs_tuple)
-=======
 def gspmm_hetero(g, op, reduce_op, lhs_len, *lhs_and_rhs_tuple):
     lhs_tuple, rhs_tuple = lhs_and_rhs_tuple[:lhs_len], lhs_and_rhs_tuple[lhs_len:]
     if op == 'sub':
@@ -671,7 +730,6 @@ def gsddmm_hetero(g, op, lhs_len, lhs_target='u', rhs_target='v', *lhs_and_rhs_t
     if op in ['add', 'mul']:
         lhs_and_rhs_tuple = tuple(list(lhs_tuple) + list(rhs_tuple))
     return GSDDMM_hetero.apply(g, op, lhs_len, lhs_target, rhs_target, *lhs_and_rhs_tuple)
->>>>>>> a2241faf47dcb8be09dc219e488831c097431c65
 
 def edge_softmax(gidx, logits, eids=ALL, norm_by='dst'):
     return EdgeSoftmax.apply(gidx, logits, eids, norm_by)

@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Enable AddressSanitizer (ASan)
+ASAN:BOOL=OFF
+
 //turn asserts on
 ASSERT:BOOL=OFF
 
@@ -22,6 +25,12 @@ ASSERT2:BOOL=OFF
 
 //Build cpp unittest executables
 BUILD_CPP_TEST:STRING=OFF
+
+//Build the testing tree.
+BUILD_TESTING:BOOL=ON
+
+//Path to a program.
+BZRCOMMAND:FILEPATH=BZRCOMMAND-NOTFOUND
 
 //Header providing backtrace(3) facility
 Backtrace_HEADER:STRING=execinfo.h
@@ -281,6 +290,28 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to the coverage program that CTest uses for performing coverage
+// inspection
+COVERAGE_COMMAND:FILEPATH=/opt/gcc-10.1.0/bin/gcov
+
+//Extra command line flags to pass to the coverage tool
+COVERAGE_EXTRA_FLAGS:STRING=-l
+
+//How many times to retry timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_COUNT:STRING=3
+
+//How long to wait between timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_DELAY:STRING=5
+
+//Path to a program.
+CVSCOMMAND:FILEPATH=CVSCOMMAND-NOTFOUND
+
+//Options passed to the cvs update command.
+CVS_UPDATE_OPTIONS:STRING=-d -A -P
+
+//Maximum time allowed before CTest will kill the test.
+DART_TESTING_TIMEOUT:STRING=1500
+
 //add debugging support
 DEBUG:BOOL=OFF
 
@@ -302,6 +333,9 @@ DMLC_USE_SANITIZER:BOOL=OFF
 //enable use of GDB
 GDB:BOOL=OFF
 
+//Path to a program.
+GITCOMMAND:FILEPATH=/usr/bin/git
+
 //enable GKRAND support
 GKRAND:BOOL=OFF
 
@@ -314,12 +348,24 @@ GOOGLE_TEST:BOOL=OFF
 //add gprof support
 GPROF:BOOL=OFF
 
+//Path to a program.
+HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
+
 //Install documentation
 INSTALL_DOCUMENTATION:BOOL=OFF
 
 //Enable the parallel algorithms library. This requires the PSTL
 // to be available.
 LIBCXX_ENABLE_PARALLEL_ALGORITHMS:STRING=OFF
+
+//Command to build the project
+MAKECOMMAND:STRING=/N/u2/m/morahma/Softwares/cmake/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+
+//Path to the memory checking command, used for memory error detection.
+MEMORYCHECK_COMMAND:FILEPATH=/usr/bin/valgrind
+
+//File that contains suppressions for the memory checker
+MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //enable OpenMP support
 OPENMP:BOOL=OFF
@@ -342,11 +388,67 @@ OpenMP_gomp_LIBRARY:FILEPATH=/opt/gcc-10.1.0/lib64/libgomp.so
 //Path to the pthread library for OpenMP
 OpenMP_pthread_LIBRARY:FILEPATH=/lib64/libpthread.so
 
+//Path to a program.
+P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
+
 //enable PCRE support
 PCRE:BOOL=OFF
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
+//build for qemu
+QEMU:BOOL=OFF
+
 //Clean LIBXSMM build cache at every build
 REBUILD_LIBXSMM:STRING=OFF
+
+//Name of the computer/site where compile is being run
+SITE:STRING=v-017
+
+//Path to the SLURM sbatch executable
+SLURM_SBATCH_COMMAND:FILEPATH=/opt/slurm/bin/sbatch
+
+//Path to the SLURM srun executable
+SLURM_SRUN_COMMAND:FILEPATH=/opt/slurm/bin/srun
+
+//Path to a program.
+SVNCOMMAND:FILEPATH=/usr/bin/svn
+
+//Build benchmarks
+TP_BUILD_BENCHMARK:BOOL=OFF
+
+//Build libuv from source
+TP_BUILD_LIBUV:BOOL=OFF
+
+//Build misc tools
+TP_BUILD_MISC:BOOL=OFF
+
+//Build python bindings
+TP_BUILD_PYTHON:BOOL=OFF
+
+//Build tests
+TP_BUILD_TESTING:BOOL=OFF
+
+//Enable cross-memory attach channel
+TP_ENABLE_CMA:BOOL=ON
+
+//Enable InfiniBand transport
+TP_ENABLE_IBV:BOOL=ON
+
+//Enable shared-memory transport
+TP_ENABLE_SHM:BOOL=ON
+
+//Directory in which to install public headers
+TP_INSTALL_INCLUDEDIR:STRING=include
+
+//Directory in which to install libraries
+TP_INSTALL_LIBDIR:STRING=lib64
+
+TP_STATIC_OR_SHARED:STRING=STATIC
+
+//Enable support for CUDA tensors
+TP_USE_CUDA:BOOL=OFF
 
 //Build with AVX optimization
 USE_AVX:STRING=ON
@@ -411,8 +513,32 @@ fusedmm_BINARY_DIR:STATIC=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/sr
 //Value Computed by CMake
 fusedmm_SOURCE_DIR:STATIC=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/src/array/cpu/FusedMM
 
+//Value Computed by CMake
+libuv_BINARY_DIR:STATIC=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/third_party/tensorpipe/third_party/libuv
+
+//Value Computed by CMake
+libuv_SOURCE_DIR:STATIC=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/third_party/tensorpipe/third_party/libuv
+
 //Dependencies for the target
 metis_LIB_DEPENDS:STATIC=general;m;
+
+//Value Computed by CMake
+tensorpipe_BINARY_DIR:STATIC=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/third_party/tensorpipe
+
+//Dependencies for the target
+tensorpipe_LIB_DEPENDS:STATIC=general;uv::uv;
+
+//Value Computed by CMake
+tensorpipe_SOURCE_DIR:STATIC=/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/third_party/tensorpipe
+
+//Dependencies for the target
+tensorpipe_uv_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
+
+//Dependencies for the target
+uv_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
+
+//Dependencies for the target
+uv_a_LIB_DEPENDS:STATIC=general;pthread;general;dl;general;rt;
 
 
 ########################
@@ -421,6 +547,8 @@ metis_LIB_DEPENDS:STATIC=general;m;
 
 //Result of TEST_BIG_ENDIAN
 BIG_ENDIAN:INTERNAL=0
+//ADVANCED property for variable: BZRCOMMAND
+BZRCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Backtrace_HEADER
 Backtrace_HEADER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Backtrace_INCLUDE_DIR
@@ -443,6 +571,8 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/N/u2/m/morahma/Softwares/cmake/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/N/u2/m/morahma/Softwares/cmake/bin/cpack
+//ADVANCED property for variable: CMAKE_CTEST_COMMAND
+CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/N/u2/m/morahma/Softwares/cmake/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -557,7 +687,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -600,6 +730,20 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_COMMAND
+COVERAGE_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
+COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
+CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
+CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CVSCOMMAND
+CVSCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CVS_UPDATE_OPTIONS
+CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DART_TESTING_TIMEOUT
+DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //Have include cxxabi.h
 DMLC_CXXABI_H_PRESENT:INTERNAL=1
 //Have symbol fopen64
@@ -614,6 +758,10 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][v()]
 //Details about finding OpenMP_CXX
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][/opt/gcc-10.1.0/lib64/libgomp.so][/lib64/libpthread.so][v()]
+//Details about finding uv
+FIND_PACKAGE_MESSAGE_DETAILS_uv:INTERNAL=[1.38.1][v1.38.1()]
+//ADVANCED property for variable: GITCOMMAND
+GITCOMMAND-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 HAVE_BIG_ENDIAN:INTERNAL=TRUE
 //Have library rt
@@ -630,6 +778,14 @@ HAVE_STDDEF_H:INTERNAL=1
 HAVE_STDINT_H:INTERNAL=1
 //Have include sys/types.h
 HAVE_SYS_TYPES_H:INTERNAL=1
+//ADVANCED property for variable: HGCOMMAND
+HGCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MAKECOMMAND
+MAKECOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_COMMAND
+MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
+MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 OpenMP_COMPILE_RESULT_CXX_fopenmp:INTERNAL=TRUE
 //Result of TRY_COMPILE
@@ -654,12 +810,91 @@ OpenMP_SPECTEST_C_:INTERNAL=TRUE
 OpenMP_gomp_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenMP_pthread_LIBRARY
 OpenMP_pthread_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: P4COMMAND
+P4COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SITE
+SITE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SLURM_SBATCH_COMMAND
+SLURM_SBATCH_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SLURM_SRUN_COMMAND
+SLURM_SRUN_COMMAND-ADVANCED:INTERNAL=1
 //Test SUPPORT_CXX11
 SUPPORT_CXX11:INTERNAL=1
 //Test SUPPORT_MSSE2
 SUPPORT_MSSE2:INTERNAL=1
+//ADVANCED property for variable: SVNCOMMAND
+SVNCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: TP_INSTALL_INCLUDEDIR
+TP_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: TP_INSTALL_LIBDIR
+TP_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: TP_STATIC_OR_SHARED
+TP_STATIC_OR_SHARED-ADVANCED:INTERNAL=1
+//Test UV_F_STRICT_ALIASING
+UV_F_STRICT_ALIASING:INTERNAL=1
+//Test UV_LINT_EXTRA
+UV_LINT_EXTRA:INTERNAL=1
+//Test UV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC
+UV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC:INTERNAL=
+//Test UV_LINT_NO_CONDITIONAL_CONSTANT_MSVC
+UV_LINT_NO_CONDITIONAL_CONSTANT_MSVC:INTERNAL=
+//Test UV_LINT_NO_HIDES_GLOBAL
+UV_LINT_NO_HIDES_GLOBAL:INTERNAL=
+//Test UV_LINT_NO_HIDES_LOCAL
+UV_LINT_NO_HIDES_LOCAL:INTERNAL=
+//Test UV_LINT_NO_HIDES_PARAM
+UV_LINT_NO_HIDES_PARAM:INTERNAL=
+//Test UV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC
+UV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC:INTERNAL=
+//Test UV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC
+UV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC:INTERNAL=
+//Test UV_LINT_NO_NONSTANDARD_MSVC
+UV_LINT_NO_NONSTANDARD_MSVC:INTERNAL=
+//Test UV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC
+UV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC:INTERNAL=
+//Test UV_LINT_NO_UNSAFE_MSVC
+UV_LINT_NO_UNSAFE_MSVC:INTERNAL=
+//Test UV_LINT_NO_UNUSED_PARAMETER
+UV_LINT_NO_UNUSED_PARAMETER:INTERNAL=1
+//Test UV_LINT_NO_UNUSED_PARAMETER_MSVC
+UV_LINT_NO_UNUSED_PARAMETER_MSVC:INTERNAL=
+//Test UV_LINT_STRICT_PROTOTYPES
+UV_LINT_STRICT_PROTOTYPES:INTERNAL=1
+//Test UV_LINT_UTF8_MSVC
+UV_LINT_UTF8_MSVC:INTERNAL=
+//Test UV_LINT_W4
+UV_LINT_W4:INTERNAL=
+//Test UV_LINT_WALL
+UV_LINT_WALL:INTERNAL=1
 //Have symbol backtrace
 _Backtrace_SYM_FOUND:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+__pkg_config_checked_uv:INTERNAL=1
+uv_CFLAGS:INTERNAL=
+uv_CFLAGS_I:INTERNAL=
+uv_CFLAGS_OTHER:INTERNAL=
+uv_FOUND:INTERNAL=
+uv_INCLUDEDIR:INTERNAL=
+uv_LIBDIR:INTERNAL=
+uv_LIBS:INTERNAL=
+uv_LIBS_L:INTERNAL=
+uv_LIBS_OTHER:INTERNAL=
+uv_LIBS_PATHS:INTERNAL=
+uv_PREFIX:INTERNAL=
+uv_STATIC_CFLAGS:INTERNAL=
+uv_STATIC_CFLAGS_I:INTERNAL=
+uv_STATIC_CFLAGS_OTHER:INTERNAL=
+uv_STATIC_LIBDIR:INTERNAL=
+uv_STATIC_LIBS:INTERNAL=
+uv_STATIC_LIBS_L:INTERNAL=
+uv_STATIC_LIBS_OTHER:INTERNAL=
+uv_STATIC_LIBS_PATHS:INTERNAL=
+uv_VERSION:INTERNAL=
+uv_libuv_INCLUDEDIR:INTERNAL=
+uv_libuv_LIBDIR:INTERNAL=
+uv_libuv_PREFIX:INTERNAL=
+uv_libuv_VERSION:INTERNAL=
 

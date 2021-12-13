@@ -1404,3 +1404,78 @@ Linking C executable cmTC_eb4a7
 gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
 
 
+Performing C SOURCE FILE Test UV_LINT_WALL succeeded with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3eac6/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_3eac6.dir/build.make CMakeFiles/cmTC_3eac6.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3eac6.dir/src.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_LINT_WALL   -Wall -o CMakeFiles/cmTC_3eac6.dir/src.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3eac6
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3eac6.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_LINT_WALL    CMakeFiles/cmTC_3eac6.dir/src.c.o  -o cmTC_3eac6 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test UV_LINT_NO_UNUSED_PARAMETER succeeded with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_fb917/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_fb917.dir/build.make CMakeFiles/cmTC_fb917.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fb917.dir/src.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_LINT_NO_UNUSED_PARAMETER   -Wno-unused-parameter -o CMakeFiles/cmTC_fb917.dir/src.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fb917
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb917.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_LINT_NO_UNUSED_PARAMETER    CMakeFiles/cmTC_fb917.dir/src.c.o  -o cmTC_fb917 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test UV_LINT_STRICT_PROTOTYPES succeeded with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a147a/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_a147a.dir/build.make CMakeFiles/cmTC_a147a.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a147a.dir/src.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_LINT_STRICT_PROTOTYPES   -Wstrict-prototypes -o CMakeFiles/cmTC_a147a.dir/src.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a147a
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a147a.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_LINT_STRICT_PROTOTYPES    CMakeFiles/cmTC_a147a.dir/src.c.o  -o cmTC_a147a 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test UV_LINT_EXTRA succeeded with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_57e9c/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_57e9c.dir/build.make CMakeFiles/cmTC_57e9c.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_57e9c.dir/src.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_LINT_EXTRA   -Wextra -o CMakeFiles/cmTC_57e9c.dir/src.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_57e9c
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57e9c.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_LINT_EXTRA    CMakeFiles/cmTC_57e9c.dir/src.c.o  -o cmTC_57e9c 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test UV_F_STRICT_ALIASING succeeded with the following output:
+Change Dir: /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_028b4/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_028b4.dir/build.make CMakeFiles/cmTC_028b4.dir/build
+gmake[1]: Entering directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_028b4.dir/src.c.o
+/opt/gcc-10.1.0/bin/gcc   -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_F_STRICT_ALIASING   -fno-strict-aliasing -o CMakeFiles/cmTC_028b4.dir/src.c.o   -c /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_028b4
+/N/u2/m/morahma/Softwares/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_028b4.dir/link.txt --verbose=1
+/opt/gcc-10.1.0/bin/gcc -fopenmp -O2 -Wall -fPIC  -DUSE_AVX -DUSE_LIBXSMM -DDGL_CPU_LLC_SIZE=40000000 -DIDXTYPEWIDTH=64 -DREALTYPEWIDTH=32 -DLINUX -D_FILE_OFFSET_BITS=64 -std=c99 -fno-strict-aliasing -march=native -fPIC -Werror -Wall  -Wno-unused-function -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unknown-pragmas -DNDEBUG -DNDEBUG2 -DHAVE_EXECINFO_H -DHAVE_GETLINE -O3 -DUV_F_STRICT_ALIASING    CMakeFiles/cmTC_028b4.dir/src.c.o  -o cmTC_028b4 
+gmake[1]: Leaving directory `/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }

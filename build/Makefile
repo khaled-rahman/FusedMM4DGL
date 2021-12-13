@@ -222,6 +222,422 @@ metis/fast:
 .PHONY : metis/fast
 
 #=============================================================================
+# Target rules for targets named tensorpipe
+
+# Build rule for target.
+tensorpipe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tensorpipe
+.PHONY : tensorpipe
+
+# fast build rule for target.
+tensorpipe/fast:
+	$(MAKE) -f third_party/tensorpipe/tensorpipe/CMakeFiles/tensorpipe.dir/build.make third_party/tensorpipe/tensorpipe/CMakeFiles/tensorpipe.dir/build
+.PHONY : tensorpipe/fast
+
+#=============================================================================
+# Target rules for targets named tensorpipe_uv
+
+# Build rule for target.
+tensorpipe_uv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tensorpipe_uv
+.PHONY : tensorpipe_uv
+
+# fast build rule for target.
+tensorpipe_uv/fast:
+	$(MAKE) -f third_party/tensorpipe/tensorpipe/CMakeFiles/tensorpipe_uv.dir/build.make third_party/tensorpipe/tensorpipe/CMakeFiles/tensorpipe_uv.dir/build
+.PHONY : tensorpipe_uv/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemCheck
+
+# Build rule for target.
+NightlyMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemCheck
+.PHONY : NightlyMemCheck
+
+# fast build rule for target.
+NightlyMemCheck/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyMemCheck.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyMemCheck.dir/build
+.PHONY : NightlyMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named NightlyTest
+
+# Build rule for target.
+NightlyTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyTest
+.PHONY : NightlyTest
+
+# fast build rule for target.
+NightlyTest/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyTest.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyTest.dir/build
+.PHONY : NightlyTest/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousConfigure
+
+# Build rule for target.
+ContinuousConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousConfigure
+.PHONY : ContinuousConfigure
+
+# fast build rule for target.
+ContinuousConfigure/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousConfigure.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousConfigure.dir/build
+.PHONY : ContinuousConfigure/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousBuild
+
+# Build rule for target.
+ContinuousBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousBuild
+.PHONY : ContinuousBuild
+
+# fast build rule for target.
+ContinuousBuild/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousBuild.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousBuild.dir/build
+.PHONY : ContinuousBuild/fast
+
+#=============================================================================
+# Target rules for targets named NightlyConfigure
+
+# Build rule for target.
+NightlyConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyConfigure
+.PHONY : NightlyConfigure
+
+# fast build rule for target.
+NightlyConfigure/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyConfigure.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyConfigure.dir/build
+.PHONY : NightlyConfigure/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemoryCheck
+
+# Build rule for target.
+NightlyMemoryCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemoryCheck
+.PHONY : NightlyMemoryCheck
+
+# fast build rule for target.
+NightlyMemoryCheck/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyMemoryCheck.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyMemoryCheck.dir/build
+.PHONY : NightlyMemoryCheck/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalTest
+
+# Build rule for target.
+ExperimentalTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalTest
+.PHONY : ExperimentalTest
+
+# fast build rule for target.
+ExperimentalTest/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalTest.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalTest.dir/build
+.PHONY : ExperimentalTest/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousUpdate
+
+# Build rule for target.
+ContinuousUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousUpdate
+.PHONY : ContinuousUpdate
+
+# fast build rule for target.
+ContinuousUpdate/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousUpdate.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousUpdate.dir/build
+.PHONY : ContinuousUpdate/fast
+
+#=============================================================================
+# Target rules for targets named NightlyUpdate
+
+# Build rule for target.
+NightlyUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyUpdate
+.PHONY : NightlyUpdate
+
+# fast build rule for target.
+NightlyUpdate/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyUpdate.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyUpdate.dir/build
+.PHONY : NightlyUpdate/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalMemCheck
+
+# Build rule for target.
+ExperimentalMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalMemCheck
+.PHONY : ExperimentalMemCheck
+
+# fast build rule for target.
+ExperimentalMemCheck/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalMemCheck.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalMemCheck.dir/build
+.PHONY : ExperimentalMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalSubmit
+
+# Build rule for target.
+ExperimentalSubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalSubmit
+.PHONY : ExperimentalSubmit
+
+# fast build rule for target.
+ExperimentalSubmit/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalSubmit.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalSubmit.dir/build
+.PHONY : ExperimentalSubmit/fast
+
+#=============================================================================
+# Target rules for targets named Experimental
+
+# Build rule for target.
+Experimental: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Experimental
+.PHONY : Experimental
+
+# fast build rule for target.
+Experimental/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/Experimental.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/Experimental.dir/build
+.PHONY : Experimental/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousCoverage
+
+# Build rule for target.
+ContinuousCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousCoverage
+.PHONY : ContinuousCoverage
+
+# fast build rule for target.
+ContinuousCoverage/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousCoverage.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousCoverage.dir/build
+.PHONY : ContinuousCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalConfigure
+
+# Build rule for target.
+ExperimentalConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalConfigure
+.PHONY : ExperimentalConfigure
+
+# fast build rule for target.
+ExperimentalConfigure/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalConfigure.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalConfigure.dir/build
+.PHONY : ExperimentalConfigure/fast
+
+#=============================================================================
+# Target rules for targets named Continuous
+
+# Build rule for target.
+Continuous: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Continuous
+.PHONY : Continuous
+
+# fast build rule for target.
+Continuous/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/Continuous.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/Continuous.dir/build
+.PHONY : Continuous/fast
+
+#=============================================================================
+# Target rules for targets named Nightly
+
+# Build rule for target.
+Nightly: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Nightly
+.PHONY : Nightly
+
+# fast build rule for target.
+Nightly/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/Nightly.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/Nightly.dir/build
+.PHONY : Nightly/fast
+
+#=============================================================================
+# Target rules for targets named NightlySubmit
+
+# Build rule for target.
+NightlySubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlySubmit
+.PHONY : NightlySubmit
+
+# fast build rule for target.
+NightlySubmit/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlySubmit.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlySubmit.dir/build
+.PHONY : NightlySubmit/fast
+
+#=============================================================================
+# Target rules for targets named NightlyStart
+
+# Build rule for target.
+NightlyStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyStart
+.PHONY : NightlyStart
+
+# fast build rule for target.
+NightlyStart/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyStart.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyStart.dir/build
+.PHONY : NightlyStart/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalCoverage
+
+# Build rule for target.
+ExperimentalCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalCoverage
+.PHONY : ExperimentalCoverage
+
+# fast build rule for target.
+ExperimentalCoverage/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalCoverage.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalCoverage.dir/build
+.PHONY : ExperimentalCoverage/fast
+
+#=============================================================================
+# Target rules for targets named NightlyCoverage
+
+# Build rule for target.
+NightlyCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyCoverage
+.PHONY : NightlyCoverage
+
+# fast build rule for target.
+NightlyCoverage/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyCoverage.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyCoverage.dir/build
+.PHONY : NightlyCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalStart
+
+# Build rule for target.
+ExperimentalStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalStart
+.PHONY : ExperimentalStart
+
+# fast build rule for target.
+ExperimentalStart/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalStart.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalStart.dir/build
+.PHONY : ExperimentalStart/fast
+
+#=============================================================================
+# Target rules for targets named NightlyBuild
+
+# Build rule for target.
+NightlyBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyBuild
+.PHONY : NightlyBuild
+
+# fast build rule for target.
+NightlyBuild/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyBuild.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/NightlyBuild.dir/build
+.PHONY : NightlyBuild/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalBuild
+
+# Build rule for target.
+ExperimentalBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalBuild
+.PHONY : ExperimentalBuild
+
+# fast build rule for target.
+ExperimentalBuild/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalBuild.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalBuild.dir/build
+.PHONY : ExperimentalBuild/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalUpdate
+
+# Build rule for target.
+ExperimentalUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalUpdate
+.PHONY : ExperimentalUpdate
+
+# fast build rule for target.
+ExperimentalUpdate/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalUpdate.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ExperimentalUpdate.dir/build
+.PHONY : ExperimentalUpdate/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousStart
+
+# Build rule for target.
+ContinuousStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousStart
+.PHONY : ContinuousStart
+
+# fast build rule for target.
+ContinuousStart/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousStart.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousStart.dir/build
+.PHONY : ContinuousStart/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousMemCheck
+
+# Build rule for target.
+ContinuousMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousMemCheck
+.PHONY : ContinuousMemCheck
+
+# fast build rule for target.
+ContinuousMemCheck/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousMemCheck.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousMemCheck.dir/build
+.PHONY : ContinuousMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named uv_a
+
+# Build rule for target.
+uv_a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uv_a
+.PHONY : uv_a
+
+# fast build rule for target.
+uv_a/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/uv_a.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/uv_a.dir/build
+.PHONY : uv_a/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousTest
+
+# Build rule for target.
+ContinuousTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousTest
+.PHONY : ContinuousTest
+
+# fast build rule for target.
+ContinuousTest/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousTest.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousTest.dir/build
+.PHONY : ContinuousTest/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousSubmit
+
+# Build rule for target.
+ContinuousSubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousSubmit
+.PHONY : ContinuousSubmit
+
+# fast build rule for target.
+ContinuousSubmit/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousSubmit.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/ContinuousSubmit.dir/build
+.PHONY : ContinuousSubmit/fast
+
+#=============================================================================
+# Target rules for targets named uv
+
+# Build rule for target.
+uv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uv
+.PHONY : uv
+
+# fast build rule for target.
+uv/fast:
+	$(MAKE) -f third_party/tensorpipe/third_party/libuv/CMakeFiles/uv.dir/build.make third_party/tensorpipe/third_party/libuv/CMakeFiles/uv.dir/build
+.PHONY : uv/fast
+
+#=============================================================================
 # Target rules for targets named fusedmm
 
 # Build rule for target.
@@ -2448,384 +2864,6 @@ src/graph/unit_graph.cc.s:
 	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/graph/unit_graph.cc.s
 .PHONY : src/graph/unit_graph.cc.s
 
-src/kernel/binary_reduce.o: src/kernel/binary_reduce.cc.o
-
-.PHONY : src/kernel/binary_reduce.o
-
-# target to build an object file
-src/kernel/binary_reduce.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.o
-.PHONY : src/kernel/binary_reduce.cc.o
-
-src/kernel/binary_reduce.i: src/kernel/binary_reduce.cc.i
-
-.PHONY : src/kernel/binary_reduce.i
-
-# target to preprocess a source file
-src/kernel/binary_reduce.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.i
-.PHONY : src/kernel/binary_reduce.cc.i
-
-src/kernel/binary_reduce.s: src/kernel/binary_reduce.cc.s
-
-.PHONY : src/kernel/binary_reduce.s
-
-# target to generate assembly for a file
-src/kernel/binary_reduce.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/binary_reduce.cc.s
-.PHONY : src/kernel/binary_reduce.cc.s
-
-src/kernel/cpu/binary_bcast_reduce_max.o: src/kernel/cpu/binary_bcast_reduce_max.cc.o
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_max.o
-
-# target to build an object file
-src/kernel/cpu/binary_bcast_reduce_max.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.o
-.PHONY : src/kernel/cpu/binary_bcast_reduce_max.cc.o
-
-src/kernel/cpu/binary_bcast_reduce_max.i: src/kernel/cpu/binary_bcast_reduce_max.cc.i
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_max.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_bcast_reduce_max.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.i
-.PHONY : src/kernel/cpu/binary_bcast_reduce_max.cc.i
-
-src/kernel/cpu/binary_bcast_reduce_max.s: src/kernel/cpu/binary_bcast_reduce_max.cc.s
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_max.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_bcast_reduce_max.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_max.cc.s
-.PHONY : src/kernel/cpu/binary_bcast_reduce_max.cc.s
-
-src/kernel/cpu/binary_bcast_reduce_min.o: src/kernel/cpu/binary_bcast_reduce_min.cc.o
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_min.o
-
-# target to build an object file
-src/kernel/cpu/binary_bcast_reduce_min.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.o
-.PHONY : src/kernel/cpu/binary_bcast_reduce_min.cc.o
-
-src/kernel/cpu/binary_bcast_reduce_min.i: src/kernel/cpu/binary_bcast_reduce_min.cc.i
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_min.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_bcast_reduce_min.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.i
-.PHONY : src/kernel/cpu/binary_bcast_reduce_min.cc.i
-
-src/kernel/cpu/binary_bcast_reduce_min.s: src/kernel/cpu/binary_bcast_reduce_min.cc.s
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_min.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_bcast_reduce_min.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_min.cc.s
-.PHONY : src/kernel/cpu/binary_bcast_reduce_min.cc.s
-
-src/kernel/cpu/binary_bcast_reduce_none.o: src/kernel/cpu/binary_bcast_reduce_none.cc.o
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_none.o
-
-# target to build an object file
-src/kernel/cpu/binary_bcast_reduce_none.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.o
-.PHONY : src/kernel/cpu/binary_bcast_reduce_none.cc.o
-
-src/kernel/cpu/binary_bcast_reduce_none.i: src/kernel/cpu/binary_bcast_reduce_none.cc.i
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_none.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_bcast_reduce_none.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.i
-.PHONY : src/kernel/cpu/binary_bcast_reduce_none.cc.i
-
-src/kernel/cpu/binary_bcast_reduce_none.s: src/kernel/cpu/binary_bcast_reduce_none.cc.s
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_none.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_bcast_reduce_none.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_none.cc.s
-.PHONY : src/kernel/cpu/binary_bcast_reduce_none.cc.s
-
-src/kernel/cpu/binary_bcast_reduce_prod.o: src/kernel/cpu/binary_bcast_reduce_prod.cc.o
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_prod.o
-
-# target to build an object file
-src/kernel/cpu/binary_bcast_reduce_prod.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.o
-.PHONY : src/kernel/cpu/binary_bcast_reduce_prod.cc.o
-
-src/kernel/cpu/binary_bcast_reduce_prod.i: src/kernel/cpu/binary_bcast_reduce_prod.cc.i
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_prod.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_bcast_reduce_prod.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.i
-.PHONY : src/kernel/cpu/binary_bcast_reduce_prod.cc.i
-
-src/kernel/cpu/binary_bcast_reduce_prod.s: src/kernel/cpu/binary_bcast_reduce_prod.cc.s
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_prod.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_bcast_reduce_prod.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_prod.cc.s
-.PHONY : src/kernel/cpu/binary_bcast_reduce_prod.cc.s
-
-src/kernel/cpu/binary_bcast_reduce_sum.o: src/kernel/cpu/binary_bcast_reduce_sum.cc.o
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_sum.o
-
-# target to build an object file
-src/kernel/cpu/binary_bcast_reduce_sum.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.o
-.PHONY : src/kernel/cpu/binary_bcast_reduce_sum.cc.o
-
-src/kernel/cpu/binary_bcast_reduce_sum.i: src/kernel/cpu/binary_bcast_reduce_sum.cc.i
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_sum.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_bcast_reduce_sum.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.i
-.PHONY : src/kernel/cpu/binary_bcast_reduce_sum.cc.i
-
-src/kernel/cpu/binary_bcast_reduce_sum.s: src/kernel/cpu/binary_bcast_reduce_sum.cc.s
-
-.PHONY : src/kernel/cpu/binary_bcast_reduce_sum.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_bcast_reduce_sum.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_bcast_reduce_sum.cc.s
-.PHONY : src/kernel/cpu/binary_bcast_reduce_sum.cc.s
-
-src/kernel/cpu/binary_reduce_impl.o: src/kernel/cpu/binary_reduce_impl.cc.o
-
-.PHONY : src/kernel/cpu/binary_reduce_impl.o
-
-# target to build an object file
-src/kernel/cpu/binary_reduce_impl.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.o
-.PHONY : src/kernel/cpu/binary_reduce_impl.cc.o
-
-src/kernel/cpu/binary_reduce_impl.i: src/kernel/cpu/binary_reduce_impl.cc.i
-
-.PHONY : src/kernel/cpu/binary_reduce_impl.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_reduce_impl.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.i
-.PHONY : src/kernel/cpu/binary_reduce_impl.cc.i
-
-src/kernel/cpu/binary_reduce_impl.s: src/kernel/cpu/binary_reduce_impl.cc.s
-
-.PHONY : src/kernel/cpu/binary_reduce_impl.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_reduce_impl.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_impl.cc.s
-.PHONY : src/kernel/cpu/binary_reduce_impl.cc.s
-
-src/kernel/cpu/binary_reduce_max.o: src/kernel/cpu/binary_reduce_max.cc.o
-
-.PHONY : src/kernel/cpu/binary_reduce_max.o
-
-# target to build an object file
-src/kernel/cpu/binary_reduce_max.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.o
-.PHONY : src/kernel/cpu/binary_reduce_max.cc.o
-
-src/kernel/cpu/binary_reduce_max.i: src/kernel/cpu/binary_reduce_max.cc.i
-
-.PHONY : src/kernel/cpu/binary_reduce_max.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_reduce_max.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.i
-.PHONY : src/kernel/cpu/binary_reduce_max.cc.i
-
-src/kernel/cpu/binary_reduce_max.s: src/kernel/cpu/binary_reduce_max.cc.s
-
-.PHONY : src/kernel/cpu/binary_reduce_max.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_reduce_max.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_max.cc.s
-.PHONY : src/kernel/cpu/binary_reduce_max.cc.s
-
-src/kernel/cpu/binary_reduce_min.o: src/kernel/cpu/binary_reduce_min.cc.o
-
-.PHONY : src/kernel/cpu/binary_reduce_min.o
-
-# target to build an object file
-src/kernel/cpu/binary_reduce_min.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.o
-.PHONY : src/kernel/cpu/binary_reduce_min.cc.o
-
-src/kernel/cpu/binary_reduce_min.i: src/kernel/cpu/binary_reduce_min.cc.i
-
-.PHONY : src/kernel/cpu/binary_reduce_min.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_reduce_min.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.i
-.PHONY : src/kernel/cpu/binary_reduce_min.cc.i
-
-src/kernel/cpu/binary_reduce_min.s: src/kernel/cpu/binary_reduce_min.cc.s
-
-.PHONY : src/kernel/cpu/binary_reduce_min.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_reduce_min.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_min.cc.s
-.PHONY : src/kernel/cpu/binary_reduce_min.cc.s
-
-src/kernel/cpu/binary_reduce_none.o: src/kernel/cpu/binary_reduce_none.cc.o
-
-.PHONY : src/kernel/cpu/binary_reduce_none.o
-
-# target to build an object file
-src/kernel/cpu/binary_reduce_none.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.o
-.PHONY : src/kernel/cpu/binary_reduce_none.cc.o
-
-src/kernel/cpu/binary_reduce_none.i: src/kernel/cpu/binary_reduce_none.cc.i
-
-.PHONY : src/kernel/cpu/binary_reduce_none.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_reduce_none.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.i
-.PHONY : src/kernel/cpu/binary_reduce_none.cc.i
-
-src/kernel/cpu/binary_reduce_none.s: src/kernel/cpu/binary_reduce_none.cc.s
-
-.PHONY : src/kernel/cpu/binary_reduce_none.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_reduce_none.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_none.cc.s
-.PHONY : src/kernel/cpu/binary_reduce_none.cc.s
-
-src/kernel/cpu/binary_reduce_prod.o: src/kernel/cpu/binary_reduce_prod.cc.o
-
-.PHONY : src/kernel/cpu/binary_reduce_prod.o
-
-# target to build an object file
-src/kernel/cpu/binary_reduce_prod.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.o
-.PHONY : src/kernel/cpu/binary_reduce_prod.cc.o
-
-src/kernel/cpu/binary_reduce_prod.i: src/kernel/cpu/binary_reduce_prod.cc.i
-
-.PHONY : src/kernel/cpu/binary_reduce_prod.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_reduce_prod.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.i
-.PHONY : src/kernel/cpu/binary_reduce_prod.cc.i
-
-src/kernel/cpu/binary_reduce_prod.s: src/kernel/cpu/binary_reduce_prod.cc.s
-
-.PHONY : src/kernel/cpu/binary_reduce_prod.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_reduce_prod.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_prod.cc.s
-.PHONY : src/kernel/cpu/binary_reduce_prod.cc.s
-
-src/kernel/cpu/binary_reduce_sum.o: src/kernel/cpu/binary_reduce_sum.cc.o
-
-.PHONY : src/kernel/cpu/binary_reduce_sum.o
-
-# target to build an object file
-src/kernel/cpu/binary_reduce_sum.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.o
-.PHONY : src/kernel/cpu/binary_reduce_sum.cc.o
-
-src/kernel/cpu/binary_reduce_sum.i: src/kernel/cpu/binary_reduce_sum.cc.i
-
-.PHONY : src/kernel/cpu/binary_reduce_sum.i
-
-# target to preprocess a source file
-src/kernel/cpu/binary_reduce_sum.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.i
-.PHONY : src/kernel/cpu/binary_reduce_sum.cc.i
-
-src/kernel/cpu/binary_reduce_sum.s: src/kernel/cpu/binary_reduce_sum.cc.s
-
-.PHONY : src/kernel/cpu/binary_reduce_sum.s
-
-# target to generate assembly for a file
-src/kernel/cpu/binary_reduce_sum.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/binary_reduce_sum.cc.s
-.PHONY : src/kernel/cpu/binary_reduce_sum.cc.s
-
-src/kernel/cpu/utils.o: src/kernel/cpu/utils.cc.o
-
-.PHONY : src/kernel/cpu/utils.o
-
-# target to build an object file
-src/kernel/cpu/utils.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.o
-.PHONY : src/kernel/cpu/utils.cc.o
-
-src/kernel/cpu/utils.i: src/kernel/cpu/utils.cc.i
-
-.PHONY : src/kernel/cpu/utils.i
-
-# target to preprocess a source file
-src/kernel/cpu/utils.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.i
-.PHONY : src/kernel/cpu/utils.cc.i
-
-src/kernel/cpu/utils.s: src/kernel/cpu/utils.cc.s
-
-.PHONY : src/kernel/cpu/utils.s
-
-# target to generate assembly for a file
-src/kernel/cpu/utils.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/cpu/utils.cc.s
-.PHONY : src/kernel/cpu/utils.cc.s
-
-src/kernel/utils.o: src/kernel/utils.cc.o
-
-.PHONY : src/kernel/utils.o
-
-# target to build an object file
-src/kernel/utils.cc.o:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/utils.cc.o
-.PHONY : src/kernel/utils.cc.o
-
-src/kernel/utils.i: src/kernel/utils.cc.i
-
-.PHONY : src/kernel/utils.i
-
-# target to preprocess a source file
-src/kernel/utils.cc.i:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/utils.cc.i
-.PHONY : src/kernel/utils.cc.i
-
-src/kernel/utils.s: src/kernel/utils.cc.s
-
-.PHONY : src/kernel/utils.s
-
-# target to generate assembly for a file
-src/kernel/utils.cc.s:
-	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/kernel/utils.cc.s
-.PHONY : src/kernel/utils.cc.s
-
 src/partition/ndarray_partition.o: src/partition/ndarray_partition.cc.o
 
 .PHONY : src/partition/ndarray_partition.o
@@ -2988,6 +3026,33 @@ src/rpc/network/socket_communicator.cc.s:
 	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/rpc/network/socket_communicator.cc.s
 .PHONY : src/rpc/network/socket_communicator.cc.s
 
+src/rpc/network/socket_pool.o: src/rpc/network/socket_pool.cc.o
+
+.PHONY : src/rpc/network/socket_pool.o
+
+# target to build an object file
+src/rpc/network/socket_pool.cc.o:
+	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.o
+.PHONY : src/rpc/network/socket_pool.cc.o
+
+src/rpc/network/socket_pool.i: src/rpc/network/socket_pool.cc.i
+
+.PHONY : src/rpc/network/socket_pool.i
+
+# target to preprocess a source file
+src/rpc/network/socket_pool.cc.i:
+	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.i
+.PHONY : src/rpc/network/socket_pool.cc.i
+
+src/rpc/network/socket_pool.s: src/rpc/network/socket_pool.cc.s
+
+.PHONY : src/rpc/network/socket_pool.s
+
+# target to generate assembly for a file
+src/rpc/network/socket_pool.cc.s:
+	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/rpc/network/socket_pool.cc.s
+.PHONY : src/rpc/network/socket_pool.cc.s
+
 src/rpc/network/tcp_socket.o: src/rpc/network/tcp_socket.cc.o
 
 .PHONY : src/rpc/network/tcp_socket.o
@@ -3041,6 +3106,33 @@ src/rpc/rpc.s: src/rpc/rpc.cc.s
 src/rpc/rpc.cc.s:
 	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/rpc/rpc.cc.s
 .PHONY : src/rpc/rpc.cc.s
+
+src/rpc/tensorpipe/tp_communicator.o: src/rpc/tensorpipe/tp_communicator.cc.o
+
+.PHONY : src/rpc/tensorpipe/tp_communicator.o
+
+# target to build an object file
+src/rpc/tensorpipe/tp_communicator.cc.o:
+	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.o
+.PHONY : src/rpc/tensorpipe/tp_communicator.cc.o
+
+src/rpc/tensorpipe/tp_communicator.i: src/rpc/tensorpipe/tp_communicator.cc.i
+
+.PHONY : src/rpc/tensorpipe/tp_communicator.i
+
+# target to preprocess a source file
+src/rpc/tensorpipe/tp_communicator.cc.i:
+	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.i
+.PHONY : src/rpc/tensorpipe/tp_communicator.cc.i
+
+src/rpc/tensorpipe/tp_communicator.s: src/rpc/tensorpipe/tp_communicator.cc.s
+
+.PHONY : src/rpc/tensorpipe/tp_communicator.s
+
+# target to generate assembly for a file
+src/rpc/tensorpipe/tp_communicator.cc.s:
+	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/rpc/tensorpipe/tp_communicator.cc.s
+.PHONY : src/rpc/tensorpipe/tp_communicator.cc.s
 
 src/runtime/c_object_api.o: src/runtime/c_object_api.cc.o
 
@@ -3339,6 +3431,33 @@ src/runtime/resource_manager.cc.s:
 	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/runtime/resource_manager.cc.s
 .PHONY : src/runtime/resource_manager.cc.s
 
+src/runtime/semaphore_wrapper.o: src/runtime/semaphore_wrapper.cc.o
+
+.PHONY : src/runtime/semaphore_wrapper.o
+
+# target to build an object file
+src/runtime/semaphore_wrapper.cc.o:
+	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.o
+.PHONY : src/runtime/semaphore_wrapper.cc.o
+
+src/runtime/semaphore_wrapper.i: src/runtime/semaphore_wrapper.cc.i
+
+.PHONY : src/runtime/semaphore_wrapper.i
+
+# target to preprocess a source file
+src/runtime/semaphore_wrapper.cc.i:
+	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.i
+.PHONY : src/runtime/semaphore_wrapper.cc.i
+
+src/runtime/semaphore_wrapper.s: src/runtime/semaphore_wrapper.cc.s
+
+.PHONY : src/runtime/semaphore_wrapper.s
+
+# target to generate assembly for a file
+src/runtime/semaphore_wrapper.cc.s:
+	$(MAKE) -f CMakeFiles/dgl.dir/build.make CMakeFiles/dgl.dir/src/runtime/semaphore_wrapper.cc.s
+.PHONY : src/runtime/semaphore_wrapper.cc.s
+
 src/runtime/shared_mem.o: src/runtime/shared_mem.cc.o
 
 .PHONY : src/runtime/shared_mem.o
@@ -3599,6 +3718,38 @@ help:
 	@echo "... dmlc_lint"
 	@echo "... dmlc"
 	@echo "... metis"
+	@echo "... tensorpipe"
+	@echo "... tensorpipe_uv"
+	@echo "... NightlyMemCheck"
+	@echo "... NightlyTest"
+	@echo "... ContinuousConfigure"
+	@echo "... ContinuousBuild"
+	@echo "... NightlyConfigure"
+	@echo "... NightlyMemoryCheck"
+	@echo "... ExperimentalTest"
+	@echo "... ContinuousUpdate"
+	@echo "... NightlyUpdate"
+	@echo "... ExperimentalMemCheck"
+	@echo "... ExperimentalSubmit"
+	@echo "... Experimental"
+	@echo "... ContinuousCoverage"
+	@echo "... ExperimentalConfigure"
+	@echo "... Continuous"
+	@echo "... Nightly"
+	@echo "... NightlySubmit"
+	@echo "... NightlyStart"
+	@echo "... ExperimentalCoverage"
+	@echo "... NightlyCoverage"
+	@echo "... ExperimentalStart"
+	@echo "... NightlyBuild"
+	@echo "... ExperimentalBuild"
+	@echo "... ExperimentalUpdate"
+	@echo "... ContinuousStart"
+	@echo "... ContinuousMemCheck"
+	@echo "... uv_a"
+	@echo "... ContinuousTest"
+	@echo "... ContinuousSubmit"
+	@echo "... uv"
 	@echo "... fusedmm"
 	@echo "... src/api/api_container.o"
 	@echo "... src/api/api_container.i"
@@ -3846,48 +3997,6 @@ help:
 	@echo "... src/graph/unit_graph.o"
 	@echo "... src/graph/unit_graph.i"
 	@echo "... src/graph/unit_graph.s"
-	@echo "... src/kernel/binary_reduce.o"
-	@echo "... src/kernel/binary_reduce.i"
-	@echo "... src/kernel/binary_reduce.s"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_max.o"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_max.i"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_max.s"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_min.o"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_min.i"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_min.s"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_none.o"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_none.i"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_none.s"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_prod.o"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_prod.i"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_prod.s"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_sum.o"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_sum.i"
-	@echo "... src/kernel/cpu/binary_bcast_reduce_sum.s"
-	@echo "... src/kernel/cpu/binary_reduce_impl.o"
-	@echo "... src/kernel/cpu/binary_reduce_impl.i"
-	@echo "... src/kernel/cpu/binary_reduce_impl.s"
-	@echo "... src/kernel/cpu/binary_reduce_max.o"
-	@echo "... src/kernel/cpu/binary_reduce_max.i"
-	@echo "... src/kernel/cpu/binary_reduce_max.s"
-	@echo "... src/kernel/cpu/binary_reduce_min.o"
-	@echo "... src/kernel/cpu/binary_reduce_min.i"
-	@echo "... src/kernel/cpu/binary_reduce_min.s"
-	@echo "... src/kernel/cpu/binary_reduce_none.o"
-	@echo "... src/kernel/cpu/binary_reduce_none.i"
-	@echo "... src/kernel/cpu/binary_reduce_none.s"
-	@echo "... src/kernel/cpu/binary_reduce_prod.o"
-	@echo "... src/kernel/cpu/binary_reduce_prod.i"
-	@echo "... src/kernel/cpu/binary_reduce_prod.s"
-	@echo "... src/kernel/cpu/binary_reduce_sum.o"
-	@echo "... src/kernel/cpu/binary_reduce_sum.i"
-	@echo "... src/kernel/cpu/binary_reduce_sum.s"
-	@echo "... src/kernel/cpu/utils.o"
-	@echo "... src/kernel/cpu/utils.i"
-	@echo "... src/kernel/cpu/utils.s"
-	@echo "... src/kernel/utils.o"
-	@echo "... src/kernel/utils.i"
-	@echo "... src/kernel/utils.s"
 	@echo "... src/partition/ndarray_partition.o"
 	@echo "... src/partition/ndarray_partition.i"
 	@echo "... src/partition/ndarray_partition.s"
@@ -3906,12 +4015,18 @@ help:
 	@echo "... src/rpc/network/socket_communicator.o"
 	@echo "... src/rpc/network/socket_communicator.i"
 	@echo "... src/rpc/network/socket_communicator.s"
+	@echo "... src/rpc/network/socket_pool.o"
+	@echo "... src/rpc/network/socket_pool.i"
+	@echo "... src/rpc/network/socket_pool.s"
 	@echo "... src/rpc/network/tcp_socket.o"
 	@echo "... src/rpc/network/tcp_socket.i"
 	@echo "... src/rpc/network/tcp_socket.s"
 	@echo "... src/rpc/rpc.o"
 	@echo "... src/rpc/rpc.i"
 	@echo "... src/rpc/rpc.s"
+	@echo "... src/rpc/tensorpipe/tp_communicator.o"
+	@echo "... src/rpc/tensorpipe/tp_communicator.i"
+	@echo "... src/rpc/tensorpipe/tp_communicator.s"
 	@echo "... src/runtime/c_object_api.o"
 	@echo "... src/runtime/c_object_api.i"
 	@echo "... src/runtime/c_object_api.s"
@@ -3945,6 +4060,9 @@ help:
 	@echo "... src/runtime/resource_manager.o"
 	@echo "... src/runtime/resource_manager.i"
 	@echo "... src/runtime/resource_manager.s"
+	@echo "... src/runtime/semaphore_wrapper.o"
+	@echo "... src/runtime/semaphore_wrapper.i"
+	@echo "... src/runtime/semaphore_wrapper.s"
 	@echo "... src/runtime/shared_mem.o"
 	@echo "... src/runtime/shared_mem.i"
 	@echo "... src/runtime/shared_mem.s"

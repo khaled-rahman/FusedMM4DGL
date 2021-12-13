@@ -57,6 +57,7 @@ dgl/_ffi/ndarray.py
 dgl/_ffi/object.py
 dgl/_ffi/object_generic.py
 dgl/_ffi/runtime_ctypes.py
+dgl/_ffi/streams.py
 dgl/_ffi/_ctypes/__init__.py
 dgl/_ffi/_ctypes/function.py
 dgl/_ffi/_ctypes/ndarray.py
@@ -119,9 +120,11 @@ dgl/data/tu.py
 dgl/data/utils.py
 dgl/dataloading/__init__.py
 dgl/dataloading/async_transferer.py
+dgl/dataloading/cluster_gcn.py
 dgl/dataloading/dataloader.py
 dgl/dataloading/negative_sampler.py
 dgl/dataloading/neighbor.py
+dgl/dataloading/shadow.py
 dgl/dataloading/pytorch/__init__.py
 dgl/dataloading/pytorch/dataloader.py
 dgl/distributed/__init__.py
@@ -206,8 +209,10 @@ dgl/nn/pytorch/conv/densegraphconv.py
 dgl/nn/pytorch/conv/densesageconv.py
 dgl/nn/pytorch/conv/dotgatconv.py
 dgl/nn/pytorch/conv/edgeconv.py
+dgl/nn/pytorch/conv/egatconv.py
 dgl/nn/pytorch/conv/gatconv.py
 dgl/nn/pytorch/conv/gatedgraphconv.py
+dgl/nn/pytorch/conv/gatv2conv.py
 dgl/nn/pytorch/conv/gcn2conv.py
 dgl/nn/pytorch/conv/ginconv.py
 dgl/nn/pytorch/conv/gmmconv.py
@@ -218,6 +223,12 @@ dgl/nn/pytorch/conv/sageconv.py
 dgl/nn/pytorch/conv/sgconv.py
 dgl/nn/pytorch/conv/tagconv.py
 dgl/nn/pytorch/conv/twirlsconv.py
+dgl/nn/pytorch/explain/__init__.py
+dgl/nn/pytorch/explain/gnnexplainer.py
+dgl/nn/pytorch/link/__init__.py
+dgl/nn/pytorch/link/edgepred.py
+dgl/nn/pytorch/link/transe.py
+dgl/nn/pytorch/link/transr.py
 dgl/nn/tensorflow/__init__.py
 dgl/nn/tensorflow/glob.py
 dgl/nn/tensorflow/hetero.py
@@ -236,6 +247,7 @@ dgl/nn/tensorflow/conv/sageconv.py
 dgl/nn/tensorflow/conv/sgconv.py
 dgl/ops/__init__.py
 dgl/ops/edge_softmax.py
+dgl/ops/fusedmm.py
 dgl/ops/sddmm.py
 dgl/ops/segment.py
 dgl/ops/spmm.py

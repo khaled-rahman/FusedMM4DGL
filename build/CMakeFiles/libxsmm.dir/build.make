@@ -54,7 +54,6 @@ CMAKE_BINARY_DIR = /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build
 include CMakeFiles/libxsmm.dir/progress.make
 
 CMakeFiles/libxsmm:
-	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/third_party/libxsmm && make realclean
 	cd /N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/third_party/libxsmm && make -j BLAS=0
 
 libxsmm: CMakeFiles/libxsmm

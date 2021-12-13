@@ -60,6 +60,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/third_party/dmlc-core/cmake_install.cmake")
   include("/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/third_party/METIS/libmetis/cmake_install.cmake")
+  include("/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/third_party/tensorpipe/cmake_install.cmake")
   include("/N/u2/m/morahma/Research/Fall2021/DGL_Run/dgl/build/src/array/cpu/FusedMM/cmake_install.cmake")
 
 endif()

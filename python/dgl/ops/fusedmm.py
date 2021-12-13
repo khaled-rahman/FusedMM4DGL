@@ -1,6 +1,6 @@
 """dgl fusedmm operator module."""
 import sys
-
+from itertools import product
 from ..backend import gfusedmm as gfusedmm_internal
 from .. import backend as F
 
