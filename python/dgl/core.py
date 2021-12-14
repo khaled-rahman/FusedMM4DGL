@@ -276,6 +276,46 @@ def invoke_gsddmm(graph, func):
         z = op(graph, x)
     return {func.out_field : z}
 
+
+def invoke_gfusedmm(graph, func):
+    """Invoke g-FUSEDMM computation on the graph.
+
+    Parameters
+    ----------
+    graph :  DGLGraph
+        The input graph.
+    func : dgl.function.BaseMessageFunction
+        Built-in message function.
+
+    Returns
+    -------
+    dict[str, Tensor]
+        Results from the g-SDDMM computation.
+    """
+    alldata = [graph.srcdata, graph.dstdata, graph.edata]
+    if isinstance(func, fn.BinaryMessageFunction):
+        x = alldata[func.lhs][func.lhs_field]
+        y = alldata[func.rhs][func.rhs_field]
+        op = getattr(ops, func.name)
+        if graph._graph.number_of_etypes() > 1:
+            lhs_target, _, rhs_target = func.name.split("_", 2)
+            x = data_dict_to_list(graph, x, func, lhs_target)
+            y = data_dict_to_list(graph, y, func, rhs_target)
+        z = op(graph, x, y)
+    else:
+        x = alldata[func.target][func.in_field]
+        op = getattr(ops, func.name)
+        if graph._graph.number_of_etypes() > 1:
+            # Convert to list as dict is unordered.
+            if func.name == "copy_u":
+                x = data_dict_to_list(graph, x, func, 'u')
+            else: # "copy_e"
+                x = data_dict_to_list(graph, x, func, 'e')
+        z = op(graph, x)
+    return {func.out_field : z}
+
+
+
 def invoke_gspmm(graph, mfunc, rfunc, *, srcdata=None, dstdata=None, edata=None):
     """Invoke g-SPMM computation on the graph.
 
@@ -367,6 +407,53 @@ def message_passing(g, mfunc, rfunc, afunc):
         if is_builtin(rfunc):
             msg = rfunc.msg_field
             ndata = invoke_gspmm(g, fn.copy_e(msg, msg), rfunc, edata=msgdata)
+        else:
+            orig_nid = g.dstdata.get(NID, None)
+            ndata = invoke_udf_reduce(g, rfunc, msgdata, orig_nid=orig_nid)
+    # apply phase
+    if afunc is not None:
+        for k, v in g.dstdata.items():   # include original node features
+            if k not in ndata:
+                ndata[k] = v
+        orig_nid = g.dstdata.get(NID, None)
+        ndata = invoke_node_udf(g, ALL, g.dsttypes[0], afunc, ndata=ndata, orig_nid=orig_nid)
+    return ndata
+
+
+
+def message_passing_fused(g, mfunc, rfunc, afunc):
+    """Invoke message passing computation on the whole graph.
+    Parameters
+    ----------
+    g : DGLGraph
+        The input graph.
+    mfunc : callable or dgl.function.BuiltinFunction
+        Message function.
+    rfunc : callable or dgl.function.BuiltinFunction
+        Reduce function.
+    afunc : callable or dgl.function.BuiltinFunction
+        Apply function.
+    Returns
+    -------
+    dict[str, Tensor]
+        Results from the message passing computation.
+    """
+    if (is_builtin(mfunc) and is_builtin(rfunc) and
+            getattr(ops, '{}_{}'.format(mfunc.name, rfunc.name), None) is not None):
+        # invoke fused message passing
+        ndata = invoke_gfusedmm(g, mfunc, rfunc)
+    else:
+        # invoke message passing in two separate steps
+        # message phase
+        if is_builtin(mfunc):
+            msgdata = invoke_gfusedmm(g, mfunc)
+        else:
+            orig_eid = g.edata.get(EID, None)
+            msgdata = invoke_edge_udf(g, ALL, g.canonical_etypes[0], mfunc, orig_eid=orig_eid)
+        # reduce phase
+        if is_builtin(rfunc):
+            msg = rfunc.msg_field
+            ndata = invoke_gfusedmm(g, fn.copy_e(msg, msg), rfunc, edata=msgdata)
         else:
             orig_nid = g.dstdata.get(NID, None)
             ndata = invoke_udf_reduce(g, rfunc, msgdata, orig_nid=orig_nid)

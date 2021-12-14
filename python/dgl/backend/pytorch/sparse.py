@@ -366,7 +366,7 @@ class GSDDMM(th.autograd.Function):
             dY = None
         return None, None, dX, dY, None, None
 
-class FUSEDMM(th.autograd.Function):
+class GFUSEDMM(th.autograd.Function):
     @staticmethod
     @custom_fwd(cast_inputs=th.float16)
     def forward(ctx, gidx, op, X, Y, lhs_target, rhs_target):
