@@ -4866,6 +4866,7 @@ class DGLHeteroGraph(object):
             _, dtid = self._graph.metagraph.find_edge(etid)
             g = self if etype is None else self[etype]
             ndata = core.message_passing(g, message_func, reduce_func, apply_node_func)
+            print(ndata)
             self._set_n_repr(dtid, ALL, ndata)
         else:   # heterogeneous graph with number of relation types > 1
             if not core.is_builtin(message_func) or not core.is_builtin(reduce_func):
@@ -4933,7 +4934,7 @@ class DGLHeteroGraph(object):
         **Homogeneous graph**
         >>> g = dgl.graph(([0, 1, 2, 3], [1, 2, 3, 4]))
         >>> g.ndata['x'] = torch.ones(5, 2)
-        >>> g.update_all(fn.copy_u('x', 'm'), fn.sum('m', 'h'))
+        >>> g.update_all_fused(fn.copy_u('x', 'm'), fn.sum('m', 'h'))
         >>> g.ndata['h']
         tensor([[0., 0.],
                 [1., 1.],
@@ -4944,7 +4945,7 @@ class DGLHeteroGraph(object):
         >>> g = dgl.heterograph({('user', 'follows', 'user'): ([0, 1, 2], [1, 2, 2])})
         Update all.
         >>> g.nodes['user'].data['h'] = torch.tensor([[0.], [1.], [2.]])
-        >>> g['follows'].update_all(fn.copy_src('h', 'm'), fn.sum('m', 'h'), etype='follows')
+        >>> g['follows'].update_all_fused(fn.copy_src('h', 'm'), fn.sum('m', 'h'), etype='follows')
         >>> g.nodes['user'].data['h']
         tensor([[0.],
                 [0.],
@@ -4957,7 +4958,7 @@ class DGLHeteroGraph(object):
         Update all.
         >>> g.nodes['user'].data['h'] = torch.tensor([[1.], [2.]])
         >>> g.nodes['game'].data['h'] = torch.tensor([[1.]])
-        >>> g.update_all(fn.copy_src('h', 'm'), fn.sum('m', 'h'))
+        >>> g.update_all_fused(fn.copy_src('h', 'm'), fn.sum('m', 'h'))
         >>> g.nodes['user'].data['h']
         tensor([[0.],
                 [4.]])
@@ -4968,7 +4969,7 @@ class DGLHeteroGraph(object):
             etype = self.canonical_etypes[etid]
             _, dtid = self._graph.metagraph.find_edge(etid)
             g = self if etype is None else self[etype]
-            ndata = core.message_passing(g, message_func, reduce_func, apply_node_func)
+            ndata = core.message_passing_fused(g, message_func, reduce_func, apply_node_func)
             self._set_n_repr(dtid, ALL, ndata)
         else:   # heterogeneous graph with number of relation types > 1
             if not core.is_builtin(message_func) or not core.is_builtin(reduce_func):
@@ -4980,7 +4981,7 @@ class DGLHeteroGraph(object):
                                           "operators as 'mean' using update_all. Please use "
                                           "multi_update_all instead.")
             g = self
-            all_out = core.message_passing(g, message_func, reduce_func, apply_node_func)
+            all_out = core.message_passing_fused(g, message_func, reduce_func, apply_node_func)
             key = list(all_out.keys())[0]
             out_tensor_tuples = all_out[key]
 

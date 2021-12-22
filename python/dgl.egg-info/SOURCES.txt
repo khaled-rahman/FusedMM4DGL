@@ -217,6 +217,7 @@ dgl/nn/pytorch/conv/gcn2conv.py
 dgl/nn/pytorch/conv/ginconv.py
 dgl/nn/pytorch/conv/gmmconv.py
 dgl/nn/pytorch/conv/graphconv.py
+dgl/nn/pytorch/conv/graphconv2.py
 dgl/nn/pytorch/conv/nnconv.py
 dgl/nn/pytorch/conv/relgraphconv.py
 dgl/nn/pytorch/conv/sageconv.py

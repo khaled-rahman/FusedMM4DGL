@@ -7,7 +7,7 @@ import dgl
 import pdb
 from dgl.data import CoraGraphDataset, CiteseerGraphDataset, PubmedGraphDataset
 import traceback
-from gcn import GCN
+from gcn import GCN, GCN2
 #from gcn_mp import GCN
 #from gcn_spmv import GCN
 import traceback
@@ -75,7 +75,16 @@ def main(args):
     g.ndata['norm'] = norm.unsqueeze(1)
 
     # create GCN model
-    model = GCN(g,
+    if args.gcn2:
+        model = GCN2(g,
+                in_feats,
+                args.n_hidden,
+                n_classes,
+                args.n_layers,
+                F.relu,
+                args.dropout)
+    else:
+        model = GCN(g,
                 in_feats,
                 args.n_hidden,
                 n_classes,
@@ -140,6 +149,8 @@ if __name__ == '__main__':
                         help="Weight for L2 loss")
     parser.add_argument("--self-loop", action='store_true',
                         help="graph self-loop (default=False)")
+    parser.add_argument("--gcn2", action='store_true',
+                        help="FusedMM-GCN (default=False)")
     parser.set_defaults(self_loop=False)
     args = parser.parse_args()
     print(args)
