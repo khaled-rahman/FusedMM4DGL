@@ -130,6 +130,7 @@ def main(args):
 
 
 if __name__ == '__main__':
+    # This version has DGL and FusedMM for gcn
     parser = argparse.ArgumentParser(description='GCN')
     parser.add_argument("--dataset", type=str, default="cora",
                         help="Dataset name ('cora', 'citeseer', 'pubmed').")
