@@ -675,6 +675,7 @@ class CSRMask(th.autograd.Function):
 
 
 def gspmm(gidx, op, reduce_op, lhs_data, rhs_data):
+    print("Calling backend GSpMM function...")
     if op == 'sub':
         op = 'add'
         rhs_data = -rhs_data

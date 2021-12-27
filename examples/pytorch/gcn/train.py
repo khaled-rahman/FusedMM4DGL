@@ -130,7 +130,7 @@ def main(args):
 
 
 if __name__ == '__main__':
-    # This version has DGL and FusedMM for gcn
+    # this version contains both DGL and FusedMM implementation
     parser = argparse.ArgumentParser(description='GCN')
     parser.add_argument("--dataset", type=str, default="cora",
                         help="Dataset name ('cora', 'citeseer', 'pubmed').")
@@ -140,7 +140,7 @@ if __name__ == '__main__':
                         help="gpu")
     parser.add_argument("--lr", type=float, default=1e-2,
                         help="learning rate")
-    parser.add_argument("--n-epochs", type=int, default=200,
+    parser.add_argument("--n-epochs", type=int, default=10,
                         help="number of training epochs")
     parser.add_argument("--n-hidden", type=int, default=16,
                         help="number of hidden gcn units")

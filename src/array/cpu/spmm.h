@@ -194,6 +194,7 @@ void SpMMSumCoo(const BcastOff& bcast, const COOMatrix& coo, NDArray ufeat,
   // fill zero elements
   memset(O, 0, out.GetSize());
   // spmm
+  printf("Calling SpMM CAPI...\n");
 #pragma omp parallel for
   for (IdType i = 0; i < nnz; ++i) {
     const IdType rid = row[i];

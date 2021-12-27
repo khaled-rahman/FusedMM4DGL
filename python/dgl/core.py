@@ -254,6 +254,7 @@ def invoke_gsddmm(graph, func):
     dict[str, Tensor]
         Results from the g-SDDMM computation.
     """
+    print("Calling invoke_gsddmm function ...", func.name)
     alldata = [graph.srcdata, graph.dstdata, graph.edata]
     if isinstance(func, fn.BinaryMessageFunction):
         x = alldata[func.lhs][func.lhs_field]
@@ -277,7 +278,7 @@ def invoke_gsddmm(graph, func):
     return {func.out_field : z}
 
 
-def invoke_gfusedmm(graph, func):
+def invoke_gfusedmm(graph, mfunc, rfunc):
     """Invoke g-FUSEDMM computation on the graph.
 
     Parameters
@@ -290,29 +291,31 @@ def invoke_gfusedmm(graph, func):
     Returns
     -------
     dict[str, Tensor]
-        Results from the g-SDDMM computation.
+        Results from the g-FusedMM computation.
     """
+    print("invoking_gfusedmm...", mfunc.name)
     alldata = [graph.srcdata, graph.dstdata, graph.edata]
-    if isinstance(func, fn.BinaryMessageFunction):
-        x = alldata[func.lhs][func.lhs_field]
-        y = alldata[func.rhs][func.rhs_field]
-        op = getattr(ops, func.name)
+    if isinstance(mfunc, fn.BinaryMessageFunction):
+        print("Binary Message Function Calling ...")
+        x = alldata[mfunc.lhs][mfunc.lhs_field]
+        y = alldata[mfunc.rhs][mfunc.rhs_field]
+        op = getattr(ops, mfunc.name)
         if graph._graph.number_of_etypes() > 1:
-            lhs_target, _, rhs_target = func.name.split("_", 2)
-            x = data_dict_to_list(graph, x, func, lhs_target)
-            y = data_dict_to_list(graph, y, func, rhs_target)
+            lhs_target, _, rhs_target = mfunc.name.split("_", 2)
+            x = data_dict_to_list(graph, x, mfunc, lhs_target)
+            y = data_dict_to_list(graph, y, mfunc, rhs_target)
         z = op(graph, x, y)
     else:
-        x = alldata[func.target][func.in_field]
-        op = getattr(ops, func.name)
+        x = alldata[mfunc.target][mfunc.in_field]
+        op = getattr(ops, mfunc.name)
         if graph._graph.number_of_etypes() > 1:
             # Convert to list as dict is unordered.
-            if func.name == "copy_u":
-                x = data_dict_to_list(graph, x, func, 'u')
+            if mfunc.name == "copy_u":
+                x = data_dict_to_list(graph, x, mfunc, 'u')
             else: # "copy_e"
-                x = data_dict_to_list(graph, x, func, 'e')
+                x = data_dict_to_list(graph, x, mfunc, 'e')
         z = op(graph, x)
-    return {func.out_field : z}
+    return {mfunc.out_field : z}
 
 
 
@@ -353,6 +356,7 @@ def invoke_gspmm(graph, mfunc, rfunc, *, srcdata=None, dstdata=None, edata=None)
     alldata = [srcdata, dstdata, edata]
 
     if isinstance(mfunc, fn.BinaryMessageFunction):
+        print("Calling invoke_gspmm function (Binary)...", mfunc.name, rfunc.name)
         x = alldata[mfunc.lhs][mfunc.lhs_field]
         y = alldata[mfunc.rhs][mfunc.rhs_field]
         op = getattr(ops, '{}_{}'.format(mfunc.name, rfunc.name))
@@ -362,8 +366,10 @@ def invoke_gspmm(graph, mfunc, rfunc, *, srcdata=None, dstdata=None, edata=None)
             y = data_dict_to_list(graph, y, mfunc, rhs_target)
         z = op(graph, x, y)
     else:
+        print("Calling invoke_gspmm function ...", mfunc.name, rfunc.name)
         x = alldata[mfunc.target][mfunc.in_field]
         op = getattr(ops, '{}_{}'.format(mfunc.name, rfunc.name))
+        print("What does op mean?...", op)
         if graph._graph.number_of_etypes() > 1 and not isinstance(x, tuple):
             if mfunc.name == "copy_u":
                 x = data_dict_to_list(graph, x, mfunc, 'u')
@@ -394,10 +400,12 @@ def message_passing(g, mfunc, rfunc, afunc):
     if (is_builtin(mfunc) and is_builtin(rfunc) and
             getattr(ops, '{}_{}'.format(mfunc.name, rfunc.name), None) is not None):
         # invoke fused message passing
+        print("Calling only gSPMM function ...", mfunc.name, rfunc.name)
         ndata = invoke_gspmm(g, mfunc, rfunc)
     else:
         # invoke message passing in two separate steps
         # message phase
+        print("Calling both gSDDMM and gSPMM function ...")
         if is_builtin(mfunc):
             msgdata = invoke_gsddmm(g, mfunc)
         else:
@@ -412,6 +420,7 @@ def message_passing(g, mfunc, rfunc, afunc):
             ndata = invoke_udf_reduce(g, rfunc, msgdata, orig_nid=orig_nid)
     # apply phase
     if afunc is not None:
+        print("Message_passing has a apply function...", afunc.name)
         for k, v in g.dstdata.items():   # include original node features
             if k not in ndata:
                 ndata[k] = v
@@ -438,27 +447,18 @@ def message_passing_fused(g, mfunc, rfunc, afunc):
     dict[str, Tensor]
         Results from the message passing computation.
     """
+    print("Calling message passing using fusedmm...", mfunc)
     if (is_builtin(mfunc) and is_builtin(rfunc) and
             getattr(ops, '{}_{}'.format(mfunc.name, rfunc.name), None) is not None):
         # invoke fused message passing
         ndata = invoke_gfusedmm(g, mfunc, rfunc)
     else:
         # invoke message passing in two separate steps
-        # message phase
-        if is_builtin(mfunc):
-            msgdata = invoke_gfusedmm(g, mfunc)
-        else:
-            orig_eid = g.edata.get(EID, None)
-            msgdata = invoke_edge_udf(g, ALL, g.canonical_etypes[0], mfunc, orig_eid=orig_eid)
-        # reduce phase
-        if is_builtin(rfunc):
-            msg = rfunc.msg_field
-            ndata = invoke_gfusedmm(g, fn.copy_e(msg, msg), rfunc, edata=msgdata)
-        else:
-            orig_nid = g.dstdata.get(NID, None)
-            ndata = invoke_udf_reduce(g, rfunc, msgdata, orig_nid=orig_nid)
+        # message generation and reduction phases together
+        ndata = invoke_gfusedmm(g, mfunc, rfunc)
     # apply phase
     if afunc is not None:
+        print("Apply function....", afunc)
         for k, v in g.dstdata.items():   # include original node features
             if k not in ndata:
                 ndata[k] = v
