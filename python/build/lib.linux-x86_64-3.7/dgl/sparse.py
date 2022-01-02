@@ -407,7 +407,7 @@ def _gsddmm(gidx, op, lhs, rhs, lhs_target='u', rhs_target='v'):
     return out
 
 # FusedMM function for Python Interface
-def _gfusedmm(gidx, op, lhs, rhs, lhs_target='u', rhs_target='v', ftype=1):
+def _gfusedmm(gidx, op, reduce_op, lhs, rhs, ftype = 1):
     r""" Unification of SDDMM and SpMM (will update below description). It
     takes the result of :attr:`op` on source node feature and destination node
     feature, leads to a feature on edge.
@@ -469,11 +469,10 @@ def _gfusedmm(gidx, op, lhs, rhs, lhs_target='u', rhs_target='v', ftype=1):
     out = F.zeros(out_shp, dtype, ctx)
     #print("lshape:", lhs_shp)
     if gidx.number_of_edges(0) > 0:
-        _CAPI_DGLKernelFUSEDMM(gidx, op,
+        _CAPI_DGLKernelFUSEDMM(gidx, op, reduce_op,
                              to_dgl_nd(lhs if use_lhs else None),
                              to_dgl_nd(rhs if use_rhs else None),
-                             to_dgl_nd_for_write(out),
-                             lhs_target, rhs_target, ftype)
+                             to_dgl_nd_for_write(out), ftype)
     if (expand_lhs or not use_lhs) and (expand_rhs or not use_rhs):
         out = F.squeeze(out, -1)
     return out

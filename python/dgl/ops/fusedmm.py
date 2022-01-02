@@ -32,54 +32,92 @@ def reshape_lhs_rhs(lhs_data, rhs_data):
     return lhs_data, rhs_data
 
 
-def gfusedmm(g, op, lhs_data, rhs_data, lhs_target='u', rhs_target='v'):
+def gfusedmm(g, op, reduce_op, lhs_data, rhs_data):
     r""" Generalized FUSEDMM.
     It computes edge features by :attr:`op` lhs features and rhs features.
-    .. math::
-        x_{e} = \phi(x_{lhs}, x_{rhs}), \forall (u,e,v)\in \mathcal{G}
-    where :math:`x_{e}` is the returned feature on edges and :math:`x_u`,
-    :math:`x_v` refers to :attr:`u`, :attr:`v` respectively. :math:`\phi`
-    is the binary operator :attr:`op`, and :math:`\mathcal{G}` is the graph
-    we apply gfusedmm on: :attr:`g`. :math:`lhs` and :math:`rhs` are one of
-    :math:`u,v,e`'s.
+    
     Parameters
     ----------
     g : DGLGraph
         The input graph.
     op : str
-        Binary operator, could be ``add``, ``sub``, ``mul``, ``div``, ``dot``,
+        The binary op's name, could be ``add``, ``sub``, ``mul``, ``div``,
         ``copy_lhs``, ``copy_rhs``.
+    reduce_op : str
+        Reduce operator, could be ``sum``, ``max``, ``min``, ``mean``.
     lhs_data : tensor or None
-        The left operand, could be None if it's not required by op.
+        The left operand, could be None if it's not required by the op.
     rhs_data : tensor or None
-        The right operand, could be None if it's not required by op.
-    lhs_target: str
-        Choice of ``u``(source), ``e``(edge) or ``v``(destination) for left operand.
-    rhs_target: str
-        Choice of ``u``(source), ``e``(edge) or ``v``(destination) for right operand.
+        The right operand, could be None if it's not required by the op.
+
     Returns
     -------
     tensor
-        The result tensor.
+    
+	The result tensor.
     """
     if g._graph.number_of_etypes() == 1:
         if op not in ['copy_lhs', 'copy_rhs']:
             lhs_data, rhs_data = reshape_lhs_rhs(lhs_data, rhs_data)
-        return gsddmm_internal(
-            g._graph, op, lhs_data, rhs_data, lhs_target, rhs_target)
+        return gfusedmm_internal(
+            g._graph, op, 'sum' if reduce_op == 'mean' else reduce_op, lhs_data, rhs_data)
     else:
         print("Hetero-graph not supported!")
         return None
 
-def _gen_fusedmm_func(lhs_target, rhs_target, binary_op):
-    name = "{}_{}_{}".format(lhs_target, binary_op, rhs_target)
+def _gen_copy_reduce_func(binary_op, reduce_op):
+
+    name = "{}_{}".format(binary_op, reduce_op)
+    binary_str = {
+        "fused_copy_u": "It copies node feature to edge as the message.",
+        'fused_copy_e': "It regards edge feature as message."
+    }
+    x_str = {
+        "fused_copy_u": "source node",
+        "fused_copy_e": "edge"
+    }
+    docstring = lambda binary_op: _attach_zerodeg_note("""Generalized FusedMM function. {}
+    Then aggregates the message by {} on destination nodes.
+
+    Parameters
+    ----------
+    g : DGLHeteroGraph
+        The input graph
+    x : tensor
+        The {} features.
+
+    Returns
+    -------
+    tensor
+        The result tensor.
+
+    Notes
+    -----
+    This function supports autograd (computing input gradients given the output gradient).
+    """.format(
+        binary_str[binary_op],
+        reduce_op,
+        x_str[binary_op]), reduce_op)
+
+    def func(g, x):
+        if binary_op == 'fused_copy_u':
+            return gfusedmm(g, 'copy_lhs', reduce_op, x, None)
+        else:
+            return gfusedmm(g, 'copy_rhs', reduce_op, None, x)
+
+    func.__name__ = name
+    #print("python/dgl/ops/spmm...", name)
+    func.__doc__ = docstring(binary_op)
+    return func
+
+
+def _gen_fusedmm_func(binary_op, reduce_op):
+    name = "{}_{}_{}".format(binary_op, reduce_op)
     target_dict = {
         'u': "source node",
         'e': "edge",
         'v': "destination node"
     }
-    lhs_str = target_dict[lhs_target]
-    rhs_str = target_dict[rhs_target]
     docstring = r"""Generalized FUSEDMM function.
     It computes edge features by {op} {lhs} features and {rhs} features.
     Parameters
@@ -102,69 +140,28 @@ def _gen_fusedmm_func(lhs_target, rhs_target, binary_op):
     Broadcasting follows NumPy semantics. Please see
     https://docs.scipy.org/doc/numpy/user/basics.broadcasting.html
     for more details about the NumPy broadcasting semantics.
-    """.format(op=binary_op, lhs=lhs_str, rhs=rhs_str)
+    """.format(binary_op, reduce_op)
 
     def func(g, x, y):
-        return gfusedmm(g, binary_op, x, y,
-                      lhs_target=lhs_target, rhs_target=rhs_target)
+        return gfusedmm(g, binary_op, reduce_op, x, y)
     func.__name__ = name
     func.__doc__ = docstring
     return func
 
-
 def _register_fusedmm_func():
-    """Register fusedmm functions"""
-    target = ["u", "v", "e"]
-    for lhs, rhs in product(target, target):
-        if lhs != rhs:
-            for binary_op in ["add", "sub", "mul", "div", "dot"]:
-                func = _gen_fusedmm_func(lhs, rhs, binary_op)
-                setattr(sys.modules[__name__], func.__name__, func)
-                __all__.append(func.__name__)
+    """Register fusedmm functions
 
-
-def copy_u(g, x):
-    r"""Generalized SDDMM function that copies source node features to edges.
-    Parameters
-    ----------
-    g : DGLHeteroGraph
-        The input graph.
-    x : tensor
-        The source node features.
-    Returns
-    -------
-    tensor
-        The result tensor.
-    Notes
-    -----
-    This function supports autograd (computing input gradients given the output gradient).
+    - Binary operation plus reduction between u and e: u_[]_e_[]
+    - Copy u plus reduction: copy_u_[]
+    - Copy e plus reduction: copy_e_[]
     """
-    return fusedmm(g, 'copy_lhs', x, None)
-
-
-def copy_v(g, x):
-    r"""Generalized SDDMM function that copies destination node features to edges.
-    Parameters
-    ----------
-    g : DGLHeteroGraph
-        The input graph.
-    x : tensor
-        The destination node features.
-    Returns
-    -------
-    tensor
-        The result tensor.
-    Notes
-    -----
-    This function supports autograd (computing input gradients given the output gradient).
-    """
-    return fusedmm(g, 'copy_rhs', None, x)
-
-
-# pylint: disable=unused-argument
-def copy_e(g, x):
-    r"""Generalized SDDMM function that copies destination node features to edges."""
-    return x
-
+    for binary_op in ["add", "sub", "mul", "div", "fused_copy_u", "fused_copy_e"]:
+        for reduce_op in ["sum", "max", "min", "mean"]:
+            if binary_op.startswith("fused_copy"):
+                func = _gen_copy_reduce_func(binary_op, reduce_op)
+            else:
+                func = _gen_fusedmm_func(binary_op, reduce_op)
+            setattr(sys.modules[__name__], func.__name__, func)
+            __all__.append(func.__name__)
 
 _register_fusedmm_func()

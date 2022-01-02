@@ -122,6 +122,28 @@ def copy_u(u, out):
     """
     return CopyMessageFunction(TargetCode.SRC, u, out)
 
+def fused_copy_u(u, out):
+    """Builtin message function for FusedMM that computes message using source node
+    feature.
+
+    Parameters
+    ----------
+    u : str
+        The source feature field.
+    out : str
+        The output message field.
+
+    Examples
+    --------
+    >>> import dgl
+    >>> message_func = dgl.function.fused_copy_u('h', 'm')
+
+    The above example is equivalent to the following user defined function:
+
+    >>> def message_func(edges):
+    >>>     return {'m': edges.src['h']}
+    """
+    return CopyMessageFunction(TargetCode.SRC, u, out)
 
 def copy_e(e, out):
     """Builtin message function that computes message using edge feature.

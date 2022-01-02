@@ -4970,7 +4970,7 @@ class DGLHeteroGraph(object):
             _, dtid = self._graph.metagraph.find_edge(etid)
             g = self if etype is None else self[etype]
             ndata = core.message_passing_fused(g, message_func, reduce_func, apply_node_func)
-            print(ndata.shape, ndata)
+            print("testing...", ndata['m'].shape, ndata)
             self._set_n_repr(dtid, ALL, ndata)
         else:   # heterogeneous graph with number of relation types > 1
             if not core.is_builtin(message_func) or not core.is_builtin(reduce_func):

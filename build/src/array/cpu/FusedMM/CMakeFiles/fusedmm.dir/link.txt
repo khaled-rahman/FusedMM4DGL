@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfusedmm.a  CMakeFiles/fusedmm.dir/fusedMM.c.o
-/usr/bin/ranlib libfusedmm.a

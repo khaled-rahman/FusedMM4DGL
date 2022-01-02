@@ -293,7 +293,7 @@ def invoke_gfusedmm(graph, mfunc, rfunc):
     dict[str, Tensor]
         Results from the g-FusedMM computation.
     """
-    print("invoking_gfusedmm...", mfunc.name)
+    print("invoking_gfusedmm...", mfunc.name, rfunc)
     alldata = [graph.srcdata, graph.dstdata, graph.edata]
     if isinstance(mfunc, fn.BinaryMessageFunction):
         print("Binary Message Function Calling ...")
@@ -451,8 +451,10 @@ def message_passing_fused(g, mfunc, rfunc, afunc):
     if (is_builtin(mfunc) and is_builtin(rfunc) and
             getattr(ops, '{}_{}'.format(mfunc.name, rfunc.name), None) is not None):
         # invoke fused message passing
+        print("Calling invoke_gfusedmm with mfunc and rfunc")
         ndata = invoke_gfusedmm(g, mfunc, rfunc)
     else:
+        print("Calling invoke_gfusedmm with mfunc and rfunc but no more option")
         # invoke message passing in two separate steps
         # message generation and reduction phases together
         ndata = invoke_gfusedmm(g, mfunc, rfunc)

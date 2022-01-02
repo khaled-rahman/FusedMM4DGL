@@ -133,13 +133,12 @@ void SDDMM(const std::string& op,
 
 /*Adding fusedmm to the kernel C file*/
 /*Fusion of SDDMM and SpMM kernels*/
-void FUSEDMM(const std::string& op,
+void FUSEDMM(const std::string& op, const std::string& reduce,
            HeteroGraphPtr graph,
            NDArray lhs,
            NDArray rhs,
            NDArray out,
-           int lhs_target,
-           int rhs_target, int ftype=1) {
+           int ftype=1) {
   SparseFormat format = graph->SelectFormat(0, COO_CODE);
   const auto &bcast = CalcBcastOff(op, lhs, rhs);
 
@@ -148,12 +147,10 @@ void FUSEDMM(const std::string& op,
       ATEN_FLOAT_TYPE_SWITCH(out->dtype, DType, "Feature data", {
         if (format == SparseFormat::kCSR) {
           FUSEDMMCsr<XPU, IdType, DType>(
-              op, bcast, graph->GetCSRMatrix(0),
-              lhs, rhs, out, lhs_target, rhs_target, ftype);
+              op, reduce, bcast, graph->GetCSRMatrix(0), lhs, rhs, out, ftype);
         } else {
 	  FUSEDMMCsr<XPU, IdType, DType>(
-              op, bcast, graph->GetCSRMatrix(0),
-              lhs, rhs, out, lhs_target, rhs_target, ftype);
+              op, reduce, bcast, graph->GetCSRMatrix(0), lhs, rhs, out, ftype);
 	  LOG(FATAL) << "FUSEDMM only supports CSR foramt";
         }
       });
@@ -440,17 +437,18 @@ DGL_REGISTER_GLOBAL("sparse._CAPI_DGLKernelSDDMM")
   });
 
 
+
 /*Registering FusedMM Kernel to DGL*/
 DGL_REGISTER_GLOBAL("sparse._CAPI_DGLKernelFUSEDMM")
 .set_body([] (DGLArgs args, DGLRetValue* rv) {
+    
     HeteroGraphRef graph = args[0];
     const std::string op = args[1];
-    NDArray lhs = args[2];
-    NDArray rhs = args[3];
-    NDArray out = args[4];
-    int lhs_target = args[5];
-    int rhs_target = args[6];
-    int ftype = args[7];
+    const std::string reduce_op = args[2];
+    NDArray lhs = args[3];
+    NDArray rhs = args[4];
+    NDArray out = args[5];
+    int ftype = args[6];
     CheckCtx(graph->Context(), {lhs, rhs, out}, {"lhs", "rhs", "out"});
     CheckContiguous({lhs, rhs, out}, {"lhs", "rhs", "out"});
     CHECK_EQ(graph->NumEdgeTypes(), 1);
@@ -459,11 +457,11 @@ DGL_REGISTER_GLOBAL("sparse._CAPI_DGLKernelFUSEDMM")
     const dgl_type_t dst_vtype = pair.second;
     CheckShape(
         {graph->NumVertices(src_vtype), graph->NumEdges(0), graph->NumVertices(dst_vtype)},
-        {lhs_target, rhs_target, 1},
+        {0, 1, 2},
         {lhs, rhs, out},
-        {"U_data", "E_data", "V_data"});
+        {"U_data", "E_data", "out"});
 
-    FUSEDMM(op, graph.sptr(), lhs, rhs, out, lhs_target, rhs_target, ftype);
+    FUSEDMM(op, reduce_op, graph.sptr(), lhs, rhs, out, ftype);
   });
 
 DGL_REGISTER_GLOBAL("sparse._CAPI_DGLKernelSDDMMHetero")

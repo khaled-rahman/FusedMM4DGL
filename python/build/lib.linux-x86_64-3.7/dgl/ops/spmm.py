@@ -201,7 +201,7 @@ def _gen_copy_reduce_func(binary_op, reduce_op):
             return gspmm(g, 'copy_rhs', reduce_op, None, x)
 
     func.__name__ = name
-    print("python/dgl/ops/spmm...", name)
+    #print("python/dgl/ops/spmm...", name)
     func.__doc__ = docstring(binary_op)
     return func
 

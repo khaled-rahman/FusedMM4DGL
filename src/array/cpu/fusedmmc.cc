@@ -42,40 +42,36 @@ namespace aten {
     }                                                                   \
   } while (0)
 
-
 /*! \brief Generalized SDDMM on Csr format. */
 template <int XPU, typename IdType, typename DType>
-void FUSEDMMCsr(const std::string& op,
+void FUSEDMMCsr(const std::string& op, const std::string& reduce,
               const BcastOff& bcast,
               const CSRMatrix& csr,
               NDArray lhs,
               NDArray rhs,
               NDArray out,
-              int lhs_target,
-              int rhs_target, int ftype = 1) {
-  SWITCH_OP(op, Op, {
-    SWITCH_TARGET(lhs_target, rhs_target, LhsTarget, RhsTarget, {
-      cpu::FUSEDMMCsr<IdType, DType, Op, LhsTarget, RhsTarget>(bcast, csr, lhs, rhs, out, ftype);
+              int ftype = 1) {
+  
+    SWITCH_OP(op, Op, {
+      cpu::FUSEDMMCsr<IdType, DType, Op>(bcast, csr, lhs, rhs, out, ftype);
     });
-  });
 }
 
 template void FUSEDMMCsr<kDLCPU, int32_t, float>(
-    const std::string& op, const BcastOff& bcast, const CSRMatrix& csr,
-    NDArray lhs, NDArray rhs, NDArray out,
-    int lhs_target, int rhs_target, int ftype);
+    const std::string& op, const std::string& reduce, const BcastOff& bcast, 
+    const CSRMatrix& csr, NDArray lhs, NDArray rhs, NDArray out, int ftype);
+
 template void FUSEDMMCsr<kDLCPU, int64_t, float>(
-    const std::string& op, const BcastOff& bcast, const CSRMatrix& csr,
-    NDArray lhs, NDArray rhs, NDArray out,
-    int lhs_target, int rhs_target, int ftype);
+    const std::string& op, const std::string& reduce, const BcastOff& bcast, 
+    const CSRMatrix& csr, NDArray lhs, NDArray rhs, NDArray out, int ftype);
+
 template void FUSEDMMCsr<kDLCPU, int32_t, double>(
-    const std::string& op, const BcastOff& bcast, const CSRMatrix& csr,
-    NDArray lhs, NDArray rhs, NDArray out,
-    int lhs_target, int rhs_target, int ftype);
+    const std::string& op, const std::string& reduce, const BcastOff& bcast, 
+    const CSRMatrix& csr, NDArray lhs, NDArray rhs, NDArray out, int ftype);
+
 template void FUSEDMMCsr<kDLCPU, int64_t, double>(
-    const std::string& op, const BcastOff& bcast, const CSRMatrix& csr,
-    NDArray lhs, NDArray rhs, NDArray out,
-    int lhs_target, int rhs_target, int ftype);
+    const std::string& op, const std::string& reduce, const BcastOff& bcast, 
+    const CSRMatrix& csr, NDArray lhs, NDArray rhs, NDArray out, int ftype);
 
 }  // namespace aten
 }  // namespace dgl

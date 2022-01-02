@@ -366,70 +366,118 @@ class GSDDMM(th.autograd.Function):
             dY = None
         return None, None, dX, dY, None, None
 
+def fusedmm_cache_X(binary_op, reduce_op, req_grad_X, req_grad_Y):
+    """Rules to identify whether to cache X in FUSEDMM forward stage."""
+    if binary_op != 'copy_lhs' and req_grad_Y:
+        if reduce_op == 'sum':
+            return True
+        else:
+            if binary_op == 'mul':
+                return True
+    return False
+
+
+def fusedmm_cache_Y(binary_op, reduce_op, req_grad_X, req_grad_Y):
+    """Rules to identify whether to cache Y in FUSEDMM forward stage."""
+    if binary_op != 'copy_rhs' and req_grad_X:
+        if reduce_op == 'sum':
+            if binary_op in ['mul', 'add']:
+                return True
+        else:
+            if binary_op == 'mul':
+                return True
+    return False
+
+
+def fusedmm_cache_argX(binary_op, reduce_op, req_grad_X, req_grad_Y):
+    """Rules to identify whether to cache argX in FUSEDMM forward stage."""
+    if req_grad_X or req_grad_Y:
+        if reduce_op in ['min', 'max']:
+            return True
+    return False
+
+
+def fusedmm_cache_argY(binary_op, reduce_op, req_grad_X, req_grad_Y):
+    """Rules to identify whether to cache argY in FUSEDMM forward stage."""
+    if req_grad_X or req_grad_Y:
+        if reduce_op in ['min', 'max']:
+            return True
+    return False
+
+
 class GFUSEDMM(th.autograd.Function):
     @staticmethod
     @custom_fwd(cast_inputs=th.float16)
     def forward(ctx, gidx, op, X, Y, lhs_target, rhs_target):
-        out = _gfusedmm(gidx, op, X, Y, lhs_target, rhs_target)
+        out, (argX, argY) = _gfusedmm(gidx, op, reduce_op, X, Y)
+        reduce_last = _need_reduce_last_dim(X, Y)
         X_shape = X.shape if X is not None else None
         Y_shape = Y.shape if Y is not None else None
-        ctx.backward_cache = gidx, op, lhs_target, rhs_target, X_shape, Y_shape
+        dtype = X.dtype if X is not None else Y.dtype
+        device = X.device if X is not None else Y.device
+        ctx.backward_cache = gidx, op, reduce_op, X_shape, Y_shape, dtype, device, reduce_last
         req_grad_X = X.requires_grad if X is not None else False
         req_grad_Y = Y.requires_grad if Y is not None else False
-        if not sddmm_cache_X(op, req_grad_X, req_grad_Y):
+        
+        if not fusedmm_cache_X(op, req_grad_X, req_grad_Y):
             X = None
-        if not sddmm_cache_Y(op, req_grad_X, req_grad_Y):
+        if not fusedmm_cache_Y(op, req_grad_X, req_grad_Y):
             Y = None
-        ctx.save_for_backward(X, Y)
+        if not fusedmm_cache_argX(op, reduce_op, req_grad_X, req_grad_Y):
+            argX = None
+        if not fusedmm_cache_argY(op, reduce_op, req_grad_X, req_grad_Y):
+            argY = None
+        ctx.save_for_backward(X, Y, argX, argY)
         return out
+
     @staticmethod
     @custom_bwd
     def backward(ctx, dZ):
-        gidx, op, lhs_target, rhs_target, X_shape, Y_shape = ctx.backward_cache
+        gidx, op, reduce_op, X_shape, Y_shape, dtype, device, reduce_last = ctx.backward_cache
         ctx.backward_cache = None
-        X, Y = ctx.saved_tensors
-        if op != 'copy_rhs' and ctx.needs_input_grad[2]:
-            if lhs_target in ['u', 'v']:
-                _gidx = gidx if lhs_target == 'v' else gidx.reverse()
-                if op in ['add', 'copy_lhs']:
-                    dX = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ)
-                else:  # mul, dot
-                    if rhs_target == lhs_target:
-                        dX = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ) *  Y
-                    elif rhs_target == 'e':
-                        dX = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ * Y)
-                    else:  # rhs_target = !lhs_target
-                        dX = gspmm(_gidx, 'mul', 'sum', Y, dZ)
-            else:  # lhs_target == 'e'
-                if op in ['add', 'copy_lhs']:
-                    dX = dZ
-                else:  # mul, dot
-                    dX = gfusedmm(gidx, 'mul', dZ, Y, 'e', rhs_target)
+        X, Y, argX, argY = ctx.saved_tensors
+        if op != 'copy_rhs' and ctx.needs_input_grad[3]:
+            g_rev = gidx.reverse()
+            if reduce_op == 'sum':
+                if op == 'mul':
+                    dX = gfusedmm(g_rev, 'mul', 'sum', dZ, Y)
+                elif op == 'add':
+                    dX = gfusedmm(g_rev, 'copy_lhs', 'sum', dZ, Y)
+                elif op == 'copy_lhs':
+                    dX = gfusedmm(g_rev, 'copy_lhs', 'sum', dZ, None)
+            else:  # max/min
+                dX = th.zeros((X_shape[0],) + dZ.shape[1:],
+                              dtype=dtype, device=device)
+                if op == 'mul':
+                    grad = _expand(Y, dZ.shape[1:]).gather(
+                        0, argY.long()) * dZ
+                    dX.scatter_add_(0, argX.long(), grad)
+                elif op in ['add', 'copy_lhs']:
+                    dX.scatter_add_(0, argX.long(), dZ)
             dX = _reduce_grad(dX, X_shape)
-        else:
+        else:  # X has not gradient
             dX = None
-        if op != 'copy_lhs' and ctx.needs_input_grad[3]:
-            if rhs_target in ['u', 'v']:
-                _gidx = gidx if rhs_target == 'v' else gidx.reverse()
-                if op in ['add', 'copy_rhs']:
-                    dY = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ)
-                else:  # mul, dot
-                    if lhs_target == rhs_target:
-                        dY = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ) * X
-                    elif lhs_target == 'e':
-                        dY = gspmm(_gidx, 'copy_rhs', 'sum', None, dZ * X)
-                    else:  # rhs_target = !lhs_target
-                        dY = gspmm(_gidx, 'mul', 'sum', X, dZ)
-            else:
-                if op in ['add', 'copy_rhs']:
-                    dY = dZ
-                else:  # mul, dot
-                    dY = gfusedmm(gidx, 'mul', dZ, X, 'e', lhs_target)
+        if op != 'copy_lhs' and ctx.needs_input_grad[4]:
+            if reduce_op == 'sum':
+                if op == 'mul' and reduce_last:
+                    dY = gsddmm(gidx, 'dot', X, dZ)
+                elif op == 'mul':
+                    dY = gsddmm(gidx, 'mul', X, dZ)
+                elif op in ['add', 'copy_rhs']:
+                    dY = gsddmm(gidx, 'copy_rhs', X, dZ)
+            else:  # max/min
+                dY = th.zeros((Y_shape[0],) + dZ.shape[1:],
+                              dtype=dtype, device=device)
+                if op == 'mul':
+                    grad = _expand(X, dZ.shape[1:]).gather(
+                        0, argX.long()) * dZ
+                    dY.scatter_add_(0, argY.long(), grad)
+                elif op in ['add', 'copy_rhs']:
+                    dY.scatter_add_(0, argY.long(), dZ)
             dY = _reduce_grad(dY, Y_shape)
-        else:
+        else:  # Y has no gradient
             dY = None
-        return None, None, dX, dY, None, None
-
+        return None, None, None, dX, dY
 
 class GSDDMM_hetero(th.autograd.Function):
     @staticmethod
@@ -694,7 +742,7 @@ def gsddmm(gidx, op, lhs_data, rhs_data, lhs_target='u', rhs_target='v'):
     return GSDDMM.apply(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target)
 
 # general-purpose fusedmm function for pytorch
-def gfusedmm(gidx, op, lhs_data, rhs_data, lhs_target='u', rhs_target='v', ftype = 1):
+def gfusedmm(gidx, op, reduce_op, lhs_data, rhs_data, ftype = 1):
     # return _gfusedmm(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target, ftype)
     if op == 'sub':
         op = 'add'
@@ -702,7 +750,7 @@ def gfusedmm(gidx, op, lhs_data, rhs_data, lhs_target='u', rhs_target='v', ftype
     if op == 'div':
         op = 'mul'
         rhs_data = 1. / rhs_data
-    return GFUSEDMM.apply(gidx, op, lhs_data, rhs_data, lhs_target, rhs_target)
+    return GFUSEDMM.apply(gidx, op, reduce_op, lhs_data, rhs_data)
 
 def gspmm_hetero(g, op, reduce_op, lhs_len, *lhs_and_rhs_tuple):
     lhs_tuple, rhs_tuple = lhs_and_rhs_tuple[:lhs_len], lhs_and_rhs_tuple[lhs_len:]
