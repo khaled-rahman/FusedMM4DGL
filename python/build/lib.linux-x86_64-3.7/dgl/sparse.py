@@ -444,8 +444,8 @@ def _gfusedmm(gidx, op, reduce_op, lhs, rhs, ftype = 1):
     """
     if gidx.number_of_etypes() != 1:
         raise DGLError("We only support gsddmm on graph with one edge type")
-    use_lhs = op != 'copy_rhs'
-    use_rhs = op != 'copy_lhs'
+    use_lhs = op != 'fused_cpy_rhs'
+    use_rhs = op != 'fused_cpy_lhs'
     # deal with scalar features.
     expand_lhs, expand_rhs = False, False
     #print("Before:", lhs)
@@ -458,8 +458,8 @@ def _gfusedmm(gidx, op, reduce_op, lhs, rhs, ftype = 1):
             rhs = F.unsqueeze(rhs, -1)
             expand_rhs = True
     #print("After:", lhs)
-    lhs_target = target_mapping[lhs_target]
-    rhs_target = target_mapping[rhs_target]
+    #lhs_target = target_mapping[lhs_target]
+    #rhs_target = target_mapping[rhs_target]
     ctx = F.context(lhs) if use_lhs else F.context(rhs)
     dtype = F.dtype(lhs) if use_lhs else F.dtype(rhs)
     lhs_shp = F.shape(lhs) if use_lhs else (0,)

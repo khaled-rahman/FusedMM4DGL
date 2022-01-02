@@ -51,10 +51,11 @@ void FUSEDMMCsr(const std::string& op, const std::string& reduce,
               NDArray rhs,
               NDArray out,
               int ftype = 1) {
-  
-    SWITCH_OP(op, Op, {
-      cpu::FUSEDMMCsr<IdType, DType, Op>(bcast, csr, lhs, rhs, out, ftype);
-    });
+ 
+      std::cout << "FusedMMCsr: op:" << op << ", reduce:" << reduce << endl;
+    //SWITCH_OP(op, Op, {
+      cpu::FUSEDMMCsr<IdType, DType>(bcast, csr, lhs, rhs, out, ftype);
+    //});
 }
 
 template void FUSEDMMCsr<kDLCPU, int32_t, float>(

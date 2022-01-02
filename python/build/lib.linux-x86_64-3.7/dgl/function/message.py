@@ -9,7 +9,7 @@ from .._deprecate.runtime import ir
 from .._deprecate.runtime.ir import var
 
 
-__all__ = ["src_mul_edge", "copy_src", "copy_edge", "copy_u", "copy_e",
+__all__ = ["src_mul_edge", "copy_src", "copy_edge", "copy_u", "copy_e", "fused_cpy_u",
            "BinaryMessageFunction", "CopyMessageFunction"]
 
 
@@ -99,6 +99,37 @@ class CopyMessageFunction(MessageFunction):
         return "copy_{}".format(TargetCode.CODE2STR[self.target])
 
 
+class CopyMessageFunctionFusedMM(MessageFunction):
+    """Class for the copy builtin message function.
+
+    See Also
+    --------
+    copy_src
+    """
+    def __init__(self, target, in_field, out_field):
+        self.target = target
+        self.in_field = in_field
+        self.out_field = out_field
+
+    def _invoke(self, graph, src_frame, dst_frame, edge_frame, out_size,
+                src_map, dst_map, edge_map, out_map, reducer="none"):
+        """Symbolic computation of builtin message function to create
+        runtime.executor
+        """
+        graph = var.GRAPH(graph)
+        in_frames = (src_frame, dst_frame, edge_frame)
+        in_maps = (src_map, dst_map, edge_map)
+        in_data = ir.READ_COL(in_frames[self.target], var.STR(self.in_field))
+        in_map = var.MAP(in_maps[self.target])
+        out_map = var.MAP(out_map)
+        return ir.COPY_REDUCE(reducer, graph, self.target, in_data, out_size,
+                              in_map, out_map)
+
+    @property
+    def name(self):
+        return "fused_cpy_{}".format(TargetCode.CODE2STR[self.target])
+
+
 def copy_u(u, out):
     """Builtin message function that computes message using source node
     feature.
@@ -122,7 +153,7 @@ def copy_u(u, out):
     """
     return CopyMessageFunction(TargetCode.SRC, u, out)
 
-def fused_copy_u(u, out):
+def fused_cpy_u(u, out):
     """Builtin message function for FusedMM that computes message using source node
     feature.
 
@@ -136,14 +167,14 @@ def fused_copy_u(u, out):
     Examples
     --------
     >>> import dgl
-    >>> message_func = dgl.function.fused_copy_u('h', 'm')
+    >>> message_func = dgl.function.fused_cpy_u('h', 'm')
 
     The above example is equivalent to the following user defined function:
 
     >>> def message_func(edges):
     >>>     return {'m': edges.src['h']}
     """
-    return CopyMessageFunction(TargetCode.SRC, u, out)
+    return CopyMessageFunctionFusedMM(TargetCode.SRC, u, out)
 
 def copy_e(e, out):
     """Builtin message function that computes message using edge feature.

@@ -408,7 +408,7 @@ def fusedmm_cache_argY(binary_op, reduce_op, req_grad_X, req_grad_Y):
 class GFUSEDMM(th.autograd.Function):
     @staticmethod
     @custom_fwd(cast_inputs=th.float16)
-    def forward(ctx, gidx, op, X, Y, lhs_target, rhs_target):
+    def forward(ctx, gidx, op, reduce_op, X, Y, ftype=1):
         out, (argX, argY) = _gfusedmm(gidx, op, reduce_op, X, Y)
         reduce_last = _need_reduce_last_dim(X, Y)
         X_shape = X.shape if X is not None else None
@@ -436,15 +436,15 @@ class GFUSEDMM(th.autograd.Function):
         gidx, op, reduce_op, X_shape, Y_shape, dtype, device, reduce_last = ctx.backward_cache
         ctx.backward_cache = None
         X, Y, argX, argY = ctx.saved_tensors
-        if op != 'copy_rhs' and ctx.needs_input_grad[3]:
+        if op != 'fused_cpy_rhs' and ctx.needs_input_grad[3]:
             g_rev = gidx.reverse()
             if reduce_op == 'sum':
                 if op == 'mul':
                     dX = gfusedmm(g_rev, 'mul', 'sum', dZ, Y)
                 elif op == 'add':
-                    dX = gfusedmm(g_rev, 'copy_lhs', 'sum', dZ, Y)
-                elif op == 'copy_lhs':
-                    dX = gfusedmm(g_rev, 'copy_lhs', 'sum', dZ, None)
+                    dX = gfusedmm(g_rev, 'fused_cpy_lhs', 'sum', dZ, Y)
+                elif op == 'fused_cpy_lhs':
+                    dX = gfusedmm(g_rev, 'fused_cpy_lhs', 'sum', dZ, None)
             else:  # max/min
                 dX = th.zeros((X_shape[0],) + dZ.shape[1:],
                               dtype=dtype, device=device)
@@ -452,18 +452,18 @@ class GFUSEDMM(th.autograd.Function):
                     grad = _expand(Y, dZ.shape[1:]).gather(
                         0, argY.long()) * dZ
                     dX.scatter_add_(0, argX.long(), grad)
-                elif op in ['add', 'copy_lhs']:
+                elif op in ['add', 'fused_cpy_lhs']:
                     dX.scatter_add_(0, argX.long(), dZ)
             dX = _reduce_grad(dX, X_shape)
         else:  # X has not gradient
             dX = None
-        if op != 'copy_lhs' and ctx.needs_input_grad[4]:
+        if op != 'fused_cpy_lhs' and ctx.needs_input_grad[4]:
             if reduce_op == 'sum':
                 if op == 'mul' and reduce_last:
                     dY = gsddmm(gidx, 'dot', X, dZ)
                 elif op == 'mul':
                     dY = gsddmm(gidx, 'mul', X, dZ)
-                elif op in ['add', 'copy_rhs']:
+                elif op in ['add', 'fused_cpy_rhs']:
                     dY = gsddmm(gidx, 'copy_rhs', X, dZ)
             else:  # max/min
                 dY = th.zeros((Y_shape[0],) + dZ.shape[1:],

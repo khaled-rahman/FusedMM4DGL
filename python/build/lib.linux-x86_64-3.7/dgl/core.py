@@ -307,7 +307,7 @@ def invoke_gfusedmm(graph, mfunc, rfunc):
         z = op(graph, x, y)
     else:
         x = alldata[mfunc.target][mfunc.in_field]
-        op = getattr(ops, mfunc.name)
+        op = getattr(ops, '{}_{}'.format(mfunc.name, rfunc.name))
         if graph._graph.number_of_etypes() > 1:
             # Convert to list as dict is unordered.
             if mfunc.name == "copy_u":

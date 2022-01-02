@@ -135,7 +135,7 @@ for (IdType rid = 0; rid < N; ++rid){
 }		
 
 }
-template <typename IdType, typename DType, typename Op>
+template <typename IdType, typename DType>
 void FUSEDMMCsr(const BcastOff& bcast,
 const CSRMatrix& csr,
               NDArray lhs, NDArray rhs, NDArray out, int ftype = 1) {

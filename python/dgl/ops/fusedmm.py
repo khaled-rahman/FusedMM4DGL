@@ -4,7 +4,7 @@ from itertools import product
 from ..backend import gfusedmm as gfusedmm_internal
 from .. import backend as F
 
-__all__ = ['gfusedmm']
+__all__ = ['gfusedmm', 'fused_cpy_u']
 
 # this operations are borrowed from spmm's
 def reshape_lhs_rhs(lhs_data, rhs_data):
@@ -57,7 +57,7 @@ def gfusedmm(g, op, reduce_op, lhs_data, rhs_data):
 	The result tensor.
     """
     if g._graph.number_of_etypes() == 1:
-        if op not in ['copy_lhs', 'copy_rhs']:
+        if op not in ['fused_cpy_lhs', 'fused_cpy_rhs']:
             lhs_data, rhs_data = reshape_lhs_rhs(lhs_data, rhs_data)
         return gfusedmm_internal(
             g._graph, op, 'sum' if reduce_op == 'mean' else reduce_op, lhs_data, rhs_data)
@@ -69,22 +69,33 @@ def _gen_copy_reduce_func(binary_op, reduce_op):
 
     name = "{}_{}".format(binary_op, reduce_op)
     binary_str = {
-        "fused_copy_u": "It copies node feature to edge as the message.",
-        'fused_copy_e': "It regards edge feature as message."
+        "fused_cpy_u": "It copies node feature to edge as the message.",
+        'fused_cpy_e': "It regards edge feature as message."
     }
     x_str = {
-        "fused_copy_u": "source node",
-        "fused_copy_e": "edge"
+        "fused_cpy_u": "source node",
+        "fused_cpy_e": "edge"
     }
-    docstring = lambda binary_op: _attach_zerodeg_note("""Generalized FusedMM function. {}
-    Then aggregates the message by {} on destination nodes.
+    def func(g, x):
+        if binary_op == 'fused_cpy_u':
+            return gfusedmm(g, 'fused_cpy_lhs', reduce_op, x, None)
+        else:
+            return gfusedmm(g, 'fused_cpy_rhs', reduce_op, None, x)
+
+    func.__name__ = name
+    #print("python/dgl/ops/spmm...", name)
+    #func.__doc__ = docstring(binary_op)
+    return func
+
+def fused_cpy_u(g, x):
+    r"""Generalized FusedMM function that copies source node features to edges.
 
     Parameters
     ----------
     g : DGLHeteroGraph
-        The input graph
+        The input graph.
     x : tensor
-        The {} features.
+        The source node features.
 
     Returns
     -------
@@ -94,40 +105,26 @@ def _gen_copy_reduce_func(binary_op, reduce_op):
     Notes
     -----
     This function supports autograd (computing input gradients given the output gradient).
-    """.format(
-        binary_str[binary_op],
-        reduce_op,
-        x_str[binary_op]), reduce_op)
-
-    def func(g, x):
-        if binary_op == 'fused_copy_u':
-            return gfusedmm(g, 'copy_lhs', reduce_op, x, None)
-        else:
-            return gfusedmm(g, 'copy_rhs', reduce_op, None, x)
-
-    func.__name__ = name
-    #print("python/dgl/ops/spmm...", name)
-    func.__doc__ = docstring(binary_op)
-    return func
-
+    """
+    return gfusedmm(g, 'fused_cpy_lhs', None, x, None)
 
 def _gen_fusedmm_func(binary_op, reduce_op):
-    name = "{}_{}_{}".format(binary_op, reduce_op)
+    name = "{}_{}".format(binary_op, reduce_op)
     target_dict = {
         'u': "source node",
         'e': "edge",
         'v': "destination node"
     }
     docstring = r"""Generalized FUSEDMM function.
-    It computes edge features by {op} {lhs} features and {rhs} features.
+    It computes edge features by {} features and {} features.
     Parameters
     ----------
     g : DGLHeteroGraph
         The input graph
     x : tensor
-        The {lhs} features.
+        The lhs features.
     y : tensor
-        The {rhs} features.
+        The rhs features.
     Returns
     -------
     tensor
@@ -155,9 +152,9 @@ def _register_fusedmm_func():
     - Copy u plus reduction: copy_u_[]
     - Copy e plus reduction: copy_e_[]
     """
-    for binary_op in ["add", "sub", "mul", "div", "fused_copy_u", "fused_copy_e"]:
+    for binary_op in ["add", "sub", "mul", "div", "fused_cpy_u", "fused_cpy_e"]:
         for reduce_op in ["sum", "max", "min", "mean"]:
-            if binary_op.startswith("fused_copy"):
+            if binary_op.startswith("fused_cpy"):
                 func = _gen_copy_reduce_func(binary_op, reduce_op)
             else:
                 func = _gen_fusedmm_func(binary_op, reduce_op)
