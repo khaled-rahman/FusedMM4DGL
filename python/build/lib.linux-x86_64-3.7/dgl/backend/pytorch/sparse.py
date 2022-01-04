@@ -409,7 +409,7 @@ class GFUSEDMM(th.autograd.Function):
     @staticmethod
     @custom_fwd(cast_inputs=th.float16)
     def forward(ctx, gidx, op, reduce_op, X, Y, ftype=1):
-        out, (argX, argY) = _gfusedmm(gidx, op, reduce_op, X, Y)
+        out = _gfusedmm(gidx, op, reduce_op, X, Y)
         reduce_last = _need_reduce_last_dim(X, Y)
         X_shape = X.shape if X is not None else None
         Y_shape = Y.shape if Y is not None else None
@@ -419,15 +419,15 @@ class GFUSEDMM(th.autograd.Function):
         req_grad_X = X.requires_grad if X is not None else False
         req_grad_Y = Y.requires_grad if Y is not None else False
         
-        if not fusedmm_cache_X(op, req_grad_X, req_grad_Y):
+        if not fusedmm_cache_X(op, reduce_op, req_grad_X, req_grad_Y):
             X = None
-        if not fusedmm_cache_Y(op, req_grad_X, req_grad_Y):
+        if not fusedmm_cache_Y(op, reduce_op, req_grad_X, req_grad_Y):
             Y = None
         if not fusedmm_cache_argX(op, reduce_op, req_grad_X, req_grad_Y):
             argX = None
         if not fusedmm_cache_argY(op, reduce_op, req_grad_X, req_grad_Y):
             argY = None
-        ctx.save_for_backward(X, Y, argX, argY)
+        ctx.save_for_backward(X, Y)
         return out
 
     @staticmethod
@@ -435,7 +435,7 @@ class GFUSEDMM(th.autograd.Function):
     def backward(ctx, dZ):
         gidx, op, reduce_op, X_shape, Y_shape, dtype, device, reduce_last = ctx.backward_cache
         ctx.backward_cache = None
-        X, Y, argX, argY = ctx.saved_tensors
+        X, Y = ctx.saved_tensors
         if op != 'fused_cpy_rhs' and ctx.needs_input_grad[3]:
             g_rev = gidx.reverse()
             if reduce_op == 'sum':

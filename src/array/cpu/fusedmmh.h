@@ -115,7 +115,7 @@ void FUSEDMMCsrSigmoid(const IdType *indptr, const IdType *indices, const IdType
 DType *sm_table;
 sm_table = static_cast<DType *> (::operator new (sizeof(DType[SM_TABLE_SIZE])));
 init_SM_TABLE<IdType, DType>(sm_table);
-
+cout << "Calling FUSEDMMCsrSigmoid..." << indptr[0] << ":" << indices[0] << ":" << edges[0] << ":" << X[0] << endl;
 #pragma omp parallel for
 for (IdType rid = 0; rid < N; ++rid){
         const IdType row_start = indptr[rid], row_end = indptr[rid + 1];
@@ -125,29 +125,64 @@ for (IdType rid = 0; rid < N; ++rid){
                 const IdType jindex = cid * dim;
                 DType attrc = 0;
                 for (int64_t k = 0; k < dim; ++k) {
-                        attrc += X[iindex + k] * Y[jindex + k];
+                        attrc += X[iindex + k] * X[jindex + k];
                 }
-		DType d1 = fast_SM<DType>(attrc, sm_table);
+		DType d1 = 0.5;//fast_SM<DType>(attrc, sm_table);
 		for (int64_t k = 0; k < dim; ++k) {
-                        O[iindex+k] = O[iindex+k]  + (1.0 - d1) * Y[jindex + k];
+                        O[iindex+k] = O[iindex+k]  + (1.0 - d1) * X[jindex + k];
                 }
         }
-}		
+}
+
+cout << "End of Calling FUSEDMMCsrSigmoid..." << endl;		
 
 }
+
+
+template <typename IdType, typename DType>
+void FUSEDMMCsrGCN(const IdType *indptr, const IdType *indices, const IdType *edges,
+                const DType *X, const DType *Y, DType *O, const IdType N, const int64_t dim) {
+
+cout << "Calling FUSEDMMCsrGCN..." << indptr[0] << ":" << indices[0] << ":" << edges[0] << ":" << X[0] << endl;
+#pragma omp parallel for
+for (IdType rid = 0; rid < N; ++rid){
+        const IdType row_start = indptr[rid], row_end = indptr[rid + 1];
+        const IdType iindex = rid * dim;
+        for (IdType j = row_start; j < row_end; ++j){
+                const IdType cid = indices[j];
+                const IdType jindex = cid * dim;
+                for (int64_t k = 0; k < dim; ++k) {
+                        O[iindex+k] = O[iindex+k] + X[jindex + k];
+                }
+        }
+}
+
+cout << "End of Calling FUSEDMMCsrGCN..." << endl;
+
+}
+
+
+
+
 template <typename IdType, typename DType>
 void FUSEDMMCsr(const BcastOff& bcast,
 const CSRMatrix& csr,
               NDArray lhs, NDArray rhs, NDArray out, int ftype = 1) {
-
 const IdType* indptr = csr.indptr.Ptr<IdType>();
 const IdType* indices = csr.indices.Ptr<IdType>();
 const IdType* edges = csr.data.Ptr<IdType>();
 const DType* X = lhs.Ptr<DType>();
 const DType* Y = rhs.Ptr<DType>();
 const int32_t dim = bcast.out_len;
+std::cout << "From FusedMMCsr function...(dim):" << dim << ", num_rows:" << csr.num_rows << endl;
 
 DType* O = out.Ptr<DType>();
+
+FUSEDMMCsrGCN<IdType, DType>(indptr, indices, edges, X, Y, O, csr.num_rows, dim);
+
+std::cout << "Returning from FusedMMCsr function..." << endl;
+
+/*
 if(ftype == 1){
    uinit_SM_TABLE();
    int32_t imsg;
@@ -158,6 +193,7 @@ if(ftype == 1){
    imsg = VOP_SUBR | ROP_UDEF | SOP_UDEF | VSC_MUL | AOP_ADD;
    fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0.0, csr.num_rows, csr.num_rows, NULL, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)Y, dim, 1.0, (float*)O, dim);
 }
+*/
 }	
 }
 }
