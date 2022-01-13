@@ -410,12 +410,12 @@ class GFUSEDMM(th.autograd.Function):
     @custom_fwd(cast_inputs=th.float16)
     def forward(ctx, gidx, op, reduce_op, X, Y, ftype=1):
         out = _gfusedmm(gidx, op, reduce_op, X, Y)
-        reduce_last = _need_reduce_last_dim(X, Y)
+        #reduce_last = _need_reduce_last_dim(X, Y)
         X_shape = X.shape if X is not None else None
         Y_shape = Y.shape if Y is not None else None
         dtype = X.dtype if X is not None else Y.dtype
         device = X.device if X is not None else Y.device
-        ctx.backward_cache = gidx, op, reduce_op, X_shape, Y_shape, dtype, device, reduce_last
+        ctx.backward_cache = gidx, op, reduce_op, X_shape, Y_shape, dtype, device
         req_grad_X = X.requires_grad if X is not None else False
         req_grad_Y = Y.requires_grad if Y is not None else False
         
@@ -433,7 +433,7 @@ class GFUSEDMM(th.autograd.Function):
     @staticmethod
     @custom_bwd
     def backward(ctx, dZ):
-        gidx, op, reduce_op, X_shape, Y_shape, dtype, device, reduce_last = ctx.backward_cache
+        gidx, op, reduce_op, X_shape, Y_shape, dtype, device = ctx.backward_cache
         ctx.backward_cache = None
         X, Y = ctx.saved_tensors
         if op != 'fused_cpy_rhs' and ctx.needs_input_grad[3]:
@@ -459,9 +459,9 @@ class GFUSEDMM(th.autograd.Function):
             dX = None
         if op != 'fused_cpy_lhs' and ctx.needs_input_grad[4]:
             if reduce_op == 'sum':
-                if op == 'mul' and reduce_last:
-                    dY = gsddmm(gidx, 'dot', X, dZ)
-                elif op == 'mul':
+                #if op == 'mul':
+                #    dY = gsddmm(gidx, 'dot', X, dZ)
+                if op == 'mul':
                     dY = gsddmm(gidx, 'mul', X, dZ)
                 elif op in ['add', 'fused_cpy_rhs']:
                     dY = gsddmm(gidx, 'copy_rhs', X, dZ)
