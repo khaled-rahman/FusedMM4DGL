@@ -115,13 +115,22 @@ def spmm_cache_argY(binary_op, reduce_op, req_grad_X, req_grad_Y):
             return True
     return False
 
+myflag = True
 
 class GSpMM(th.autograd.Function):
     @staticmethod
     @custom_fwd(cast_inputs=th.float16)
     def forward(ctx, gidx, op, reduce_op, X, Y):
+        if myflag:
+            print("From GSpMM forward autograd.Function...", "op:", op, ",reduce_op:", reduce_op)
+            print("X:", X, "Y:", Y)
+
         out, (argX, argY) = _gspmm(gidx, op, reduce_op, X, Y)
+        if myflag:
+            print(out.shape, "out:", out, "argX:", argX, "argY:", argY)
         reduce_last = _need_reduce_last_dim(X, Y)
+        if myflag:
+            print("reduce_last:", reduce_last)
         X_shape = X.shape if X is not None else None
         Y_shape = Y.shape if Y is not None else None
         dtype = X.dtype if X is not None else Y.dtype
@@ -129,6 +138,8 @@ class GSpMM(th.autograd.Function):
         ctx.backward_cache = gidx, op, reduce_op, X_shape, Y_shape, dtype, device, reduce_last
         req_grad_X = X.requires_grad if X is not None else False
         req_grad_Y = Y.requires_grad if Y is not None else False
+        if myflag:
+            print("req_grad_X:",req_grad_X, "req_grad_Y:", req_grad_Y)
         if not spmm_cache_X(op, reduce_op, req_grad_X, req_grad_Y):
             X = None
         if not spmm_cache_Y(op, reduce_op, req_grad_X, req_grad_Y):
@@ -146,6 +157,10 @@ class GSpMM(th.autograd.Function):
         gidx, op, reduce_op, X_shape, Y_shape, dtype, device, reduce_last = ctx.backward_cache
         ctx.backward_cache = None
         X, Y, argX, argY = ctx.saved_tensors
+        if myflag:
+            print("From GSpMM backward autograd.Function...", "op:", op, "reduce_op:", reduce_op, "reduce_last:", reduce_last)
+            print("ctx.needs_input_grad[3]",ctx.needs_input_grad[3], "X:", X, "Y:", Y, "dZ:", dZ)
+            
         if op != 'copy_rhs' and ctx.needs_input_grad[3]:
             g_rev = gidx.reverse()
             if reduce_op == 'sum':
@@ -164,7 +179,11 @@ class GSpMM(th.autograd.Function):
                     dX.scatter_add_(0, argX.long(), grad)
                 elif op in ['add', 'copy_lhs']:
                     dX.scatter_add_(0, argX.long(), dZ)
+            if myflag:
+                print(dX.shape, " before reduce dX:", dX)
             dX = _reduce_grad(dX, X_shape)
+            if myflag:
+                print(dX.shape, " after reduce dX:", dX)
         else:  # X has not gradient
             dX = None
         if op != 'copy_lhs' and ctx.needs_input_grad[4]:
@@ -408,8 +427,13 @@ def fusedmm_cache_argY(binary_op, reduce_op, req_grad_X, req_grad_Y):
 class GFUSEDMM(th.autograd.Function):
     @staticmethod
     @custom_fwd(cast_inputs=th.float16)
-    def forward(ctx, gidx, op, reduce_op, X, Y, ftype=1):
+    def forward(ctx, gidx, op, reduce_op, X, Y):
+        if myflag:
+            print("From GFusedMM forward autograd.Function...", "op:", op, ",reduce_op:", reduce_op)
+            print("X:", X, "Y:", Y)
         out = _gfusedmm(gidx, op, reduce_op, X, Y)
+        if myflag:
+            print(out.shape, "out:", out)
         #reduce_last = _need_reduce_last_dim(X, Y)
         X_shape = X.shape if X is not None else None
         Y_shape = Y.shape if Y is not None else None
@@ -418,7 +442,8 @@ class GFUSEDMM(th.autograd.Function):
         ctx.backward_cache = gidx, op, reduce_op, X_shape, Y_shape, dtype, device
         req_grad_X = X.requires_grad if X is not None else False
         req_grad_Y = Y.requires_grad if Y is not None else False
-        
+        if myflag:
+            print("req_grad_X:",req_grad_X, "req_grad_Y:", req_grad_Y)
         if not fusedmm_cache_X(op, reduce_op, req_grad_X, req_grad_Y):
             X = None
         if not fusedmm_cache_Y(op, reduce_op, req_grad_X, req_grad_Y):
@@ -436,6 +461,10 @@ class GFUSEDMM(th.autograd.Function):
         gidx, op, reduce_op, X_shape, Y_shape, dtype, device = ctx.backward_cache
         ctx.backward_cache = None
         X, Y = ctx.saved_tensors
+        if myflag:
+            print("From GFusedMM backward autograd.Function...", "op:", op, "reduce_op:", reduce_op)
+            print("ctx.needs_input_grad",ctx.needs_input_grad, "X:", X, "Y:", Y, "dZ:", dZ)
+        
         if op != 'fused_cpy_rhs' and ctx.needs_input_grad[3]:
             g_rev = gidx.reverse()
             if reduce_op == 'sum':
@@ -454,7 +483,11 @@ class GFUSEDMM(th.autograd.Function):
                     dX.scatter_add_(0, argX.long(), grad)
                 elif op in ['add', 'fused_cpy_lhs']:
                     dX.scatter_add_(0, argX.long(), dZ)
+            if myflag:
+                print(dX.shape, " before reduce dX:", dX)
             dX = _reduce_grad(dX, X_shape)
+            if myflag:
+                print(dX.shape, " after reduce dX:", dX)
         else:  # X has not gradient
             dX = None
         if op != 'fused_cpy_lhs' and ctx.needs_input_grad[4]:
@@ -723,7 +756,8 @@ class CSRMask(th.autograd.Function):
 
 
 def gspmm(gidx, op, reduce_op, lhs_data, rhs_data):
-    print("Calling backend GSpMM function...")
+    if myflag:
+        print("Calling backend GSpMM function...")
     if op == 'sub':
         op = 'add'
         rhs_data = -rhs_data

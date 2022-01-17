@@ -1,6 +1,6 @@
 import argparse
 import time,sys
-import numpy as np
+#import numpy as np
 import torch
 import torch.nn.functional as F
 import dgl
@@ -11,6 +11,8 @@ from gcn import GCN, GCN2
 #from gcn_mp import GCN
 #from gcn_spmv import GCN
 import traceback
+import numpy as np
+import random
 
 def evaluate(model, features, labels, mask):
     model.eval()
@@ -130,6 +132,12 @@ def main(args):
 
 
 if __name__ == '__main__':
+
+    if True:
+        torch.manual_seed(123)
+        np.random.seed(123)
+        random.seed(123)
+
     # this version contains both DGL and FusedMM implementation
     parser = argparse.ArgumentParser(description='GCN')
     parser.add_argument("--dataset", type=str, default="cora",

@@ -137,8 +137,7 @@ void FUSEDMM(const std::string& op, const std::string& reduce,
            HeteroGraphPtr graph,
            NDArray lhs,
            NDArray rhs,
-           NDArray out,
-           int ftype=1) {
+           NDArray out) {
   SparseFormat format = graph->SelectFormat(0, COO_CODE);
   const auto &bcast = CalcBcastOff(op, lhs, rhs);
 
@@ -147,10 +146,10 @@ void FUSEDMM(const std::string& op, const std::string& reduce,
       ATEN_FLOAT_TYPE_SWITCH(out->dtype, DType, "Feature data", {
         if (format == SparseFormat::kCSR) {
           FUSEDMMCsr<XPU, IdType, DType>(
-              op, reduce, bcast, graph->GetCSRMatrix(0), lhs, rhs, out, ftype);
+              op, reduce, bcast, graph->GetCSRMatrix(0), lhs, rhs, out);
         } else {
 	  FUSEDMMCsr<XPU, IdType, DType>(
-              op, reduce, bcast, graph->GetCSRMatrix(0), lhs, rhs, out, ftype);
+              op, reduce, bcast, graph->GetCSRMatrix(0), lhs, rhs, out);
 	  std::cout << "FUSEDMM only supports CSR foramt";
         }
       });
@@ -449,7 +448,7 @@ DGL_REGISTER_GLOBAL("sparse._CAPI_DGLKernelFUSEDMM")
     NDArray lhs = args[3];
     NDArray rhs = args[4];
     NDArray out = args[5];
-    int ftype = args[6];
+    //int ftype = args[6];
     CheckCtx(graph->Context(), {lhs, rhs, out}, {"lhs", "rhs", "out"});
     CheckContiguous({lhs, rhs, out}, {"lhs", "rhs", "out"});
     CHECK_EQ(graph->NumEdgeTypes(), 1);
@@ -462,7 +461,7 @@ DGL_REGISTER_GLOBAL("sparse._CAPI_DGLKernelFUSEDMM")
         {lhs, rhs, out},
         {"U_data", "E_data", "out"});
 
-    FUSEDMM(op, reduce_op, graph.sptr(), lhs, rhs, out, ftype);
+    FUSEDMM(op, reduce_op, graph.sptr(), lhs, rhs, out);
   });
 
 DGL_REGISTER_GLOBAL("sparse._CAPI_DGLKernelSDDMMHetero")

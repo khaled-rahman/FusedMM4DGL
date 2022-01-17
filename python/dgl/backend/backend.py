@@ -1513,7 +1513,7 @@ def gspmm_hetero(g, op, reduce_op, lhs_len, *lhs_and_rhs_tuple):
     """
     pass
 
-def gfusedmm(gidx, op, reduce_op, lhs_data, rhs_data, ftype=1):
+def gfusedmm(gidx, op, reduce_op, lhs_data, rhs_data):
     r""" Unification of SDDMM and SpMM interface.
     It computes edge features by :attr:`op` lhs features and rhs features.
     .. math::

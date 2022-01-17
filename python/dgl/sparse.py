@@ -83,6 +83,7 @@ target_mapping = {
     'dst': 2
 }
 
+myflag = False
 
 def _gspmm(gidx, op, reduce_op, u, e):
     r""" Generalized Sparse Matrix Multiplication interface. It takes the result of
@@ -163,11 +164,11 @@ def _gspmm(gidx, op, reduce_op, u, e):
             arg_e = F.zeros(v_shp, idtype, ctx)
     arg_u_nd = to_dgl_nd_for_write(arg_u)
     arg_e_nd = to_dgl_nd_for_write(arg_e)
-    if use_u:
-        print("Shape of u:", u.shape)
-    print("use_u:", use_u, ":u_shp:", u)
-    print("use_e:", use_e, ":e_shp:", e)
-    print("output:", v.shape, ":out:", v)
+    if myflag:
+        print("Shape of u:", u)
+        print("use_u:", use_u, ":u_shp:", u)
+        print("use_e:", use_e, ":e_shp:", e)
+        print("output:", v.shape, ":out:", v)
     if gidx.number_of_edges(0) > 0:
         _CAPI_DGLKernelSpMM(gidx, op, reduce_op,
                             to_dgl_nd(u if use_u else None),
@@ -412,7 +413,7 @@ def _gsddmm(gidx, op, lhs, rhs, lhs_target='u', rhs_target='v'):
     return out
 
 # FusedMM function for Python Interface
-def _gfusedmm(gidx, op, reduce_op, lhs, rhs, ftype = 1):
+def _gfusedmm(gidx, op, reduce_op, lhs, rhs):
     r""" Unification of SDDMM and SpMM (will update below description). It
     takes the result of :attr:`op` on source node feature and destination node
     feature, leads to a feature on edge.
@@ -472,17 +473,19 @@ def _gfusedmm(gidx, op, reduce_op, lhs, rhs, ftype = 1):
     #Khaled:see carefully, output shape is similar to LHS
     out_shp = F.shape(lhs) if use_lhs else (0,)
     out = F.zeros(out_shp, dtype, ctx)
-    print("use_rhs:", use_rhs, ":rhs_shp:", rhs_shp)
-    print("use_lhs:", use_lhs, ":lhs_shp:", lhs_shp)
-    print("output:", out_shp, ":out:", out)
+    if myflag:
+        print("use_rhs:", use_rhs, ":rhs_shp:", rhs_shp)
+        print("use_lhs:", use_lhs, ":lhs_shp:", lhs_shp)
+        print("output:", out_shp, ":out:", out)
     if gidx.number_of_edges(0) > 0:
         _CAPI_DGLKernelFUSEDMM(gidx, op, reduce_op,
                              to_dgl_nd(lhs if use_lhs else None), 
                              to_dgl_nd(rhs if use_rhs else None), # remember this that using
-                             to_dgl_nd_for_write(out), ftype)
+                             to_dgl_nd_for_write(out))
     if (expand_lhs or not use_lhs) and (expand_rhs or not use_rhs):
         out = F.squeeze(out, -1)
-    print("gfusedmm returned output (python)...", out)
+    if myflag:
+        print("gfusedmm returned output (python)...", out)
     return out
 
 
