@@ -126,9 +126,11 @@ def main(args):
               "ETputs(KTEPS) {:.2f}". format(epoch, np.mean(dur), loss.item(),
                                              acc, n_edges / np.mean(dur) / 1000))
 
-    print()
+    print("Total Time:", sum(dur))
+    test_start = time.time()
     acc = evaluate(model, features, labels, test_mask)
-    print("Test accuracy {:.2%}".format(acc))
+    test_end = time.time()
+    print("Test time: {:.2} sec., Test accuracy: {:.2%}".format((test_end-test_start), acc))
 
 
 if __name__ == '__main__':

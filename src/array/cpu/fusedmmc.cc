@@ -52,7 +52,7 @@ void FUSEDMMCsr(const std::string& op, const std::string& reduce,
               NDArray out,
               int ftype = 1) {
  
-      std::cout << "FusedMMCsr: op:" << op << ", reduce:" << reduce << endl;
+      //std::cout << "FusedMMCsr: op:" << op << ", reduce:" << reduce << endl;
     //SWITCH_OP(op, Op, {
       cpu::FUSEDMMCsr<IdType, DType>(bcast, csr, lhs, rhs, out, ftype);
     //});

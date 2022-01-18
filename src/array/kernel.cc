@@ -150,12 +150,12 @@ void FUSEDMM(const std::string& op, const std::string& reduce,
         } else {
 	  FUSEDMMCsr<XPU, IdType, DType>(
               op, reduce, bcast, graph->GetCSRMatrix(0), lhs, rhs, out);
-	  std::cout << "FUSEDMM only supports CSR foramt";
+	  // std::cout << "FUSEDMM only supports CSR foramt";
         }
       });
     });
   });
-  std::cout << "End of kernel CAPI call" << std::endl;
+  //std::cout << "End of kernel CAPI call" << std::endl;
 }
 
 

@@ -318,7 +318,8 @@ def invoke_gfusedmm(graph, mfunc, rfunc):
             else: # "copy_e"
                 x = data_dict_to_list(graph, x, mfunc, 'e')
         z = op(graph, x)
-    return {mfunc.out_field : z}
+    # here was the problem: it was mfunc.out_field
+    return {rfunc.out_field : z}
 
 
 

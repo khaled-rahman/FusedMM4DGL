@@ -143,7 +143,7 @@ template <typename IdType, typename DType>
 void FUSEDMMCsrGCN(const IdType *indptr, const IdType *indices, const IdType *edges,
                 const DType *X, const DType *Y, DType *O, const IdType N, const int64_t dim) {
 
-cout << "Calling FUSEDMMCsrGCN..." << indptr[0] << ":" << indices[0] << ":" << edges[0] << ":" << X[0] << endl;
+//cout << "Calling FUSEDMMCsrGCN..." << indptr[0] << ":" << indices[0] << ":" << edges[0] << ":" << X[0] << endl;
 #pragma omp parallel for
 for (IdType rid = 0; rid < N; ++rid){
         const IdType row_start = indptr[rid], row_end = indptr[rid + 1];
@@ -157,7 +157,7 @@ for (IdType rid = 0; rid < N; ++rid){
         }
 }
 
-cout << "End of Calling FUSEDMMCsrGCN..." << endl;
+//cout << "End of Calling FUSEDMMCsrGCN..." << endl;
 
 }
 
@@ -174,13 +174,13 @@ const IdType* edges = csr.data.Ptr<IdType>();
 const DType* X = lhs.Ptr<DType>();
 const DType* Y = rhs.Ptr<DType>();
 const int32_t dim = bcast.out_len;
-std::cout << "From FusedMMCsr function...(dim):" << dim << ", num_rows:" << csr.num_rows << endl;
+//std::cout << "From FusedMMCsr function...(dim):" << dim << ", num_rows:" << csr.num_rows << endl;
 
 DType* O = out.Ptr<DType>();
 
 FUSEDMMCsrGCN<IdType, DType>(indptr, indices, edges, X, Y, O, csr.num_rows, dim);
 
-std::cout << "Returning from FusedMMCsr function..." << endl;
+//std::cout << "Returning from FusedMMCsr function..." << endl;
 
 /*
 if(ftype == 1){

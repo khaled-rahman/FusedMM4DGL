@@ -115,7 +115,7 @@ def spmm_cache_argY(binary_op, reduce_op, req_grad_X, req_grad_Y):
             return True
     return False
 
-myflag = True
+myflag = False
 
 class GSpMM(th.autograd.Function):
     @staticmethod
@@ -327,6 +327,9 @@ class GSDDMM(th.autograd.Function):
         out = _gsddmm(gidx, op, X, Y, lhs_target, rhs_target)
         X_shape = X.shape if X is not None else None
         Y_shape = Y.shape if Y is not None else None
+        if myflag:
+            print("From GDDMM forward autograd.Function...", "op:", op, ",lhs_target:", lhs_target, ",rhs_target", rhs_target)
+            print("X:", X, "Y:", Y)
         ctx.backward_cache = gidx, op, lhs_target, rhs_target, X_shape, Y_shape
         req_grad_X = X.requires_grad if X is not None else False
         req_grad_Y = Y.requires_grad if Y is not None else False
@@ -343,6 +346,9 @@ class GSDDMM(th.autograd.Function):
         gidx, op, lhs_target, rhs_target, X_shape, Y_shape = ctx.backward_cache
         ctx.backward_cache = None
         X, Y = ctx.saved_tensors
+        if myflag:
+            print("From GSDDMM backward autograd.Function...", "op:", op)
+            print("ctx.needs_input_grad[2]", ctx.needs_input_grad[2], "X:", X, "Y:", Y, "dZ:", dZ)
         if op != 'copy_rhs' and ctx.needs_input_grad[2]:
             if lhs_target in ['u', 'v']:
                 _gidx = gidx if lhs_target == 'v' else gidx.reverse()
