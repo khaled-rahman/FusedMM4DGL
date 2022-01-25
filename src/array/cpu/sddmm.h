@@ -90,7 +90,7 @@ void SDDMMCoo(const BcastOff& bcast,
                 rhs_dim = bcast.rhs_len,
                 reduce_size = bcast.reduce_size;
   DType* O = out.Ptr<DType>();
-  printf("Calling SDDMM CAPI...\n");
+  //printf("Calling SDDMM CAPI...\n");
 #pragma omp parallel for
   for (int64_t i = 0; i < coo.row->shape[0]; ++i) {
     const IdType rid = row[i];

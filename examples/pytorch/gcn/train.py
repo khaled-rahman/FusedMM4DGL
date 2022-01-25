@@ -131,6 +131,12 @@ def main(args):
     acc = evaluate(model, features, labels, test_mask)
     test_end = time.time()
     print("Test time: {:.2} sec., Test accuracy: {:.2%}".format((test_end-test_start), acc))
+    outp_file = open("out_time.txt", "a")
+    if args.gcn2:
+        outp_file.write(str(args.dataset) + " " + str(args.n_hidden) + " FusedMM " + str(sum(dur)) + " " + str(test_end-test_start) + "\n")
+    else:
+        outp_file.write(str(args.dataset) + " " + str(args.n_hidden) + " DGL " + str(sum(dur)) + " " + str(test_end-test_start) + "\n")
+    outp_file.close()
 
 
 if __name__ == '__main__':

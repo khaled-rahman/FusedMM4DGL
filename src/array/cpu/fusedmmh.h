@@ -178,22 +178,14 @@ const int32_t dim = bcast.out_len;
 
 DType* O = out.Ptr<DType>();
 
-FUSEDMMCsrGCN<IdType, DType>(indptr, indices, edges, X, Y, O, csr.num_rows, dim);
+// FUSEDMMCsrGCN<IdType, DType>(indptr, indices, edges, X, Y, O, csr.num_rows, dim);
 
 //std::cout << "Returning from FusedMMCsr function..." << endl;
 
-/*
-if(ftype == 1){
-   uinit_SM_TABLE();
-   int32_t imsg;
-   imsg = VOP_COPY_RHS | ROP_DOT | SOP_UDEF | VSC_MUL | AOP_ADD;
-   fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0.0, csr.num_rows, csr.num_rows, NULL, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)Y, dim, 1.0, (float*)O, dim);
-}else{
-   int32_t imsg;
-   imsg = VOP_SUBR | ROP_UDEF | SOP_UDEF | VSC_MUL | AOP_ADD;
-   fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0.0, csr.num_rows, csr.num_rows, NULL, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)Y, dim, 1.0, (float*)O, dim);
-}
-*/
+int32_t imsg;
+imsg = VOP_COPY_RHS | ROP_NOOP | SOP_NOOP | VSC_NOOP | AOP_ADD;
+fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0, csr.num_rows, csr.num_rows, (const float*)edges, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)X, dim, 0.0, (float*)O, dim);
+
 }	
 }
 }
