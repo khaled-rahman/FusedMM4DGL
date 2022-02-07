@@ -6,6 +6,7 @@ import torch.nn.functional as F
 import dgl
 import pdb
 from dgl.data import CoraGraphDataset, CiteseerGraphDataset, PubmedGraphDataset
+from dgl.data import CoauthorPhysicsDataset, AmazonCoBuyComputerDataset, RedditDataset
 import traceback
 from gcn import GCN, GCN2
 #from gcn_mp import GCN
@@ -24,33 +25,58 @@ def evaluate(model, features, labels, mask):
         correct = torch.sum(indices == labels)
         return correct.item() * 1.0 / len(labels)
 
-
-def main(args):
-    # load and preprocess dataset
+def citations_network(args):
     if args.dataset == 'cora':
         data = CoraGraphDataset()
     elif args.dataset == 'citeseer':
         data = CiteseerGraphDataset()
     elif args.dataset == 'pubmed':
         data = PubmedGraphDataset()
+    return data
+
+def create_masks(g):
+    train_mask = torch.zeros([g.num_nodes()], dtype=torch.bool)
+    val_mask = torch.zeros([g.num_nodes()], dtype=torch.bool)
+    test_mask = torch.zeros([g.num_nodes()], dtype=torch.bool)
+    # shuffle indices of masks
+    # indices = random.sample(range(g.num_nodes()), g.num_nodes())
+    indices = list(range(g.num_nodes()))
+    train_length = int(len(indices) * 0.6)
+    val_length = train_length + int(len(indices) * 0.2)
+    train_mask[indices[:train_length]] = True
+    val_mask[indices[train_length:val_length]] = True
+    test_mask[indices[val_length:]] = True
+    return train_mask, val_mask, test_mask
+
+def main(args):
+    # load and preprocess dataset
+    if args.dataset in ('cora', 'citeseer', 'pubmed'):
+        data = citations_network(args)
+        g = data[0]
+        train_mask = g.ndata['train_mask']
+        val_mask = g.ndata['val_mask']
+        test_mask = g.ndata['test_mask']
+    elif args.dataset == 'PUBMED':
+        g = PubmedGraphDataset()[0]
+        train_mask, val_mask, test_mask = create_masks(g)
+    elif args.dataset == 'coauthorp':
+        g = CoauthorPhysicsDataset()[0]
+        train_mask, val_mask, test_mask = create_masks(g)
+    elif args.dataset == 'amazon':
+        g = AmazonCoBuyComputerDataset()[0]
+        train_mask, val_mask, test_mask = create_masks(g)
+    elif args.dataset == 'reddit':
+        g = RedditDataset()[0]
+        train_mask, val_mask, test_mask = create_masks(g)
     else:
         raise ValueError('Unknown dataset: {}'.format(args.dataset))
-
-    g = data[0]
-    if args.gpu < 0:
-        cuda = False
-    else:
-        cuda = True
-        g = g.int().to(args.gpu)
-
     features = g.ndata['feat']
     labels = g.ndata['label']
-    train_mask = g.ndata['train_mask']
-    val_mask = g.ndata['val_mask']
-    test_mask = g.ndata['test_mask']
     in_feats = features.shape[1]
-    n_classes = data.num_labels
-    n_edges = data.graph.number_of_edges()
+    n_classes = len(set(g.ndata['label'].tolist()))
+    n_edges = g.num_edges()
+    cuda = False
+    
     print("""----Data statistics------'
       #Edges %d
       #Classes %d
@@ -63,9 +89,8 @@ def main(args):
               test_mask.int().sum().item()))
 
     # add self loop
-    if args.self_loop:
-        g = dgl.remove_self_loop(g)
-        g = dgl.add_self_loop(g)
+    g = dgl.remove_self_loop(g)
+    g = dgl.add_self_loop(g)
     n_edges = g.number_of_edges()
 
     # normalization
@@ -156,9 +181,9 @@ if __name__ == '__main__':
                         help="gpu")
     parser.add_argument("--lr", type=float, default=1e-2,
                         help="learning rate")
-    parser.add_argument("--n-epochs", type=int, default=10,
+    parser.add_argument("--n-epochs", type=int, default=100,
                         help="number of training epochs")
-    parser.add_argument("--n-hidden", type=int, default=16,
+    parser.add_argument("--n-hidden", type=int, default=64,
                         help="number of hidden gcn units")
     parser.add_argument("--n-layers", type=int, default=1,
                         help="number of hidden gcn layers")
@@ -170,6 +195,6 @@ if __name__ == '__main__':
                         help="FusedMM-GCN (default=False)")
     parser.set_defaults(self_loop=False)
     args = parser.parse_args()
-    print(args)
+    # print(args)
     main(args)
     
