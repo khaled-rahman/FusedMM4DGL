@@ -7,9 +7,8 @@
 #include <omp.h>
 #include "../selector.h"
 #include "sddmm.h"
-//#include "./FusedMM/kernels/include/kernels.h"
+#include "./FusedMM/kernels/generated/include/kernels.h"
 #include "./FusedMM/fusedMM.h"
-//#include "fusedMM.h"
 #define SM_TABLE_SIZE 2048
 #define SM_BOUND 5.0
 #define SM_RESOLUTION SM_TABLE_SIZE/(2.0 * SM_BOUND)
@@ -174,17 +173,14 @@ const IdType* edges = csr.data.Ptr<IdType>();
 const DType* X = lhs.Ptr<DType>();
 const DType* Y = rhs.Ptr<DType>();
 const int32_t dim = bcast.out_len;
-//std::cout << "From FusedMMCsr function...(dim):" << dim << ", num_rows:" << csr.num_rows << endl;
 
 DType* O = out.Ptr<DType>();
 
-// FUSEDMMCsrGCN<IdType, DType>(indptr, indices, edges, X, Y, O, csr.num_rows, dim);
-
-//std::cout << "Returning from FusedMMCsr function..." << endl;
-
 int32_t imsg;
-imsg = VOP_COPY_RHS | ROP_NOOP | SOP_NOOP | VSC_NOOP | AOP_ADD;
-fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0, csr.num_rows, csr.num_rows, (const float*)edges, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)X, dim, 0.0, (float*)O, dim);
+// imsg = VOP_COPY_RHS | ROP_NOOP | SOP_NOOP | VSC_NOOP | AOP_ADD;
+// fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0, csr.num_rows, csr.num_rows, (const float*)edges, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)X, dim, 0.0, (float*)O, dim);
+
+sgfusedMM_csr('g', csr.num_rows, csr.num_rows, dim, 1.0, 0, csr.num_rows, csr.num_rows, (const float*)edges, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)X, dim, 0.0, (float*)O, dim);
 
 }	
 }
