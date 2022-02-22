@@ -11,14 +11,14 @@ Pytorch implementation: https://github.com/Diego999/pyGAT
 import argparse
 import numpy as np
 import networkx as nx
-import time
+import time,random
 import torch
 import torch.nn.functional as F
 import dgl
 from dgl.data import register_data_args
 from dgl.data import CoraGraphDataset, CiteseerGraphDataset, PubmedGraphDataset
 
-from gat import GAT
+from gat import GAT,GAT2
 from utils import EarlyStopping
 
 
@@ -80,7 +80,20 @@ def main(args):
     n_edges = g.number_of_edges()
     # create model
     heads = ([args.num_heads] * args.num_layers) + [args.num_out_heads]
-    model = GAT(g,
+    if args.gat2:
+        model = GAT2(g,
+                args.num_layers,
+                num_feats,
+                args.num_hidden,
+                n_classes,
+                heads,
+                F.elu,
+                args.in_drop,
+                args.attn_drop,
+                args.negative_slope,
+                args.residual)
+    else:
+        model = GAT(g,
                 args.num_layers,
                 num_feats,
                 args.num_hidden,
@@ -143,11 +156,16 @@ def main(args):
 
 if __name__ == '__main__':
 
+    if True:
+        torch.manual_seed(123)
+        np.random.seed(123)
+        random.seed(123)
+
     parser = argparse.ArgumentParser(description='GAT')
     register_data_args(parser)
     parser.add_argument("--gpu", type=int, default=-1,
                         help="which GPU to use. Set -1 to use CPU.")
-    parser.add_argument("--epochs", type=int, default=200,
+    parser.add_argument("--epochs", type=int, default=100,
                         help="number of training epochs")
     parser.add_argument("--num-heads", type=int, default=8,
                         help="number of hidden attention heads")
@@ -173,6 +191,8 @@ if __name__ == '__main__':
                         help="indicates whether to use early stop or not")
     parser.add_argument('--fastmode', action="store_true", default=False,
                         help="skip re-evaluate the validation set")
+    parser.add_argument("--gat2", action='store_true',
+                        help="FusedMM-GAT (default=False)")
     args = parser.parse_args()
     print(args)
 
