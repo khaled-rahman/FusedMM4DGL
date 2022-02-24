@@ -1,6 +1,3 @@
-[submodule "src/array/cpu/FusedMM"]
-        path = src/array/cpu/FusedMM
-        url = https://github.com/HipGraph/FusedMM
 [submodule "third_party/dmlc-core"]
 	path = third_party/dmlc-core
 	url = https://github.com/dmlc/dmlc-core.git
@@ -31,3 +28,6 @@
 [submodule "third_party/tvm"]
 	path = third_party/tvm
 	url = https://github.com/apache/incubator-tvm
+[submodule "src/array/cpu/FusedMM"]
+	path = src/array/cpu/FusedMM
+	url = https://github.com/HipGraph/FusedMM.git
