@@ -31,3 +31,12 @@
 [submodule "src/array/cpu/FusedMM"]
 	path = src/array/cpu/FusedMM
 	url = https://github.com/HipGraph/FusedMM.git
+[submodule "third_party/tensorpipe"]
+	path = third_party/tensorpipe
+	url = https://github.com/pytorch/tensorpipe
+[submodule "third_party/libxsmm"]
+	path = third_party/libxsmm
+	url = https://github.com/hfp/libxsmm.git
+[submodule "nccl"]
+	path = nccl
+	url = https://github.com/nvidia/nccl
