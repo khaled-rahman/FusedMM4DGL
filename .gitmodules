@@ -1,6 +1,6 @@
-[submodule "src/array/cpu/fusedmm"]
-	path = src/array/cpu/fusedmm
-	url = https://github.com/HipGraph/FusedMM
+[submodule "src/array/cpu/FusedMM"]
+        path = src/array/cpu/FusedMM
+        url = https://github.com/HipGraph/FusedMM
 [submodule "third_party/dmlc-core"]
 	path = third_party/dmlc-core
 	url = https://github.com/dmlc/dmlc-core.git
