@@ -412,6 +412,7 @@ class GraphConv(nn.Module):
                 shp = norm.shape + (1,) * (feat_src.dim() - 1)
                 norm = th.reshape(norm, shp)
                 feat_src = feat_src * norm
+                # [128 x 1000] [1000 x n]
 
             if weight is not None:
                 if self.weight is not None:

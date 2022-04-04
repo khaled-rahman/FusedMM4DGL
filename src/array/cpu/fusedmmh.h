@@ -174,13 +174,16 @@ const DType* X = lhs.Ptr<DType>();
 const DType* Y = rhs.Ptr<DType>();
 const int32_t dim = bcast.out_len;
 
+// cout << "Start of Calling FusedMMCsr..." << endl;
+// cout << "lhs num elements:" << lhs.NumElements() << endl;
+// cout << "rhs num elements:" << rhs.NumElements() << endl;
+
 DType* O = out.Ptr<DType>();
 
 int32_t imsg;
-// imsg = VOP_COPY_RHS | ROP_NOOP | SOP_NOOP | VSC_NOOP | AOP_ADD;
-// fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0, csr.num_rows, csr.num_rows, (const float*)edges, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)X, dim, 0.0, (float*)O, dim);
-
-sgfusedMM_csr('g', csr.num_rows, csr.num_rows, dim, 1.0, 0, csr.num_rows, csr.num_rows, (const float*)edges, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)X, dim, 0.0, (float*)O, dim);
+// imsg = VOP_COPY_RHS | ROP_NOOP | SOP_NOOP | VSC_NOOP | AOP_ADD; // message for GCN
+imsg = VOP_MUL | ROP_NOOP | SOP_NOOP | VSC_MUL | AOP_ADD;
+fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0, csr.num_rows, csr.num_rows, (const float*)edges, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)X, dim, 0.0, (float*)O, dim);
 
 }	
 }

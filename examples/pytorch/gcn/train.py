@@ -2,18 +2,23 @@ import argparse
 import time,sys
 #import numpy as np
 import torch
+import dgl.function as fn
 import torch.nn.functional as F
 import dgl
 import pdb
 from dgl.data import CoraGraphDataset, CiteseerGraphDataset, PubmedGraphDataset
 from dgl.data import CoauthorPhysicsDataset, AmazonCoBuyComputerDataset, RedditDataset
+from ogb.nodeproppred import DglNodePropPredDataset
 import traceback
+from sklearn.preprocessing import OneHotEncoder
 from gcn import GCN, GCN2
 #from gcn_mp import GCN
 #from gcn_spmv import GCN
 import traceback
 import numpy as np
 import random
+import warnings
+warnings.filterwarnings('ignore')
 
 def evaluate(model, features, labels, mask):
     model.eval()
@@ -34,15 +39,15 @@ def citations_network(args):
         data = PubmedGraphDataset()
     return data
 
-def create_masks(g):
+def create_masks(g, num_train = 1000):
     train_mask = torch.zeros([g.num_nodes()], dtype=torch.bool)
     val_mask = torch.zeros([g.num_nodes()], dtype=torch.bool)
     test_mask = torch.zeros([g.num_nodes()], dtype=torch.bool)
     # shuffle indices of masks
     # indices = random.sample(range(g.num_nodes()), g.num_nodes())
     indices = list(range(g.num_nodes()))
-    train_length = int(len(indices) * 0.6)
-    val_length = train_length + int(len(indices) * 0.2)
+    train_length = num_train # int(len(indices) * 0.3)
+    val_length = train_length + int(len(indices) * 0.1)
     train_mask[indices[:train_length]] = True
     val_mask[indices[train_length:val_length]] = True
     test_mask[indices[val_length:]] = True
@@ -58,20 +63,26 @@ def main(args):
         test_mask = g.ndata['test_mask']
     elif args.dataset == 'PUBMED':
         g = PubmedGraphDataset()[0]
-        train_mask, val_mask, test_mask = create_masks(g)
+        train_mask, val_mask, test_mask = create_masks(g, args.tsamples)
     elif args.dataset == 'coauthorp':
         g = CoauthorPhysicsDataset()[0]
-        train_mask, val_mask, test_mask = create_masks(g)
+        train_mask, val_mask, test_mask = create_masks(g, args.tsamples)
     elif args.dataset == 'amazon':
         g = AmazonCoBuyComputerDataset()[0]
-        train_mask, val_mask, test_mask = create_masks(g)
+        train_mask, val_mask, test_mask = create_masks(g, args.tsamples)
+    elif args.dataset == 'ogbn-protein':
+        dataset = DglNodePropPredDataset(name='ogbn-proteins')[0]
+        g = dataset[0]
+        g.update_all(fn.copy_e("feat", "feat_copy"), fn.sum("feat_copy", "feat"))
+        g.ndata['label'] = dataset[1].sum(dim=1) # view(-1)
+        train_mask, val_mask, test_mask = create_masks(g, args.tsamples)
     elif args.dataset == 'reddit':
         g = RedditDataset()[0]
-        train_mask, val_mask, test_mask = create_masks(g)
+        train_mask, val_mask, test_mask = create_masks(g, args.tsamples)
     else:
         raise ValueError('Unknown dataset: {}'.format(args.dataset))
-    features = g.ndata['feat']
-    labels = g.ndata['label']
+    features = g.ndata['feat'] # [train_mask] would make incompatible with matrix multiplication
+    labels = g.ndata['label'] #
     in_feats = features.shape[1]
     n_classes = len(set(g.ndata['label'].tolist()))
     n_edges = g.num_edges()
@@ -183,6 +194,8 @@ if __name__ == '__main__':
                         help="learning rate")
     parser.add_argument("--n-epochs", type=int, default=100,
                         help="number of training epochs")
+    parser.add_argument("--tsamples", type=int, default=1000,
+                        help="number of training samples")
     parser.add_argument("--n-hidden", type=int, default=64,
                         help="number of hidden gcn units")
     parser.add_argument("--n-layers", type=int, default=1,

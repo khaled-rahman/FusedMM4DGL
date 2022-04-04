@@ -157,6 +157,7 @@ def _gen_spmm_func(binary_op, reduce_op):
         return gspmm(g, binary_op, reduce_op, x, y)
     func.__name__ = name
     func.__doc__ = docstring
+    # print("SpMM message generation in ops:", name)
     return func
 
 
@@ -193,7 +194,7 @@ def _gen_copy_reduce_func(binary_op, reduce_op):
         binary_str[binary_op],
         reduce_op,
         x_str[binary_op]), reduce_op)
-
+    # print("registering spmm function:", name)
     def func(g, x):
         if binary_op == 'copy_u':
             return gspmm(g, 'copy_lhs', reduce_op, x, None)

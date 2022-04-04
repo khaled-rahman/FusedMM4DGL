@@ -9,8 +9,8 @@ from .._deprecate.runtime import ir
 from .._deprecate.runtime.ir import var
 
 
-__all__ = ["src_mul_edge", "copy_src", "fused_cpy_src", "copy_edge", "copy_u", "copy_e", "fused_cpy_u",
-           "BinaryMessageFunction", "CopyMessageFunction"]
+__all__ = ["src_mul_edge", "copy_src", "fused_cpy_src", "copy_edge", "fused_cpy_edge", "copy_u", "copy_e", "fused_cpy_u",
+           "BinaryMessageFunction", "CopyMessageFunction", "CopyMessageFunctionFusedMM"]
 
 
 class MessageFunction(BuiltinFunction):
@@ -198,6 +198,27 @@ def copy_e(e, out):
     """
     return CopyMessageFunction(TargetCode.EDGE, e, out)
 
+def fused_cpy_e(e, out):
+    """Builtin message function that computes message using edge feature.
+
+    Parameters
+    ----------
+    e : str
+        The edge feature field.
+    out : str
+        The output message field.
+
+    Examples
+    --------
+    >>> import dgl
+    >>> message_func = dgl.function.fused_cpy_e('h', 'm')
+
+    The above example is equivalent to the following user defined function:
+
+    >>> def message_func(edges):
+    >>>     return {'m': edges.data['h']}
+    """
+    return CopyMessageFunctionFusedMM(TargetCode.EDGE, e, out)
 
 ###############################################################################
 # Generate all following  builtin message functions:
@@ -257,6 +278,7 @@ def _gen_message_builtin(lhs, rhs, binary_op):
             _TARGET_MAP[rhs], lhs_field, rhs_field, out)
     func.__name__ = name
     func.__doc__ = docstring
+    # print("\n Special function name...\n\n, here:", name)
     return func
 
 
@@ -265,7 +287,7 @@ def _register_builtin_message_func():
     target = ["u", "v", "e"]
     for lhs, rhs in product(target, target):
         if lhs != rhs:
-            for binary_op in ["add", "sub", "mul", "div", "dot"]:
+            for binary_op in ["add", "sub", "fmul", "mul", "div", "dot"]:
                 func = _gen_message_builtin(lhs, rhs, binary_op)
                 setattr(sys.modules[__name__], func.__name__, func)
                 __all__.append(func.__name__)
@@ -382,3 +404,30 @@ def copy_edge(edge, out):
     >>>     return {'m': edges.data['h']}
     """
     return copy_e(edge, out)
+
+
+def fused_cpy_edge(edge, out):
+    """Builtin message function that computes message using edge feature.
+
+    Notes
+    -----
+    This function is deprecated. Please use copy_e instead.
+
+    Parameters
+    ----------
+    edge : str
+        The edge feature field.
+    out : str
+        The output message field.
+
+    Examples
+    --------
+    >>> import dgl
+    >>> message_func = dgl.function.fused_cpy_edge('h', 'm')
+
+    The above example is equivalent to the following user defined function:
+
+    >>> def message_func(edges):
+    >>>     return {'m': edges.data['h']}
+    """
+    return fused_cpy_e(edge, out)

@@ -302,7 +302,9 @@ def invoke_gfusedmm(graph, mfunc, rfunc):
     if isinstance(mfunc, fn.BinaryMessageFunction):
         x = alldata[mfunc.lhs][mfunc.lhs_field]
         y = alldata[mfunc.rhs][mfunc.rhs_field]
-        op = getattr(ops, mfunc.name)
+        # the following getattr had an issue. It's only using mfunc.name
+        #op = getattr(ops, mfunc.name)
+        op = getattr(ops, '{}_{}'.format(mfunc.name, rfunc.name))
         if graph._graph.number_of_etypes() > 1:
             lhs_target, _, rhs_target = mfunc.name.split("_", 2)
             x = data_dict_to_list(graph, x, mfunc, lhs_target)

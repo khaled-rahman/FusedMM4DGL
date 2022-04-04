@@ -301,14 +301,17 @@ class GATConv(nn.Module):
             # which further speeds up computation and saves memory footprint.
             el = (feat_src * self.attn_l).sum(dim=-1).unsqueeze(-1)
             er = (feat_dst * self.attn_r).sum(dim=-1).unsqueeze(-1)
+            # print("gatconv: applying update function on srcdata-dstdata...")
             graph.srcdata.update({'ft': feat_src, 'el': el})
             graph.dstdata.update({'er': er})
             # compute edge attention, el and er are a_l Wh_i and a_r Wh_j respectively.
+            # print("gatconv: applying functions on edges...")
             graph.apply_edges(fn.u_add_v('el', 'er', 'e'))
             e = self.leaky_relu(graph.edata.pop('e'))
             # compute softmax
             graph.edata['a'] = self.attn_drop(edge_softmax(graph, e))
             # message passing
+            # print("gatconv: applying update_all on graph...")
             graph.update_all(fn.u_mul_e('ft', 'a', 'm'),
                              fn.sum('m', 'ft'))
             rst = graph.dstdata['ft']

@@ -456,11 +456,11 @@ def _gfusedmm(gidx, op, reduce_op, lhs, rhs):
     expand_lhs, expand_rhs = False, False
     #print("Before:", lhs)
     if use_lhs:
-        if F.ndim(lhs) == 1:
+        if lhs is not None and F.ndim(lhs) == 1:
             lhs = F.unsqueeze(lhs, -1)
             expand_lhs = True
     if use_rhs:
-        if F.ndim(rhs) == 1:
+        if rhs is not None and F.ndim(rhs) == 1:
             rhs = F.unsqueeze(rhs, -1)
             expand_rhs = True
     #print("After:", lhs)

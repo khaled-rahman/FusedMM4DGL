@@ -115,7 +115,7 @@ def spmm_cache_argY(binary_op, reduce_op, req_grad_X, req_grad_Y):
             return True
     return False
 
-myflag = False
+myflag = False #True
 
 class GSpMM(th.autograd.Function):
     @staticmethod
@@ -328,8 +328,8 @@ class GSDDMM(th.autograd.Function):
         X_shape = X.shape if X is not None else None
         Y_shape = Y.shape if Y is not None else None
         if myflag:
-            print("From GDDMM forward autograd.Function...", "op:", op, ",lhs_target:", lhs_target, ",rhs_target", rhs_target)
-            print("X:", X, "Y:", Y)
+            print("From GSDDMM forward autograd.Function...", "op:", op, ",lhs_target:", lhs_target, ",rhs_target", rhs_target)
+            print("X:", X, "Y:", Y, "out:", out)
         ctx.backward_cache = gidx, op, lhs_target, rhs_target, X_shape, Y_shape
         req_grad_X = X.requires_grad if X is not None else False
         req_grad_Y = Y.requires_grad if Y is not None else False
@@ -474,9 +474,10 @@ class GFUSEDMM(th.autograd.Function):
         if op != 'fused_cpy_rhs' and ctx.needs_input_grad[3]:
             g_rev = gidx.reverse()
             if reduce_op == 'sum':
-                if op == 'mul':
-                    dX = gfusedmm(g_rev, 'mul', 'sum', dZ, Y)
-                elif op == 'add':
+                if op == 'fmul':
+                    # changed op == 'fmul'
+                    dX = gfusedmm(g_rev, 'fmul', 'sum', dZ, Y)
+                elif op == 'fadd':
                     dX = gfusedmm(g_rev, 'fused_cpy_lhs', 'sum', dZ, Y)
                 elif op == 'fused_cpy_lhs':
                     dX = gfusedmm(g_rev, 'fused_cpy_lhs', 'sum', dZ, None)
@@ -500,14 +501,14 @@ class GFUSEDMM(th.autograd.Function):
             if reduce_op == 'sum':
                 #if op == 'mul':
                 #    dY = gsddmm(gidx, 'dot', X, dZ)
-                if op == 'mul':
+                if op == 'fmul':
                     dY = gsddmm(gidx, 'mul', X, dZ)
                 elif op in ['add', 'fused_cpy_rhs']:
                     dY = gsddmm(gidx, 'copy_rhs', X, dZ)
             else:  # max/min
                 dY = th.zeros((Y_shape[0],) + dZ.shape[1:],
                               dtype=dtype, device=device)
-                if op == 'mul':
+                if op == 'fmul':
                     grad = _expand(X, dZ.shape[1:]).gather(
                         0, argX.long()) * dZ
                     dY.scatter_add_(0, argY.long(), grad)

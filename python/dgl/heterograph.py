@@ -4870,6 +4870,7 @@ class DGLHeteroGraph(object):
             ndata = core.message_passing(g, message_func, reduce_func, apply_node_func)
             if myflag:
                 print("testing...ndata(update_all)", ndata)
+                print("testing...ndata shape:", ndata[list(ndata.keys())[0]].shape)
             self._set_n_repr(dtid, ALL, ndata)
         else:   # heterogeneous graph with number of relation types > 1
             if not core.is_builtin(message_func) or not core.is_builtin(reduce_func):
@@ -4975,6 +4976,7 @@ class DGLHeteroGraph(object):
             ndata = core.message_passing_fused(g, message_func, reduce_func, apply_node_func)
             if myflag:
                 print("testing...ndata(update_all_fused)", ndata)
+                print("testing...ndata shape:", ndata[list(ndata.keys())[0]].shape)
             self._set_n_repr(dtid, ALL, ndata)
         else:   # heterogeneous graph with number of relation types > 1
             if not core.is_builtin(message_func) or not core.is_builtin(reduce_func):

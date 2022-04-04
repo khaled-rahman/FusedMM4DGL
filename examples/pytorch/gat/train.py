@@ -104,7 +104,7 @@ def main(args):
                 args.attn_drop,
                 args.negative_slope,
                 args.residual)
-    print(model)
+    # print(model)
     if args.early_stop:
         stopper = EarlyStopping(patience=100)
     if cuda:
@@ -125,9 +125,9 @@ def main(args):
         logits = model(features)
         loss = loss_fcn(logits[train_mask], labels[train_mask])
 
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
+        # optimizer.zero_grad()
+        # loss.backward()
+        # optimizer.step()
 
         if epoch >= 3:
             dur.append(time.time() - t0)
@@ -137,7 +137,7 @@ def main(args):
         if args.fastmode:
             val_acc = accuracy(logits[val_mask], labels[val_mask])
         else:
-            val_acc = evaluate(model, features, labels, val_mask)
+            val_acc = 1 # evaluate(model, features, labels, val_mask)
             if args.early_stop:
                 if stopper.step(val_acc, model):
                     break
@@ -150,7 +150,7 @@ def main(args):
     print()
     if args.early_stop:
         model.load_state_dict(torch.load('es_checkpoint.pt'))
-    acc = evaluate(model, features, labels, test_mask)
+    acc = 1# evaluate(model, features, labels, test_mask)
     print("Test Accuracy {:.4f}".format(acc))
 
 
@@ -165,7 +165,7 @@ if __name__ == '__main__':
     register_data_args(parser)
     parser.add_argument("--gpu", type=int, default=-1,
                         help="which GPU to use. Set -1 to use CPU.")
-    parser.add_argument("--epochs", type=int, default=100,
+    parser.add_argument("--epochs", type=int, default=1,
                         help="number of training epochs")
     parser.add_argument("--num-heads", type=int, default=8,
                         help="number of hidden attention heads")

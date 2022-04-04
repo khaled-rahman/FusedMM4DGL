@@ -6,6 +6,7 @@ from .appnpconv import APPNPConv
 from .chebconv import ChebConv
 from .edgeconv import EdgeConv
 from .gatconv import GATConv
+from .gatconv2 import GATConv2
 from .gatv2conv import GATv2Conv
 from .egatconv import EGATConv
 from .ginconv import GINConv
@@ -27,8 +28,8 @@ from .dotgatconv import DotGatConv
 from .twirlsconv import TWIRLSConv, TWIRLSUnfoldingAndAttention
 from .gcn2conv import GCN2Conv
 
-__all__ = ['GraphConv', 'GraphConv2', 'EdgeWeightNorm', 'GATConv', 'GATv2Conv', 'EGATConv', 'TAGConv',
-           'RelGraphConv', 'SAGEConv', 'SGConv', 'APPNPConv', 'GINConv', 'GatedGraphConv',
+__all__ = ['GraphConv', 'GraphConv2', 'EdgeWeightNorm', 'GATConv', 'GATConv2', 'GATv2Conv', 'EGATConv',
+            'TAGConv', 'RelGraphConv', 'SAGEConv', 'SGConv', 'APPNPConv', 'GINConv', 'GatedGraphConv',
            'GMMConv', 'ChebConv', 'AGNNConv', 'NNConv', 'DenseGraphConv', 'DenseSAGEConv',
            'DenseChebConv', 'EdgeConv', 'AtomicConv', 'CFConv', 'DotGatConv', 'TWIRLSConv',
            'TWIRLSUnfoldingAndAttention', 'GCN2Conv']

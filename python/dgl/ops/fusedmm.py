@@ -4,7 +4,7 @@ from itertools import product
 from ..backend import gfusedmm as gfusedmm_internal
 from .. import backend as F
 
-__all__ = ['gfusedmm', 'fused_cpy_u']
+__all__ = ['gfusedmm', 'fused_cpy_u', 'u_fmul_e_sum']
 
 # this operations are borrowed from spmm's
 def reshape_lhs_rhs(lhs_data, rhs_data):
@@ -79,6 +79,8 @@ def _gen_copy_reduce_func(binary_op, reduce_op):
     def func(g, x):
         if binary_op == 'fused_cpy_u':
             return gfusedmm(g, 'fused_cpy_lhs', reduce_op, x, None)
+        elif binary_op == 'u_fmul_e_sum':
+            return gfusedmm(g, 'u_fmul_e_sum', reduce_op, x, None)
         else:
             return gfusedmm(g, 'fused_cpy_rhs', reduce_op, None, x)
 
@@ -108,13 +110,30 @@ def fused_cpy_u(g, x):
     """
     return gfusedmm(g, 'fused_cpy_lhs', None, x, None)
 
+def u_fmul_e_sum(g, x):
+    r"""Generalized FusedMM function that copies source node features to edges.
+
+    Parameters
+    ----------
+    g : DGLHeteroGraph
+        The input graph.
+    x : tensor
+        The source node features.
+
+    Returns
+    -------
+    tensor
+        The result tensor.
+
+    Notes
+    -----
+    This function supports autograd (computing input gradients given the output gradient).
+    """
+    return gfusedmm(g, 'u_fmul_e_sum', None, x, None)
+
+
 def _gen_fusedmm_func(binary_op, reduce_op):
-    name = "{}_{}".format(binary_op, reduce_op)
-    target_dict = {
-        'u': "source node",
-        'e': "edge",
-        'v': "destination node"
-    }
+    name = "u_{}_e_{}".format(binary_op, reduce_op)
     docstring = r"""Generalized FUSEDMM function.
     It computes edge features by {} features and {} features.
     Parameters
@@ -138,11 +157,11 @@ def _gen_fusedmm_func(binary_op, reduce_op):
     https://docs.scipy.org/doc/numpy/user/basics.broadcasting.html
     for more details about the NumPy broadcasting semantics.
     """.format(binary_op, reduce_op)
-
+    # print("registering fusedmm function:", name)
     def func(g, x, y):
         return gfusedmm(g, binary_op, reduce_op, x, y)
     func.__name__ = name
-    func.__doc__ = docstring
+    # func.__doc__ = docstring
     return func
 
 def _register_fusedmm_func():
@@ -152,7 +171,7 @@ def _register_fusedmm_func():
     - Copy u plus reduction: copy_u_[]
     - Copy e plus reduction: copy_e_[]
     """
-    for binary_op in ["add", "sub", "mul", "div", "fused_cpy_u", "fused_cpy_e"]:
+    for binary_op in ["fsub", "fdiv", "fmul", "fadd", "fused_cpy_u", "fused_cpy_e"]:
         for reduce_op in ["sum", "max", "min", "mean"]:
             if binary_op.startswith("fused_cpy"):
                 func = _gen_copy_reduce_func(binary_op, reduce_op)

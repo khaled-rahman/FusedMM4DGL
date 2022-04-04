@@ -5,6 +5,8 @@
  */
 #include "./spmm.h"
 #include <dgl/array.h>
+#include <iostream>
+using namespace std;
 
 namespace dgl {
 namespace aten {
@@ -19,6 +21,8 @@ void SpMMCsr(const std::string& op, const std::string& reduce,
              NDArray out,
              std::vector<NDArray> out_aux) {
   const int64_t dim = bcast.out_len;
+  // cout << "End of Calling SpMMCsr..." << endl; 
+  // cout << "ufeat num elements:" << ufeat.NumElements() << endl;
   if (reduce == "sum") {
     SWITCH_BITS(bits, DType, {
       SWITCH_OP(op, Op, {
@@ -201,6 +205,9 @@ void SpMMCoo(const std::string& op, const std::string& reduce,
              NDArray efeat,
              NDArray out,
              std::vector<NDArray> out_aux) {
+  cout << "End of Calling SpMMCoo..." << endl; 
+  cout << "ufeat num elements:" << ufeat.NumElements() << endl;
+
   if (reduce == "sum") {
     SWITCH_BITS(bits, DType, {
       SWITCH_OP(op, Op, {
