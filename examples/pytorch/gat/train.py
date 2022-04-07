@@ -147,7 +147,7 @@ def main(args):
               format(epoch, np.mean(dur), loss.item(), train_acc,
                      val_acc, n_edges / np.mean(dur) / 1000))
 
-    print()
+    print("Total time:", sum(dur))
     if args.early_stop:
         model.load_state_dict(torch.load('es_checkpoint.pt'))
     acc = 1# evaluate(model, features, labels, test_mask)
