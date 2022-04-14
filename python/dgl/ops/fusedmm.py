@@ -172,7 +172,7 @@ def _register_fusedmm_func():
     - Copy e plus reduction: copy_e_[]
     """
     for binary_op in ["fsub", "fdiv", "fmul", "fadd", "fused_cpy_u", "fused_cpy_e"]:
-        for reduce_op in ["sum", "max", "min", "mean"]:
+        for reduce_op in ["sum", "max", "min", "mean", "fdot"]:
             if binary_op.startswith("fused_cpy"):
                 func = _gen_copy_reduce_func(binary_op, reduce_op)
             else:

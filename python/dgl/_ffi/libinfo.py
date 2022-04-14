@@ -5,7 +5,7 @@ import os
 import pathlib
 
 
-def find_lib_path(name=None, search_path=None, optional=False):
+def find_lib_path(name=None, search_path=None, optional=True):
     """Find dynamic library files.
 
     Parameters

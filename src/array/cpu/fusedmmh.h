@@ -7,11 +7,12 @@
 #include <omp.h>
 #include "../selector.h"
 #include "sddmm.h"
-#include "./FusedMM/kernels/generated/include/kernels.h"
+// #include "./FusedMM/kernels/generated/include/kernels.h"
 #include "./FusedMM/fusedMM.h"
 #define SM_TABLE_SIZE 2048
 #define SM_BOUND 5.0
 #define SM_RESOLUTION SM_TABLE_SIZE/(2.0 * SM_BOUND)
+#define ROP_UDEF_IMPL 1 
 
 using namespace std;
 
@@ -41,10 +42,10 @@ VALUETYPE ufast_SM(VALUETYPE v)
    else if (v < -SM_BOUND) return 0.0;
    return SM_TABLE[(INDEXTYPE)((v + SM_BOUND) * SM_RESOLUTION)];
 }
-
-int SOP_UDEF_FUNC(VALUETYPE val, VALUETYPE &out)
+int ROP_UDEF_FUNC(INDEXTYPE lhs_dim, const VALUETYPE *lhs, INDEXTYPE rhs_dim,
+      const VALUETYPE *rhs, VALUETYPE *out)
 {
-   out = 1.0 - ufast_SM(val);
+   VALUETYPE v = 1.0;
    return FUSEDMM_SUCCESS_RETURN;
 }
 
@@ -174,15 +175,16 @@ const DType* X = lhs.Ptr<DType>();
 const DType* Y = rhs.Ptr<DType>();
 const int32_t dim = bcast.out_len;
 
-// cout << "Start of Calling FusedMMCsr..." << endl;
-// cout << "lhs num elements:" << lhs.NumElements() << endl;
-// cout << "rhs num elements:" << rhs.NumElements() << endl;
+//cout << "Start of Calling FusedMMCsr...dim=" << dim << endl;
+//cout << "lhs num elements:" << lhs.NumElements() << endl;
+//cout << "rhs num elements:" << rhs.NumElements() << endl;
+
 
 DType* O = out.Ptr<DType>();
 
 int32_t imsg;
 // imsg = VOP_COPY_RHS | ROP_NOOP | SOP_NOOP | VSC_NOOP | AOP_ADD; // message for GCN
-imsg = VOP_MUL | ROP_NOOP | SOP_NOOP | VSC_MUL | AOP_ADD;
+imsg = VOP_MUL | ROP_UDEF | SOP_NOOP | VSC_MUL | AOP_ADD;
 fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0, csr.num_rows, csr.num_rows, (const float*)edges, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)X, dim, 0.0, (float*)O, dim);
 
 }	

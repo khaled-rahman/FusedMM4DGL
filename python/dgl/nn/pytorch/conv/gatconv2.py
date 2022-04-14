@@ -302,10 +302,12 @@ class GATConv2(nn.Module):
             el = (feat_src * self.attn_l).sum(dim=-1).unsqueeze(-1)
             er = (feat_dst * self.attn_r).sum(dim=-1).unsqueeze(-1)
             # print("gatconv2: applying update function on srcdata-dstdata...")
-            graph.srcdata.update({'ft': feat_src, 'el': el})
-            graph.dstdata.update({'er': er})
+            # graph.srcdata.update({'ft': feat_src, 'el': el})
+            # graph.dstdata.update({'er': er})
+            # print("graph values:", graph)
             # compute edge attention, el and er are a_l Wh_i and a_r Wh_j respectively.
             # print("gatconv2: applying functions on edges...")
+            """
             graph.apply_edges(fn.u_add_v('el', 'er', 'e'))
             e = self.leaky_relu(graph.edata.pop('e'))
             # compute softmax
@@ -314,7 +316,15 @@ class GATConv2(nn.Module):
             # print("gatconv2: applying update_all on graph...")
             graph.update_all_fused(fn.u_fmul_e('ft', 'a', 'm'),
                              fn.sum('m', 'ft'))
-            rst = graph.dstdata['ft']
+            """
+            aggregate_fn = fn.fused_cpy_src('h', 'm')
+            graph.srcdata['h'] = feat_src
+            graph.srcdata['el'] = el
+            graph.dstdata['er'] = er
+            #graph.update_all_fused(aggregate_fn, fn.sum(msg='m', out='h'))
+
+            graph.update_all_fused(aggregate_fn, fn.sum('m', 'h'))
+            rst = graph.dstdata['h']
             # residual
             if self.res_fc is not None:
                 # Use -1 rather than self._num_heads to handle broadcasting
@@ -329,6 +339,6 @@ class GATConv2(nn.Module):
                 rst = self.activation(rst)
 
             if get_attention:
-                return rst, graph.edata['a']
+                return rst, graph.edata['h']
             else:
                 return rst

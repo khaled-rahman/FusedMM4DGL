@@ -287,7 +287,7 @@ def _register_builtin_message_func():
     target = ["u", "v", "e"]
     for lhs, rhs in product(target, target):
         if lhs != rhs:
-            for binary_op in ["add", "sub", "fmul", "mul", "div", "dot"]:
+            for binary_op in ["add", "sub", "fmul", "mul", "div", "dot", "fdot"]:
                 func = _gen_message_builtin(lhs, rhs, binary_op)
                 setattr(sys.modules[__name__], func.__name__, func)
                 __all__.append(func.__name__)

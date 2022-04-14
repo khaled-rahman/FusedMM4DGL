@@ -326,7 +326,7 @@ class GATConv(nn.Module):
                     *((1,) * len(dst_prefix_shape)), self._num_heads, self._out_feats)
             # activation
             if self.activation:
-                rst = self.activation(rst)
+                rat = self.activation(rst)
 
             if get_attention:
                 return rst, graph.edata['a']
