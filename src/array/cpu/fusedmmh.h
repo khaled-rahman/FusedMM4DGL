@@ -5,6 +5,7 @@
 #include <math.h>
 #include <iostream>
 #include <omp.h>
+#include <ctime>
 #include "../selector.h"
 #include "sddmm.h"
 // #include "./FusedMM/kernels/generated/include/kernels.h"
@@ -15,7 +16,6 @@
 #define ROP_UDEF_IMPL 1 
 
 using namespace std;
-
 VALUETYPE *SM_TABLE;
 void uinit_SM_TABLE()
 {
@@ -42,10 +42,37 @@ VALUETYPE ufast_SM(VALUETYPE v)
    else if (v < -SM_BOUND) return 0.0;
    return SM_TABLE[(INDEXTYPE)((v + SM_BOUND) * SM_RESOLUTION)];
 }
+
+VALUETYPE dropout_prob(VALUETYPE v){
+   // dropout randomly
+   // pseudo random number generator
+   unsigned short lfsr = (unsigned short) clock();//0xACE1u;
+   unsigned bit;
+   bit  = ((lfsr >> 0) ^ (lfsr >> 3)) & 1;
+   lfsr =  (bit << 5);
+   return lfsr % 100 > 0.5 ? 0.0: v;
+}
+VALUETYPE leaky_relu(VALUETYPE val){
+   // leaky_relu for forward propagation
+   return val > 0.0 ? val : 0.2 * val;
+}
 int ROP_UDEF_FUNC(INDEXTYPE lhs_dim, const VALUETYPE *lhs, INDEXTYPE rhs_dim,
       const VALUETYPE *rhs, VALUETYPE *out)
 {
-   VALUETYPE v = 1.0;
+   //printf("User defined function in ROP step\n");
+   VALUETYPE v[lhs_dim] = {0.0}, edge_softmax = 0.0;
+   for(INDEXTYPE i = 0; i < lhs_dim; i++){
+       // leaky_relu
+       out[i] = lhs[i] > 0.0? lhs[i] : 0.2 * lhs[i];
+       v[i] = exp(out[i]);
+       edge_softmax += v[i];
+   }
+   for(INDEXTYPE i = 0; i < lhs_dim; i++){
+       //out[i] = dropout_prob(v[i] / edge_softmax);
+       out[i] = v[i] / edge_softmax;
+       // out[i] = v[i] / edge_softmax;
+   }
+   
    return FUSEDMM_SUCCESS_RETURN;
 }
 
@@ -184,7 +211,7 @@ DType* O = out.Ptr<DType>();
 
 int32_t imsg;
 // imsg = VOP_COPY_RHS | ROP_NOOP | SOP_NOOP | VSC_NOOP | AOP_ADD; // message for GCN
-imsg = VOP_MUL | ROP_UDEF | SOP_NOOP | VSC_MUL | AOP_ADD;
+imsg = VOP_ADD | ROP_UDEF | SOP_NOOP | VSC_MUL | AOP_ADD;
 fusedMM_csr(imsg, csr.num_rows, csr.num_rows, dim, 1.0, 0, csr.num_rows, csr.num_rows, (const float*)edges, (const long int*)indices, (const long int*)indptr, (const long int*)indptr+1, (const float*)X, dim, (const float*)X, dim, 0.0, (float*)O, dim);
 
 }	
