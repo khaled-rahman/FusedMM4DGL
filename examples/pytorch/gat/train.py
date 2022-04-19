@@ -165,7 +165,7 @@ if __name__ == '__main__':
     register_data_args(parser)
     parser.add_argument("--gpu", type=int, default=-1,
                         help="which GPU to use. Set -1 to use CPU.")
-    parser.add_argument("--epochs", type=int, default=1,
+    parser.add_argument("--epochs", type=int, default=10,
                         help="number of training epochs")
     parser.add_argument("--num-heads", type=int, default=8,
                         help="number of hidden attention heads")
@@ -177,9 +177,9 @@ if __name__ == '__main__':
                         help="number of hidden units")
     parser.add_argument("--residual", action="store_true", default=False,
                         help="use residual connection")
-    parser.add_argument("--in-drop", type=float, default=.6,
+    parser.add_argument("--in-drop", type=float, default=0.0,
                         help="input feature dropout")
-    parser.add_argument("--attn-drop", type=float, default=.6,
+    parser.add_argument("--attn-drop", type=float, default=0.0,
                         help="attention dropout")
     parser.add_argument("--lr", type=float, default=0.005,
                         help="learning rate")

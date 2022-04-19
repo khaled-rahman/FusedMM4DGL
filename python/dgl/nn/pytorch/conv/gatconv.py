@@ -309,7 +309,8 @@ class GATConv(nn.Module):
             graph.apply_edges(fn.u_add_v('el', 'er', 'e'))
             e = self.leaky_relu(graph.edata.pop('e'))
             # compute softmax
-            graph.edata['a'] = self.attn_drop(edge_softmax(graph, e))
+            # graph.edata['a'] = self.attn_drop(edge_softmax(graph, e))
+            graph.edata['a'] = edge_softmax(graph, e)
             # message passing
             # print("gatconv: applying update_all on graph...")
             graph.update_all(fn.u_mul_e('ft', 'a', 'm'),
